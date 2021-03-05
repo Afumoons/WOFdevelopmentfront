@@ -1,0 +1,53 @@
+.teks-sedang {
+    background-color: white;
+    // color: color(black);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "judul"
+        "teks";
+    grid-gap: 2em;
+
+    @include pc {
+        grid-template-columns: 37% 60%;
+        grid-template-areas: "judul teks";
+        justify-content: space-between;
+
+    }
+
+    // &:nth-child(2n) {
+    //     @include tablet {
+    //         grid-template-columns: 43% 50%;
+    //         grid-template-areas: "judul teks";
+    //     }
+    // }
+
+    .field-judul {
+        grid-area: judul;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    .field-teks {
+        grid-area: teks;
+    }
+
+    .field-judul,
+    .field-teks {
+        color: color(black-lightest);
+        // background-color: rgb(240, 240, 240);
+        // min-height: 60em;
+        padding: 4em;
+        // padding-left: 15em;
+        @include flex-column;
+        // align-items: flex-start;
+        transition: $transition-slower;
+
+
+        // justify-content: space-evenly;
+        // @include pc {
+        //     padding-left: 15em;
+        // }
+
+
+    }
+}

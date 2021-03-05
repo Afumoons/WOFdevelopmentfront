@@ -1,0 +1,32 @@
+.judul-section {
+    @include flex-row;
+    justify-content: space-between;
+    border-bottom: 2px color(white-darkest) solid;
+    margin: 4rem 1rem;
+    padding: 1em;
+    transition: $transition-slower;
+
+    @include pc {
+        margin: 4rem 15%;
+    }
+
+    .judul {
+        font: {
+            size: 1em;
+            weight: bold;
+            family: 'EB Garamond', serif;
+        }
+
+        color: color(black-lighter);
+        margin-bottom: .23em;
+        transition: $transition-slower;
+
+        @include tablet {
+            font-size: 2em;
+        }
+    }
+
+    .teks {
+        color: color(black-lightest);
+    }
+}

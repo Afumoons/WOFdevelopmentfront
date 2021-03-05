@@ -1,0 +1,9 @@
+.copyright {
+    @include flex-column;
+    height: 4rem;
+    background-color: color(white);
+
+    .teks {
+        color: color(black-lightest);
+    }
+}

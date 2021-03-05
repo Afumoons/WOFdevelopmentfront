@@ -1,0 +1,6 @@
+.section-client {
+    @include flex-column;
+    justify-content: flex-start;
+    padding: 3em;
+    background-color: color(white);
+}

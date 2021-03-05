@@ -1,0 +1,23 @@
+.section-galeri {
+    @include flex-column;
+    justify-content: flex-start;
+    padding: 3em;
+    background-color: color(white);
+
+    .judul {
+        font: {
+            size: 2em;
+            weight: bold;
+            family: 'EB Garamond', serif;
+        }
+
+        color: color(black-lighter);
+        border-bottom: .1em color(black-lighter) solid;
+        padding-bottom: .5em;
+        margin-bottom: 1.5em;
+    }
+
+    .button {
+        @include button;
+    }
+}

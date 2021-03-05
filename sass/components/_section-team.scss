@@ -1,0 +1,7 @@
+.section-team {
+    @include flex-column;
+    padding: 2em;
+    background-color: color(white);
+    justify-content: flex-start;
+
+}

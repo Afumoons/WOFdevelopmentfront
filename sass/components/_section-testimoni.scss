@@ -1,0 +1,15 @@
+.section-testimoni {
+    @include flex-column;
+    padding: 3em;
+    padding-top: 6em;
+    justify-content: flex-start;
+    height: 40em;
+    background-image: url("../img/tim-mossholder-ysDq0fY-bzo-unsplash.jpg"),
+        linear-gradient(hsl(0, 0%, 35%) 0%, hsl(0, 0%, 35%) 100%);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}

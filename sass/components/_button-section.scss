@@ -1,0 +1,10 @@
+.button-section {
+    @include flex-column;
+    margin: 4rem 1rem;
+    padding: 1em;
+
+    .button {
+        @include button;
+    }
+
+}

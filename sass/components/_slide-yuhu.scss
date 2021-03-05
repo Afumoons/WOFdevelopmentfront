@@ -1,0 +1,181 @@
+.slide-yuhu {
+    // overflow-x: hidden;
+    // background-color: rgb(240, 240, 240);
+    // color: color(black);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "fjudul"
+        "fteks"
+        "fnama"
+        "fgambarb"
+        "fdeskripsi"
+        "fgambark"
+    ;
+    // grid-gap: 2em;
+    min-height: 45em;
+
+    @include pc {
+        grid-template-columns: 10% 30% 27% 10% 23%;
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+            "null fjudul fteks fteks null2"
+            "fgambark fnama fdeskripsi fgambarb fgambarb"
+        ;
+        justify-content: space-between;
+    }
+
+    .field-judul {
+        grid-area: fjudul;
+        @include flex-row;
+        // align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1em;
+        border-bottom: 3px solid color(black-lightest);
+        transition: $transition-slower;
+        transition: $transition-slower;
+
+
+        .teks {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+
+        // background-color: red;
+        // min-height: 20em;
+
+    }
+
+    .field-teks {
+        grid-area: fteks;
+        @include flex-row;
+        // align-items: flex-start;
+        justify-content: flex-end;
+        padding: .8em;
+        // background-color: yellow;
+        border-bottom: 3px solid color(black-lightest);
+        transition: $transition-slower;
+
+
+        .teks {
+            font-size: 1rem;
+        }
+    }
+
+    .field-gambark {
+        grid-area: fgambark;
+        position: relative;
+        transition: $transition-slower;
+        margin-top: 2em;
+
+        // min-height: 20em;
+        .gambar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $transition-slow;
+        }
+
+    }
+
+    .field-nama {
+        grid-area: fnama;
+        margin-top: 2em;
+        padding: 2em;
+        transition: $transition-slow;
+
+
+        li {
+            list-style: none;
+
+            .link {
+                display: block;
+                font-size: 2em;
+                text-decoration: none;
+                color: color(black-lightest);
+                transition: $transition-slow;
+                transform: translatex(0);
+
+                &.animate {
+                    color: color(black);
+                    transform: translatex(1em);
+                }
+            }
+        }
+
+        @include tablet {
+            padding-left: 6em;
+        }
+
+        // background-color: blue;
+        // min-height: 20em;
+
+    }
+
+    .field-deskripsi {
+        grid-area: fdeskripsi;
+        position: relative;
+        margin-top: 2em;
+        padding: 2em;
+        // padding-left: 15em;
+        transition: $transition-slower;
+
+        .isi {
+            @include flex-column;
+            align-items: flex-start;
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            padding: 2em;
+            transition: $transition-slow;
+
+            .judul {
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 2em;
+            }
+
+            .deskripsi {
+                text-align: justify;
+                font-style: italic;
+                margin-bottom: 2em;
+            }
+
+            .spec {
+                font-size: 1.1;
+                font-weight: 700;
+                font-style: italic;
+                margin-bottom: .5em;
+            }
+
+            .ketspec {
+                font-weight: 500;
+                font-style: italic;
+                margin-bottom: .7em;
+            }
+        }
+
+
+    }
+
+    .field-gambarb {
+        grid-area: fgambarb;
+        position: relative;
+        transition: $transition-slower;
+        margin-top: 2em;
+
+        // min-height: 20em;
+        .gambar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $transition-slow;
+        }
+
+    }
+}

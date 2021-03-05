@@ -1,0 +1,31 @@
+.logo-hero {
+    @include flex-column;
+    background-color: white;
+    color: color(black);
+    margin-bottom: 1em;
+    position: relative;
+
+    .background {
+        background-image: url('../img/WOFLogo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 300px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: $transition;
+        pointer-events: none;
+
+        &.kecil {
+            background-size: 150px;
+        }
+    }
+
+    img.gambar {
+        margin: 2em;
+        max-height: 10em;
+    }
+
+    .teks {}
+}

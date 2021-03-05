@@ -1,0 +1,66 @@
+.flex-container {
+    @include flex-row;
+    // padding: 3.5em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: color(white);
+
+    // background-color: red;
+    @include pc {
+
+        padding: 1em;
+    }
+
+    .item {
+        @include flex-column;
+        // background-color: blue;
+        position: relative;
+        width: 18.75em;
+        height: 100%;
+        margin: 2em 0;
+
+        @include tablet {
+            margin: 2em 3.5em;
+        }
+
+        @include pc {
+            margin: 2em 8em;
+
+        }
+
+        .icon {
+            width: 63%;
+            margin-bottom: 1.2em;
+            object-fit: cover;
+            transition: $transition-slower;
+        }
+
+        .teks {
+            text-align: justify;
+            font-size: 1em;
+            transition: $transition-slower;
+            // opacity: 0;
+            // transform: translateX(-100%) rotatey(90deg);
+
+            // &.animate {
+            //     opacity: 1;
+            //     transform: translateX(0) rotate(0);
+            // }
+        }
+
+        .nomor {
+            position: absolute;
+            top: 2.3em;
+            left: .4em;
+            font-size: 4em;
+            transition: $transition-slower;
+            // opacity: 0;
+            // transform: translatey(-2em);
+
+            // &.animate {
+            //     opacity: 1;
+            //     transform: translatey(0);
+            // }
+        }
+    }
+}
