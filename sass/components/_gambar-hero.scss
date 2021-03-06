@@ -1,0 +1,30 @@
+.gambar-hero {
+    position: relative;
+    height: 35vh;
+    width: 100%;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .item {
+        @include flex-column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+
+        .judul {
+            @include judul;
+            margin-bottom: .6em;
+        }
+
+        .teks {
+            color: color(black-lightest);
+        }
+    }
+}

@@ -104,3 +104,19 @@
         color: color(white-light);
     }
 }
+
+@mixin judul {
+    font: {
+        size: 1em;
+        weight: bold;
+        family: 'EB Garamond', serif;
+    }
+
+    color: color(black-lighter);
+    margin-right: .23em;
+    transition: $transition-slower;
+
+    @include tablet {
+        font-size: 2em;
+    }
+}

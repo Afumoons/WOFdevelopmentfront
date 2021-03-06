@@ -17,6 +17,10 @@
             right: 1em;
         }
 
+        max: {
+            width: 404px;
+        }
+
         .gambar {
             width: 100%;
             height: 100%;
@@ -31,6 +35,7 @@
         }
 
         .teks {
+            width: 100%;
             color: color(black-lighter);
             transition: $transition-slower;
         }

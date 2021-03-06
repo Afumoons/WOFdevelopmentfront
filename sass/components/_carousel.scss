@@ -213,7 +213,6 @@
         // position: relative;
         /* Center slide text vertically */
         @include flex-column;
-        background-color: red;
         justify-content: flex-start;
         align-items: flex-start;
         transition: $transition-slow;

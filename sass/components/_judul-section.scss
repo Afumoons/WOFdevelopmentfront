@@ -10,23 +10,49 @@
         margin: 4rem 15%;
     }
 
-    .judul {
-        font: {
-            size: 1em;
-            weight: bold;
-            family: 'EB Garamond', serif;
-        }
-
-        color: color(black-lighter);
+    .field-kiri {
+        @include flex-row;
+        justify-content: space-evenly;
         margin-bottom: .23em;
-        transition: $transition-slower;
 
         @include tablet {
-            font-size: 2em;
+            margin-bottom: 0;
+        }
+
+        .burger {
+            display: block;
+            z-index: 3;
+            margin-right: .23em;
+
+            div {
+                width: 1.875em;
+                height: .1875em;
+                background-color: color(black-lighter);
+                margin: .3125em;
+                transition: .3s ease
+            }
+
+        }
+
+        .judul {
+            @include judul;
         }
     }
 
-    .teks {
-        color: color(black-lightest);
+    .field-kanan {
+        @include flex-row;
+        justify-content: space-evenly;
+
+        .teks {
+            color: color(black-lightest);
+            margin-right: .23em;
+
+            a {
+                text-decoration: none;
+                color: color(black-lightest);
+            }
+        }
     }
+
+
 }

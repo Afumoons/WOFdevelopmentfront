@@ -47,6 +47,14 @@ $(document).ready(function () {
       createSceneVertical(this);
     });
   });
+
+  // Scene GambarHero
+  $(".gambar-hero").each(function () {
+    $(this.children).each(function () {
+      createSceneVertical(this);
+    });
+  });
+
   // Scene TeksJumbo
   $(".judul-section").each(function () {
     createSceneVertical(this);
