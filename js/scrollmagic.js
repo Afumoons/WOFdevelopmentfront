@@ -31,6 +31,32 @@ $(document).ready(function () {
       // .addIndicators({ name: "fade scene" }) // this requires plugin
       .addTo(scrollmagichorizontal);
   }
+  function initscenesimple(
+    classutama = ".null",
+    adaanak = false,
+    vertical = true
+  ) {
+    $(classutama).each(function () {
+      if (adaanak == false) {
+        if (vertical == true) {
+          createSceneVertical(this);
+        } else {
+          createSceneHorizontal(this);
+        }
+      } else {
+        if (vertical == true) {
+          $(this.children).each(function () {
+            createSceneVertical(this);
+          });
+        } else {
+          $(this.children).each(function () {
+            createSceneHorizontal(this);
+          });
+        }
+      }
+    });
+  }
+
   //init scrollmagic
   var scrollmagichorizontal = new ScrollMagic.Controller({ vertical: false });
   var scrollmagicvertical = new ScrollMagic.Controller({ vertical: true });
@@ -42,23 +68,13 @@ $(document).ready(function () {
   });
 
   // Scene TeksJumbo
-  $(".teks-jumbo").each(function () {
-    $(this.children).each(function () {
-      createSceneVertical(this);
-    });
-  });
+  initscenesimple(".teks-jumbo", true);
 
   // Scene GambarHero
-  $(".gambar-hero").each(function () {
-    $(this.children).each(function () {
-      createSceneVertical(this);
-    });
-  });
+  initscenesimple(".gambar-hero", true);
 
-  // Scene TeksJumbo
-  $(".judul-section").each(function () {
-    createSceneVertical(this);
-  });
+  // Scene JudulSection
+  initscenesimple(".judul-section", false);
 
   // Scene TeksGambar
   $(".teks-gambar").each(function () {

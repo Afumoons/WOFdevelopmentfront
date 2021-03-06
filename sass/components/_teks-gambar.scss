@@ -30,7 +30,10 @@
             background-color: hsl(0, 0%, 91%);
 
             @include pc {
-                padding-left: 15em;
+                padding: {
+                    left: 15em;
+                    right: 0;
+                }
             }
         }
     }
@@ -71,19 +74,12 @@
         }
 
         .judul {
-            font: {
-                size: 1em;
-                weight: bold;
-                family: 'EB Garamond', serif;
+            @include judul;
+
+            margin: {
+                bottom: .23em;
             }
 
-            color: color(black-lighter);
-            margin-bottom: .23em;
-            transition: $transition-slower;
-
-            @include tablet {
-                font-size: 2em;
-            }
         }
 
         p.subjudul {

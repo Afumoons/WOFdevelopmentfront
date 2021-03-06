@@ -107,16 +107,16 @@
 
 @mixin judul {
     font: {
-        size: 1em;
+        size: 2em;
         weight: bold;
         family: 'EB Garamond', serif;
     }
 
     color: color(black-lighter);
-    margin-right: .23em;
+
     transition: $transition-slower;
 
     @include tablet {
-        font-size: 2em;
+        font-size: 3em;
     }
 }

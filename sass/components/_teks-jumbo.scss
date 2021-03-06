@@ -38,20 +38,7 @@ div.teks-jumbo {
     }
 
     .judul {
-
-        // @include flex-column;
-        font: {
-            size: 2em;
-            weight: bold;
-            family: 'EB Garamond', serif;
-        }
-
-        color: color(black-light);
-        transition: $transition-slower;
-
-        @include tablet {
-            font-size: 3em;
-        }
+        @include judul;
     }
 
     .line {

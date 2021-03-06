@@ -31,8 +31,8 @@ $colors: (
 
 
 /*Media Breakpoints*/
-$pc:1000px;
-$tablet:541px;
+$pc:1024px; //1024 is pc
+$tablet:768px; //768 is tablet
 /*Transisi*/
 $transition:350ms ease-in-out;
 $transition-fast: 200ms ease-in-out;

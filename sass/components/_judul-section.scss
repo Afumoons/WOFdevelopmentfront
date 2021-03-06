@@ -1,12 +1,15 @@
 .judul-section {
-    @include flex-row;
+    @include flex-column;
     justify-content: space-between;
+    align-items: flex-start;
     border-bottom: 2px color(white-darkest) solid;
     margin: 4rem 1rem;
     padding: 1em;
     transition: $transition-slower;
 
-    @include pc {
+    @include tablet {
+        @include flex-row;
+        justify-content: space-between;
         margin: 4rem 15%;
     }
 
@@ -36,6 +39,18 @@
 
         .judul {
             @include judul;
+
+            margin: {
+                bottom: .23em;
+            }
+
+            @include tablet {
+                margin: {
+                    right: .23em;
+                    bottom: 0;
+                }
+
+            }
         }
     }
 
