@@ -2,10 +2,10 @@
   -----------------------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
   var myVar;
-  myVar = setTimeout(preloaderFun, 1000);
-  // myVar = setTimeout(preloaderFun, 500);
-  myVar = setTimeout(preloaderFunhapus, 2500);
-  // myVar = setTimeout(preloaderFunhapus, 1000);
+  setTimeout(preloaderFun, 1000);
+  //setTimeout(preloaderFun, 500);
+  setTimeout(preloaderFunhapus, 2500);
+  //setTimeout(preloaderFunhapus, 1000);
 
   function preloaderFun() {
     document.querySelector(".preloader").classList.add("hilang");
@@ -117,6 +117,7 @@ const scrollPage = () => {
       nav.classList.add("animate");
     } else {
       nav.classList.remove("animate");
+      btnup.classList.remove("btnup_scroll");
     }
   }
 
