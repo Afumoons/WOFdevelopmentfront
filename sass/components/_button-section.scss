@@ -2,6 +2,7 @@
     @include flex-column;
     margin: 4rem 1rem;
     padding: 1em;
+    transition: $transition-slower;
 
     .button {
         @include button;

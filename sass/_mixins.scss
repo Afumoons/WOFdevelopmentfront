@@ -91,13 +91,16 @@
 
 @mixin button {
     color: color(black-lightest);
-    padding: 1em 2em;
+    padding: .5em 1em;
     transition: $transition-slow;
 
     border: 2px color(white-darkest) solid {
         radius: 2em;
     }
 
+    @include tablet {
+        padding: 1em 2em;
+    }
 
     &:hover {
         background-color: color(white-darkest);

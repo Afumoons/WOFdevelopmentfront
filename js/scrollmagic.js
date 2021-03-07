@@ -76,6 +76,21 @@ $(document).ready(function () {
   // Scene JudulSection
   initscenesimple(".judul-section", false);
 
+  // Scene ButtonSection
+  initscenesimple(".button-section", false);
+
+  // Scene SectionBlog
+  initscenesimple(".section-blog", true);
+
+  // Scene SectionGaleri
+  initscenesimple(".section-galeri", true);
+
+  // Scene SectionTeam
+  initscenesimple(".section-team", true);
+
+  // Scene SectionClient
+  initscenesimple(".section-client", true);
+
   // Scene TeksGambar
   $(".teks-gambar").each(function () {
     createSceneVertical(this.children[0]);

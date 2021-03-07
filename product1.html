@@ -38,6 +38,123 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     </nav>
     <!-- Navbar Close -->
 
+    <div class="section-product">
+        <div class="field-gambar">
+            <img src="./img/1.png" alt="" class="gambar">
+            <div class="icon"><i class="fas fa-search-plus"></i></div>
+        </div>
+        <div class="field-teks">
+            <p class="category">Stool / Taku Stool</p>
+            <p class="judul">Taku Stool</p>
+            <p class="harga">IDR 370.000,-</p>
+            <div class="line"></div>
+            <p class="deskripsi">Inspired by structure of Japanese building Mori and Taku stool
+                is our furniture pieces made with attention to details. It has
+                strong joints behind its simple form.</p>
+            <div class="field-spesifikasi">
+                <ul class="list-judul">
+                    <li>Category</li>
+                    <li>Tag</li>
+                </ul>
+                <ul class="list-spesifikasi">
+                    <li>: Stool</li>
+                    <li>: Japanese Stool</li>
+                </ul>
+            </div>
+            <div class="field-button">
+                <a class="button">Assembly</a>
+                <a class="button">More Detail</a>
+            </div>
+            <div class="line"></div>
+            <div class="button-cart">
+                Add To Cart >
+                <div class="qty">
+                    <div class="tombol">
+                        <div class="segitiga" id="qty-tambah"></div>
+                        <div class="segitiga" id="qty-kurang"></div>
+                    </div>
+                    <p class="angka">1</p>
+                </div>
+            </div>
+            <p class="estimasi">Delivered in 3 - 15 days.</p>
+        </div>
+    </div>
+
+    <div class="section-review" id="galeri">
+        <p class="judul">Reviews from the people</p>
+        <div class="line"></div>
+        <!-- Swiper -->
+        <div class="swiper-container review-carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="field-bintang">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <div class="keterangan">Very Very Good</div>
+                    <div class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="field-bintang">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <div class="keterangan">Very Very Good</div>
+                    <div class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="field-bintang">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <div class="keterangan">Very Very Good</div>
+                    <div class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="field-bintang">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <div class="keterangan">Very Very Good</div>
+                    <div class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</div>
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div class="footer">
@@ -93,6 +210,12 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     <script src="./js/yuhu.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/scrollmagic.js"></script>
+    <script>
+        navSlide();
+        scrollPage();
+        navMod();
+        qtyButton();
+    </script>
 </body>
 
 </html>

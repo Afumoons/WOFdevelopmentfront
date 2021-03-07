@@ -1,0 +1,32 @@
+.section-review {
+    @include flex-column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3em;
+    background-color: color(white);
+
+    .judul {
+        @include judul;
+        text-align: center;
+        padding-bottom: .5em;
+
+        margin: {
+            bottom: .1em;
+        }
+
+    }
+
+    .line {
+        width: 2em;
+        border-bottom: 2px color(black-lighter) solid;
+        margin-bottom: 2em;
+
+        @include tablet {
+            margin-bottom: 3em;
+        }
+    }
+
+    .button {
+        @include button;
+    }
+}
