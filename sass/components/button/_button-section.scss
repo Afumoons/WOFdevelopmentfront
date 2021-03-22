@@ -6,6 +6,32 @@
 
     .button {
         @include button;
-    }
+        position: relative;
 
+        .overlay {
+            @include flex-column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            background-color: color(white-darkest);
+            transition: $transition-slow;
+
+            border: 2px color(white-darkest) solid {
+                radius: 2em;
+            }
+
+            .teks {
+                color: color(white-light);
+            }
+        }
+
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+        }
+    }
 }

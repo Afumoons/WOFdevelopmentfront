@@ -12,6 +12,8 @@
     }
 
     .item {
+        position: relative;
+
         margin: {
             bottom: 2em;
             right: 1em;
@@ -39,6 +41,50 @@
             width: 100%;
             color: color(black-lighter);
             transition: $transition-slower;
+        }
+
+        .overlay {
+            @include flex-column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            background-color: #fff;
+            transition: $transition-slow;
+
+
+        }
+
+        .teks-overlay {
+            @include flex-column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: $transition-slow;
+
+            .teks {
+                width: auto;
+                font-size: 1.4rem;
+                padding: 0 .5em;
+                padding-bottom: .3em;
+                color: color(white-light);
+                border-bottom: 2px solid color(white-light);
+            }
+        }
+
+        &:hover {
+            .overlay {
+                opacity: .3;
+            }
+
+            .teks-overlay {
+                opacity: 1;
+            }
         }
     }
 }
