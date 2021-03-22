@@ -108,6 +108,7 @@
     }
 
     .swiper-slide {
+        padding: 10px 0;
         text-align: center;
         font-size: 18px;
         // background: rgb(162, 162, 162);
@@ -117,20 +118,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         transition: $transition-slow;
-        // transform: translateY(2.3em);
-        // margin-left: -30px;
-
-        // &.animate {
-        //     // transition: $transition-slow;
-        //     // height: 100%;
-        //     // transform: translateY(0);
-        // }
-
-        // &.swiper-slide-active {
-        //     // transition: $transition-slow;
-        //     // height: 100%;
-        //     // transform: translateY(0);
-        // }
+        position: relative;
 
         .gambar {
             width: 100%;
@@ -190,7 +178,23 @@
             }
         }
 
+        .overlay {
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            opacity: 0;
+            background: color(white-darkest);
+            transition: $transition-slow;
+            // background: red;
+        }
 
+        &:hover {
+            .overlay {
+                opacity: .5;
+            }
+        }
 
     }
 
