@@ -1,0 +1,15 @@
+.overlay-background {
+    position: fixed;
+    @include fullposition;
+    width: 0;
+    background: black;
+    opacity: 0;
+    transition: width 10ms;
+    transition: opacity $transition-slow;
+    z-index: 2;
+
+    &.animate {
+        width: 100%;
+        opacity: .4;
+    }
+}

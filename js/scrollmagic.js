@@ -74,7 +74,7 @@ $(document).ready(function () {
   initscenesimple(".gambar-hero", true);
 
   // Scene JudulSection
-  initscenesimple(".judul-section", false);
+  initscenesimple(".section-judul", false);
 
   // Scene ButtonSection
   initscenesimple(".button-section", false);

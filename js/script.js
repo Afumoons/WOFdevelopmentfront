@@ -119,36 +119,53 @@ const qtyButton = () => {
   });
 };
 
-// const fancy = () => {
-//   const text = document.querySelector(".layar-depan_text");
-//   const strText = text.textContent;
-//   const splitText = strText.split("");
-//   text.textContent = "";
+/* Zoom Button DOM
+  -----------------------------------------------*/
+const zoomButton = () => {
+  const buttonZoom = document.querySelector(
+    ".section-product .field-gambar .icon"
+  );
+  const overlayGambar = document.querySelector(".overlay-gambar");
+  buttonZoom.addEventListener("click", () => {
+    overlayGambar.classList.add("animate");
+  });
+  overlayGambar.addEventListener("click", () => {
+    overlayGambar.classList.remove("animate");
+  });
+};
 
-//   for (let i = 0; i < splitText.length; i++) {
-//     text.innerHTML += '<span class="animate">' + splitText[i] + "</span>";
-//   }
+/* Assembly Button DOM
+  -----------------------------------------------*/
+const assemblyButton = () => {
+  const buttonAssembly = document.querySelector(
+    ".section-product .field-teks .field-button .button.assembly"
+  );
+  const overlayBackground = document.querySelector(".overlay-background");
+  const sectionAssembly = document.querySelector(".section-assembly");
+  buttonAssembly.addEventListener("click", () => {
+    overlayBackground.classList.add("animate");
+    sectionAssembly.classList.add("animate");
+  });
+  overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionAssembly.classList.remove("animate");
+  });
+};
 
-//   let char = 0;
-//   let timer = setInterval(onTick, 50);
-
-//   function onTick() {
-//     const span = text.querySelectorAll("span")[char];
-//     span.classList.add("fade");
-//     char++;
-//     if (char === splitText.length) {
-//       complete();
-//       return;
-//     }
-//   }
-
-//   function complete() {
-//     clearInterval(timer);
-//     timer = null;
-//   }
-// };
-
-// timeoutfun();
-// preloaderFun();
-// navSlide();
-// fancy();
+/* Detail Button DOM
+  -----------------------------------------------*/
+const detailButton = () => {
+  const buttonDetail = document.querySelector(
+    ".section-product .field-teks .field-button .button.detail"
+  );
+  const overlayBackground = document.querySelector(".overlay-background");
+  const sectionDetail = document.querySelector(".section-detail");
+  buttonDetail.addEventListener("click", () => {
+    overlayBackground.classList.add("animate");
+    sectionDetail.classList.add("animate");
+  });
+  overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionDetail.classList.remove("animate");
+  });
+};

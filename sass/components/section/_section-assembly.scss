@@ -1,0 +1,19 @@
+.section-assembly {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: color(white-light);
+    z-index: 3;
+    transform: translateX(100%);
+    transition: $transition-slow;
+
+    @include tablet {
+        width: 50vw;
+    }
+
+    &.animate {
+        transform: translateX(0);
+    }
+}
