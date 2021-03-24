@@ -44,10 +44,10 @@
 
         .menu {
             position: absolute;
-            top: 1em;
+            top: .5em;
             left: -15em;
-            height: 10em;
             width: 14em;
+            padding-top: .5em;
             background: #E8E8E8;
             opacity: 0;
             transition: $transition-slow;
@@ -70,6 +70,33 @@
                 }
             }
 
+            .nav-links {
+                @include flex-column;
+                justify-content: space-around;
+                list-style: none;
+                min-height: 10em;
+                margin: 3em 0;
+
+                li {
+                    margin-bottom: 1.2em;
+
+                    a {
+                        color: color(black-lighter);
+                        text-decoration: none;
+                        letter-spacing: .1rem;
+                        font-size: 1rem;
+
+                        @include tablet {
+                            font-size: .875rem
+                        }
+
+                        &.active {
+                            padding: .4em 1em;
+                            border-bottom: color(black-lighter) .1875em solid
+                        }
+                    }
+                }
+            }
         }
 
         .judul {
