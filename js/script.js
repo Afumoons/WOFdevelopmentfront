@@ -142,11 +142,16 @@ const assemblyButton = () => {
   );
   const overlayBackground = document.querySelector(".overlay-background");
   const sectionAssembly = document.querySelector(".section-assembly");
+  const crossButton = sectionAssembly.querySelector(".cross");
   buttonAssembly.addEventListener("click", () => {
     overlayBackground.classList.add("animate");
     sectionAssembly.classList.add("animate");
   });
   overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionAssembly.classList.remove("animate");
+  });
+  crossButton.addEventListener("click", () => {
     overlayBackground.classList.remove("animate");
     sectionAssembly.classList.remove("animate");
   });
@@ -160,11 +165,16 @@ const detailButton = () => {
   );
   const overlayBackground = document.querySelector(".overlay-background");
   const sectionDetail = document.querySelector(".section-detail");
+  const crossButton = sectionDetail.querySelector(".cross");
   buttonDetail.addEventListener("click", () => {
     overlayBackground.classList.add("animate");
     sectionDetail.classList.add("animate");
   });
   overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionDetail.classList.remove("animate");
+  });
+  crossButton.addEventListener("click", () => {
     overlayBackground.classList.remove("animate");
     sectionDetail.classList.remove("animate");
   });
