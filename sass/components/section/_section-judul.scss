@@ -26,13 +26,48 @@
             display: block;
             z-index: 3;
             margin-right: .23em;
+            position: relative;
+            cursor: pointer;
 
-            div {
+            .line1,
+            .line2,
+            .line3 {
                 width: 1.875em;
                 height: .1875em;
                 background-color: color(black-lighter);
                 margin: .3125em;
                 transition: .3s ease
+            }
+
+
+        }
+
+        .menu {
+            position: absolute;
+            top: 1em;
+            left: -15em;
+            height: 10em;
+            width: 14em;
+            background: #E8E8E8;
+            opacity: 0;
+            transition: $transition-slow;
+
+            &.animate {
+                opacity: 1;
+            }
+
+            .burger {
+                position: relative;
+
+                .line1,
+                .line2,
+                .line3 {
+                    width: 17em;
+                    height: .1875em;
+                    background-color: color(black-lighter);
+                    margin: .3125em;
+                    transition: .3s ease
+                }
             }
 
         }

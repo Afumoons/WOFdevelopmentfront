@@ -95,6 +95,21 @@ const navMod = () => {
   }
 };
 
+/* Shop Menu Button DOM
+  -----------------------------------------------*/
+const shopMenu = () => {
+  const burgerButton = document.querySelector(
+    ".section-judul .field-kiri .burger"
+  );
+  const menu = document.querySelector(".section-judul .field-kiri .menu");
+  burgerButton.addEventListener("click", () => {
+    menu.classList.toggle("animate");
+  });
+  // burgerButton.addEventListener("focusout", () => {
+  //   menu.classList.remove("animate");
+  // });
+};
+
 /* Qty Button DOM
   -----------------------------------------------*/
 const qtyButton = () => {
