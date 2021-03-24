@@ -95,6 +95,21 @@ const navMod = () => {
   }
 };
 
+/* Shop Menu Button DOM
+  -----------------------------------------------*/
+const shopMenu = () => {
+  const burgerButton = document.querySelector(
+    ".section-judul .field-kiri .burger"
+  );
+  const menu = document.querySelector(".section-judul .field-kiri .menu");
+  burgerButton.addEventListener("click", () => {
+    menu.classList.toggle("animate");
+  });
+  // burgerButton.addEventListener("focusout", () => {
+  //   menu.classList.remove("animate");
+  // });
+};
+
 /* Qty Button DOM
   -----------------------------------------------*/
 const qtyButton = () => {
@@ -119,36 +134,63 @@ const qtyButton = () => {
   });
 };
 
-// const fancy = () => {
-//   const text = document.querySelector(".layar-depan_text");
-//   const strText = text.textContent;
-//   const splitText = strText.split("");
-//   text.textContent = "";
+/* Zoom Button DOM
+  -----------------------------------------------*/
+const zoomButton = () => {
+  const buttonZoom = document.querySelector(
+    ".section-product .field-gambar .icon"
+  );
+  const overlayGambar = document.querySelector(".overlay-gambar");
+  buttonZoom.addEventListener("click", () => {
+    overlayGambar.classList.add("animate");
+  });
+  overlayGambar.addEventListener("click", () => {
+    overlayGambar.classList.remove("animate");
+  });
+};
 
-//   for (let i = 0; i < splitText.length; i++) {
-//     text.innerHTML += '<span class="animate">' + splitText[i] + "</span>";
-//   }
+/* Assembly Button DOM
+  -----------------------------------------------*/
+const assemblyButton = () => {
+  const buttonAssembly = document.querySelector(
+    ".section-product .field-teks .field-button .button.assembly"
+  );
+  const overlayBackground = document.querySelector(".overlay-background");
+  const sectionAssembly = document.querySelector(".section-assembly");
+  const crossButton = sectionAssembly.querySelector(".cross");
+  buttonAssembly.addEventListener("click", () => {
+    overlayBackground.classList.add("animate");
+    sectionAssembly.classList.add("animate");
+  });
+  overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionAssembly.classList.remove("animate");
+  });
+  crossButton.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionAssembly.classList.remove("animate");
+  });
+};
 
-//   let char = 0;
-//   let timer = setInterval(onTick, 50);
-
-//   function onTick() {
-//     const span = text.querySelectorAll("span")[char];
-//     span.classList.add("fade");
-//     char++;
-//     if (char === splitText.length) {
-//       complete();
-//       return;
-//     }
-//   }
-
-//   function complete() {
-//     clearInterval(timer);
-//     timer = null;
-//   }
-// };
-
-// timeoutfun();
-// preloaderFun();
-// navSlide();
-// fancy();
+/* Detail Button DOM
+  -----------------------------------------------*/
+const detailButton = () => {
+  const buttonDetail = document.querySelector(
+    ".section-product .field-teks .field-button .button.detail"
+  );
+  const overlayBackground = document.querySelector(".overlay-background");
+  const sectionDetail = document.querySelector(".section-detail");
+  const crossButton = sectionDetail.querySelector(".cross");
+  buttonDetail.addEventListener("click", () => {
+    overlayBackground.classList.add("animate");
+    sectionDetail.classList.add("animate");
+  });
+  overlayBackground.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionDetail.classList.remove("animate");
+  });
+  crossButton.addEventListener("click", () => {
+    overlayBackground.classList.remove("animate");
+    sectionDetail.classList.remove("animate");
+  });
+};

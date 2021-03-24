@@ -3,7 +3,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 3em;
-    background-color: color(white);
+    background-color: #E8E8E8;
+    margin-bottom: 13em;
 
     .judul {
         @include judul;

@@ -38,6 +38,88 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     </nav>
     <!-- Navbar Close -->
 
+    <!-- Overlay -->
+    <div class="overlay-gambar">
+        <div class="background"></div>
+        <img src="./img/1.png" alt="" class="gambar">
+    </div>
+
+    <div class="overlay-background"></div>
+
+
+
+    <!-- Section Assembly -->
+    <div class="section-assembly">
+        <div class="cross">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <p class="judul">Assembly</p>
+        <div class="line"></div>
+        <div class="flex">
+            <div class="item">
+                <img src="./img/2.png" alt="" class="gambar">
+                <p class="teks">Assembly Instructions</p>
+            </div>
+            <div class="item">
+                <img src="./img/2.png" alt="" class="gambar">
+                <p class="teks">Wof Wooden Catalogue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Detail -->
+    <div class="section-detail">
+        <div class="cross">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <p class="judul">More Information</p>
+        <div class="line"></div>
+        <img src="./img/b1.png" alt="" class="gambar">
+        <div class="flex">
+            <div class="item">
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Category</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">Stool</p>
+                </div>
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Tag</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">Japanese Stool</p>
+                </div>
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Dimension</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">38 x 28 x H43 cm</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Weight</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">4 kg</p>
+                </div>
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Finishing</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">Natural Coating</p>
+                </div>
+                <div class="spesifikasi-item">
+                    <p class="spesifikasi">Material</p>
+                    <p class="titikdua">:</p>
+                    <p class="isi">Meranti Wood</p>
+                </div>
+            </div>
+        </div>
+        <p class="deskripsi">
+            Inspired by structure of Japanese building Mori and Taku stool is out furniture pieces made with attention
+            to details. It has strong joints behind its simple form
+        </p>
+    </div>
+
+    <!-- Section Product -->
     <div class="section-product">
         <div class="field-gambar">
             <img src="./img/1.png" alt="" class="gambar">
@@ -62,8 +144,8 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
                 </ul>
             </div>
             <div class="field-button">
-                <a class="button">Assembly</a>
-                <a class="button">More Detail</a>
+                <a href="#" class="button assembly">Assembly</a>
+                <a href="#" class="button detail">More Detail</a>
             </div>
             <div class="line"></div>
             <div class="button-cart">
@@ -156,6 +238,38 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         </div>
     </div>
 
+    <div class="section-showcase">
+        <div class="kiri">
+            <div class="kotak"></div>
+        </div>
+        <div class="kanan">
+            <div class="kotak"></div>
+        </div>
+        <div class="overlay">
+            <div class="kiri">
+                <img src="./img/taku rangka 1.png" alt="" class="gambar">
+                <div class="field-teks">
+                    <p class="judul">Teks Judul 1</p>
+                    <p class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="kanan">
+                <img src="./img/taku rangka 1.png" alt="" class="gambar">
+                <div class="field-teks">
+                    <p class="judul">Teks Judul 2</p>
+                    <p class="deskripsi">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <div class="footer">
         <div class="knavigasi">
@@ -191,7 +305,7 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         <p class="teks">copyright - ZNBC Group 2021</p>
     </div>
     <div class="preloader">
-        <img src="./img/WOFLogo.png" class="icon"></img>
+        <img src="./img/WOFLogoq.png" class="icon"></img>
     </div>
     <button onclick="topFunction()" class="btnup" title="Go to top">^</button>
     <!-- Jquery -->
@@ -207,7 +321,6 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     <script src="./js/addindicator.js"></script>
     <!-- Custom Script -->
     <script src="./js/script.js"></script>
-    <script src="./js/yuhu.js"></script>
     <script src="./js/carousel.js"></script>
     <script src="./js/scrollmagic.js"></script>
     <script>
@@ -215,6 +328,9 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         scrollPage();
         navMod();
         qtyButton();
+        zoomButton();
+        assemblyButton();
+        detailButton();
     </script>
 </body>
 

@@ -1,0 +1,38 @@
+.overlay-gambar {
+    position: fixed;
+    @include fullposition;
+    height: 0;
+    z-index: 2;
+    opacity: 0;
+    @include flex-column;
+    transition: $transition-fast;
+
+    .background {
+        position: absolute;
+        @include fullposition;
+        background: black;
+        opacity: 0;
+        transition: $transition-slow;
+    }
+
+    .gambar {
+        height: 0px;
+        transition: $transition-slow;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    &.animate {
+        height: 100%;
+        opacity: 1;
+
+        .background {
+            opacity: .4;
+        }
+
+        .gambar {
+            height: 90vh;
+            opacity: 1;
+        }
+    }
+}

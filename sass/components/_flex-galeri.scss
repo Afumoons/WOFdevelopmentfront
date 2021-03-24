@@ -53,8 +53,6 @@
             opacity: 0;
             background-color: #fff;
             transition: $transition-slow;
-
-
         }
 
         .teks-overlay {
@@ -72,6 +70,7 @@
                 font-size: 1.4rem;
                 padding: 0 .5em;
                 padding-bottom: .3em;
+                margin-bottom: 1.7em;
                 color: color(white-light);
                 border-bottom: 2px solid color(white-light);
             }

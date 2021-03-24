@@ -1,0 +1,95 @@
+.section-assembly {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    @include flex-column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: color(white-light);
+    padding: 1em 2em;
+    z-index: 3;
+    transform: translateX(100%);
+    transition: $transition-slow;
+
+    @include tablet {
+        width: 52vw;
+        padding: 2em 2em 2em 10em;
+    }
+
+    &.animate {
+        transform: translateX(0);
+    }
+
+    .cross {
+        align-self: flex-end;
+        margin-bottom: 1em;
+
+        div {
+            width: 1.875em;
+            height: .1875em;
+            background-color: color(black-light);
+            margin: .3125em;
+            transition: .3s ease;
+            cursor: pointer;
+        }
+
+        .line1 {
+            transform: rotate(-405deg) translate(0px, 6px)
+        }
+
+        .line2 {
+            transform: rotate(45deg) translate(0px, -6px)
+        }
+    }
+
+    .judul {
+        @include judul;
+        margin-bottom: 1em;
+
+        @include tablet {
+            font-size: 2.5em
+        }
+    }
+
+    .line {
+        width: 5%;
+        border-bottom: 2px color(black-lightest) solid;
+        margin-bottom: 3em;
+    }
+
+    .flex {
+        @include flex-row;
+
+        .item {
+            position: relative;
+
+            margin: {
+                bottom: 2em;
+                right: 2em;
+            }
+
+            max: {
+                width: 230px;
+            }
+
+            .gambar {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                margin-bottom: .5em;
+                transition: $transition-slower;
+            }
+
+            .teks {
+                width: 100%;
+                font-weight: 500;
+                color: color(black-lighter);
+                transition: $transition-slower;
+            }
+        }
+    }
+}
