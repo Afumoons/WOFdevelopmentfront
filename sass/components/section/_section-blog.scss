@@ -6,7 +6,9 @@
 
     .judul {
         @include judul;
-        border-bottom: .1em color(black-lighter) solid;
+        text-align: center;
+        color: color(black-lightest);
+        border-bottom: .08em color(black-lightest) solid;
         padding-bottom: .5em;
 
         margin: {

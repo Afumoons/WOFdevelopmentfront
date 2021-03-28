@@ -11,7 +11,7 @@
     // height: 30em;
 
     @include pc {
-        margin: 10rem 8rem;
+        margin: 10rem 19rem;
         grid-template-columns: 43% 54%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
@@ -33,8 +33,8 @@
         .icon {
             @include flex-column;
             position: absolute;
-            top: 1em;
-            left: 1em;
+            top: 2em;
+            left: 2em;
             height: 3em;
             width: 3em;
             background-color: color(white-darkest);
@@ -57,7 +57,8 @@
 
         .category {
             font: {
-                size: 1.1em;
+                size: 1.125em;
+                weight: 300;
             }
 
             margin-bottom: 3em;
@@ -66,7 +67,16 @@
 
         .judul {
             @include judul;
-            margin-bottom: 1em;
+            margin-bottom: .4em;
+
+            @include tablet {
+                font-size: 4em;
+            }
+        }
+
+        .subjudul {
+            font-size: 1.25em;
+            margin-bottom: 1.2em;
         }
 
         .harga {
@@ -80,7 +90,7 @@
             transition: $transition-slower;
 
             @include tablet {
-                font-size: 2em;
+                font-size: 2.25em;
             }
         }
 
@@ -93,6 +103,7 @@
         .deskripsi {
             color: color(black-lightest);
             margin-bottom: 3em;
+            font-weight: 300;
         }
 
         .field-spesifikasi {
@@ -107,6 +118,7 @@
                 list-style: none;
 
                 li {
+                    font-weight: 300;
                     margin-bottom: .8em;
                 }
             }
@@ -131,9 +143,10 @@
 
             .button {
                 @include button;
+                border: 2px color(black-lightest) solid;
 
                 @include tablet {
-                    font-size: 1.3em;
+                    font-size: 1.125em;
                     padding: .6em 3em;
                 }
 
@@ -146,7 +159,7 @@
             padding: 1em 2em;
             transition: $transition-slow;
             width: 100%;
-            background-color: color(black-lightest);
+            background-color: #707070;
             color: color(white-light);
             margin-bottom: 1em;
             cursor: pointer;
@@ -177,10 +190,10 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                background-color: color(white-dark);
+                background-color: color(white-darker);
                 padding: .5em .5em;
 
-                border: 2px color(white-dark) solid {
+                border: 2px color(white-darker) solid {
                     radius: 2em;
                 }
 
@@ -194,16 +207,16 @@
 
                     .segitiga {
                         cursor: pointer;
-                        width: .5em;
-                        height: .3em;
+                        width: 1em;
+                        height: 0.5em;
                         margin: .2em;
                         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                         background-color: color(black-lighter);
                         transition: $transition-slow;
 
                         @include tablet {
-                            width: .5em;
-                            height: .2em;
+                            width: 0.875em;
+                            height: 0.375em;
                             margin: .1em;
                         }
 
@@ -219,10 +232,11 @@
 
                 .angka {
                     font-size: 1em;
+                    font-weight: 500;
                     color: color(white);
 
                     @include tablet {
-                        font-size: 1.6em;
+                        font-size: 3em;
                     }
                 }
             }

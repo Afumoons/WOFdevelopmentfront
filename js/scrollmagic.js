@@ -9,8 +9,10 @@ $(document).ready(function () {
   ) {
     let initial = new ScrollMagic.Scene({
       triggerElement: trigger, //tempat trigger
-      duration: durasi, //responsive
+      // duration: durasi, //responsive
       triggerHook: 0.75 - jarak,
+      reverse: false,
+      // offset: 700,
     })
       .setClassToggle(node, classisian) // add class to node
       // .addIndicators({ name: deskripsi }) // this requires plugin

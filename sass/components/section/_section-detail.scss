@@ -17,7 +17,7 @@
 
     @include tablet {
         width: 52vw;
-        padding: 2em 2em 2em 10em;
+        padding: 2em 6em 2em 10em;
     }
 
     &.animate {
@@ -50,15 +50,16 @@
         @include judul;
         margin-bottom: 1em;
 
-        @include tablet {
-            font-size: 2.5em
-        }
     }
 
     .line {
-        width: 5%;
+        width: 10%;
         border-bottom: 2px color(black-lightest) solid;
         margin-bottom: 3em;
+
+        @include pc {
+            width: 5%;
+        }
     }
 
     .gambar {
@@ -67,12 +68,18 @@
         object-fit: cover;
         margin-bottom: 3em;
         transition: $transition-slower;
+        // max-width: 40.1875em;
+        align-self: center;
     }
 
     .flex {
-        @include flex-row;
         width: 100%;
         margin-bottom: 2em;
+        @include flex-column;
+
+        @include pc {
+            @include flex-row;
+        }
 
         .item {
             width: 100%;
@@ -80,8 +87,8 @@
 
             .spesifikasi-item {
                 width: 100%;
-                @include flex-row;
                 justify-content: flex-start;
+                @include flex-row;
 
                 p {
                     color: color(black-lightest);

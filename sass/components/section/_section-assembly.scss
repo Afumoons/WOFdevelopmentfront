@@ -17,7 +17,7 @@
 
     @include tablet {
         width: 52vw;
-        padding: 2em 2em 2em 10em;
+        padding: 2em 6em 2em 10em;
     }
 
     &.animate {
@@ -50,19 +50,22 @@
         @include judul;
         margin-bottom: 1em;
 
-        @include tablet {
-            font-size: 2.5em
-        }
+
     }
 
     .line {
-        width: 5%;
+        width: 10%;
         border-bottom: 2px color(black-lightest) solid;
         margin-bottom: 3em;
+
+        @include pc {
+            width: 5%;
+        }
     }
 
     .flex {
         @include flex-row;
+        align-items: flex-start;
 
         .item {
             position: relative;
@@ -73,7 +76,7 @@
             }
 
             max: {
-                width: 230px;
+                width: 13.564375em;
             }
 
             .gambar {
@@ -86,6 +89,7 @@
 
             .teks {
                 width: 100%;
+                font-size: 1.125em;
                 font-weight: 500;
                 color: color(black-lighter);
                 transition: $transition-slower;

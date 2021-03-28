@@ -1,9 +1,9 @@
-.section-review {
+.section-related {
     @include flex-column;
     justify-content: flex-start;
     align-items: center;
     padding: 3em;
-    background-color: #E8E8E8;
+    background-color: color(white-light);
     margin-bottom: 13em;
 
     .judul {
@@ -30,7 +30,5 @@
         }
     }
 
-    .button {
-        @include button;
-    }
+
 }
