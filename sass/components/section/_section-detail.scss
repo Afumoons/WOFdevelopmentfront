@@ -17,7 +17,7 @@
 
     @include tablet {
         width: 52vw;
-        padding: 2em 2em 2em 10em;
+        padding: 2em 6em 2em 10em;
     }
 
     &.animate {
@@ -50,9 +50,6 @@
         @include judul;
         margin-bottom: 1em;
 
-        @include tablet {
-            font-size: 2.5em
-        }
     }
 
     .line {
@@ -71,6 +68,8 @@
         object-fit: cover;
         margin-bottom: 3em;
         transition: $transition-slower;
+        // max-width: 40.1875em;
+        align-self: center;
     }
 
     .flex {

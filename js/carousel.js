@@ -162,7 +162,40 @@ var swiperclient = new Swiper(".swiper-container.client-carousel", {
   },
 });
 
-var swipergaleri = new Swiper(".swiper-container.review-carousel", {
+var swiperreview = new Swiper(".swiper-container.review-carousel", {
+  loop: true,
+  lazy: true,
+  effect: "slide",
+  speed: 1000,
+  // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2000,
+    // reverseDirection: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+var swiperrelated = new Swiper(".swiper-container.related-carousel", {
   loop: true,
   lazy: true,
   effect: "slide",

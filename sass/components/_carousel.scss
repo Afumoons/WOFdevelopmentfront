@@ -537,10 +537,70 @@
         .keterangan {
             color: color(black-lighter);
             margin-bottom: 1em;
+            font-size: 1.125em;
         }
 
         .deskripsi {
             color: color(black-lighter);
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: color(black);
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}
+
+// Related Carousel
+.swiper-container.related-carousel {
+    width: 100%;
+    position: relative;
+    height: 40rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        width: 75%;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        transition: $transition-slow;
+        // transform: translateY(2.3em);
+        // margin-left: -30px;
+
+        // &.animate {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+
+        // &.swiper-slide-active {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+        a {
+            justify-content: flex-start;
+            align-items: center;
+
+            .gambar {
+                width: 100%;
+                // height: 100%;
+                object-fit: cover;
+                margin-bottom: 1em;
+            }
+
+            .teks {
+                font-size: 1.0625em;
+                margin-left: 1em;
+                margin-bottom: .6em;
+                align-self: flex-start;
+            }
         }
     }
 
