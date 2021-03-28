@@ -1,17 +1,17 @@
 .teks-gambar {
     overflow: hidden;
-    background-color: color(white);
+    background-color: color(white-light);
     position: relative;
     // color: color(black);
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas: "gambar"
         "teks";
-    grid-gap: 2em;
+    grid-gap: 8%;
     // height: 30em;
 
     @include pc {
-        grid-template-columns: 43% 54%;
+        grid-template-columns: 37% 55%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
 
@@ -21,7 +21,7 @@
         background-color: #E8E8E8;
 
         @include pc {
-            grid-template-columns: 54% 43%;
+            grid-template-columns: 55% 37%;
             grid-template-areas: "teks gambar";
         }
 
@@ -52,7 +52,7 @@
     }
 
     .field-teks {
-        background-color: color(white);
+        background-color: color(white-light);
         // min-height: 60em;
         grid-area: teks;
         padding: 3em;
@@ -77,17 +77,17 @@
             @include judul;
 
             margin: {
-                bottom: .23em;
+                bottom: .6em;
             }
 
         }
 
-        p.subjudul {
+        .subjudul {
             // @include flex-column;
             // width: 50%;
             font-size: .5em;
-            font-weight: bold;
-            margin-bottom: .63em;
+            font-weight: 400;
+            margin-bottom: 2em;
             transition: $transition-slower;
             color: color(black-lighter);
 
@@ -98,13 +98,14 @@
 
         div.line {
             width: 5em;
-            border-bottom: solid color(white-darker) 2px;
+            border-bottom: solid color(black-light) 2px;
             margin-bottom: 1.2em;
             transition: $transition-slower;
         }
 
         p.teks {
-            text-align: justify;
+            @include font2;
+            font-weight: 300;
             color: color(black-lighter);
             transition: $transition-slower;
         }

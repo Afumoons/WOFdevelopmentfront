@@ -56,9 +56,13 @@
     }
 
     .line {
-        width: 5%;
+        width: 10%;
         border-bottom: 2px color(black-lightest) solid;
         margin-bottom: 3em;
+
+        @include pc {
+            width: 5%;
+        }
     }
 
     .flex {

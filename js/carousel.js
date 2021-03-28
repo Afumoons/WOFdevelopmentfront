@@ -127,7 +127,7 @@ var swiperteam = new Swiper(".swiper-container.team-carousel", {
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 30,
     },
   },

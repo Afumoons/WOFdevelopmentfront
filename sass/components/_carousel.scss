@@ -100,7 +100,7 @@
 .swiper-container.blog-carousel {
     width: 100%;
     position: relative;
-    height: 30rem;
+    height: 36rem;
     margin-bottom: 2rem;
 
     @include tablet {
@@ -137,14 +137,14 @@
                 width: 100%;
 
                 .judul {
+                    @include font2;
                     font-size: 1.375rem;
                     text-align: left;
+                    line-height: 1.813125em;
                     border: 0;
                     padding-bottom: 0;
                     font-weight: 700;
-                    margin-bottom: 1.5em;
-                    font-family: 'Roboto Mono',
-                        monospace;
+                    margin-bottom: .9em;
 
                 }
 
@@ -159,8 +159,9 @@
 
                 .line {
                     width: 100%;
-                    border-bottom: 1px solid color(white-darkest);
+                    border-bottom: 2px solid color(white-darkest);
                     justify-self: flex-end;
+                    margin-bottom: .4em;
                 }
 
                 .meta {
@@ -171,7 +172,7 @@
                     .tanggal,
                     .author {
                         font-style: italic;
-                        font-weight: 600;
+                        font-weight: 400;
                         color: color(black-lightest);
                     }
                 }
@@ -352,7 +353,7 @@
 .swiper-container.team-carousel {
     width: 100%;
     position: relative;
-    height: 20rem;
+    height: 23rem;
 
     @include tablet {
         width: 75%;
@@ -401,23 +402,25 @@
                 width: 100%;
 
                 .judul {
+                    @include font1;
+
                     font: {
-                        size: 1em;
-                        weight: 600;
-                        family: 'EB Garamond', serif;
+                        size: 1.375em;
+                        weight: 700;
                         color: color(black-lighter);
                     }
 
+                    line-height: 1.794375em;
                     text-align: center;
                     border: 0;
                     padding-bottom: 0;
-                    font-weight: 600;
-                    margin-bottom: .15em;
+                    margin-bottom: .25em;
                     color: color(black-lighter);
                 }
 
                 .deskripsi {
                     text-align: center;
+                    font-size: 1.125em;
                     margin-bottom: 1em;
                     color: color(black-lightest);
                 }

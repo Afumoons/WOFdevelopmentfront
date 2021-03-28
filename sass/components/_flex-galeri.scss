@@ -20,7 +20,7 @@
         }
 
         max: {
-            width: 404px;
+            width: 25.25em;
         }
 
         .gambar {
@@ -39,6 +39,7 @@
 
         .teks {
             width: 100%;
+            font-size: 1.125em;
             color: color(black-lighter);
             transition: $transition-slower;
         }

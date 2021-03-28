@@ -39,11 +39,12 @@ div.teks-jumbo {
 
     .judul {
         @include judul;
+        text-align: center;
     }
 
     .line {
         width: 5em;
-        border-bottom: solid color(white-darker) 2px;
+        border-bottom: solid color(black-lightest) 2px;
         transition: $transition-slower;
 
     }
@@ -51,6 +52,7 @@ div.teks-jumbo {
     .teks {
         text-align: center;
         transition: $transition-slower;
+        font-size: 1.125em;
 
         // @include flex-column;
         // width: 50%;
