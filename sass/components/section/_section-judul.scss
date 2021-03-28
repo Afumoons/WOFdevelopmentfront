@@ -84,7 +84,7 @@
                         color: color(black-lighter);
                         text-decoration: none;
                         letter-spacing: .1rem;
-                        font-size: 1rem;
+                        font-size: 0.9375em;
 
                         @include tablet {
                             font-size: .875rem
@@ -121,15 +121,17 @@
         justify-content: space-evenly;
 
         .teks {
+            @include font2;
             color: color(black-lightest);
             margin-right: .23em;
+            margin-left: 2em;
+            font-weight: 400;
+            font-size: 0.9375em;
 
             a {
-                @include font2;
                 text-decoration: none;
-                text-align: right;
-                font-weight: 300;
                 color: color(black-lightest);
+                // text-align: right;
             }
         }
     }
