@@ -528,7 +528,7 @@
         //     // transform: translateY(0);
         // }
         .field-bintang {
-            color: color(black-lighter);
+            color: black;
             font-size: 1.4em;
             margin-bottom: 1em;
         }
@@ -538,13 +538,13 @@
         }
 
         .keterangan {
-            color: color(black-lighter);
+            color: black;
             margin-bottom: 1em;
             font-size: 1.125em;
         }
 
         .deskripsi {
-            color: color(black-lighter);
+            color: black;
         }
     }
 
@@ -599,10 +599,11 @@
             }
 
             .teks {
-                font-size: 1.0625em;
+                font-size: 18px;
                 margin-left: 1em;
                 margin-bottom: .6em;
                 align-self: flex-start;
+                color: black;
             }
         }
     }
