@@ -90,7 +90,7 @@ const scrollPage = () => {
 const navMod = () => {
   const navlinks = document.querySelector(".navbar .nav-links");
   const navlinksitem = navlinks.querySelectorAll("li");
-  if (navlinksitem.length == 1) {
+  if (navlinksitem.length == 2) {
     navlinks.style.justifyContent = "flex-end";
   }
 };

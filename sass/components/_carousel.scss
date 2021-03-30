@@ -138,19 +138,22 @@
 
                 .judul {
                     @include font2;
-                    font-size: 1.375rem;
+                    font-size: 22px;
                     text-align: left;
-                    line-height: 1.813125em;
+                    line-height: 29.01px;
                     border: 0;
                     padding-bottom: 0;
                     font-weight: 700;
-                    margin-bottom: .9em;
+                    margin-bottom: 21px;
 
                 }
 
                 .deskripsi {
                     text-align: justify;
                     margin-bottom: 1em;
+                    line-height: 21.1px;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 1);
                 }
             }
 
@@ -159,7 +162,7 @@
 
                 .line {
                     width: 100%;
-                    border-bottom: 2px solid color(white-darkest);
+                    border-bottom: 2px solid rgba(0, 0, 0, 1);
                     justify-self: flex-end;
                     margin-bottom: .4em;
                 }
@@ -173,7 +176,8 @@
                     .author {
                         font-style: italic;
                         font-weight: 400;
-                        color: color(black-lightest);
+                        font-size: 18px;
+                        color: rgba(0, 0, 0, 1);
                     }
                 }
             }
@@ -405,9 +409,8 @@
                     @include font1;
 
                     font: {
-                        size: 1.375em;
+                        size: 22px;
                         weight: 700;
-                        color: color(black-lighter);
                     }
 
                     line-height: 1.794375em;
@@ -415,14 +418,14 @@
                     border: 0;
                     padding-bottom: 0;
                     margin-bottom: .25em;
-                    color: color(black-lighter);
+                    color:black;
                 }
 
                 .deskripsi {
                     text-align: center;
-                    font-size: 1.125em;
+                    font-size: 18px;
                     margin-bottom: 1em;
-                    color: color(black-lightest);
+                    color: black;
                 }
             }
         }

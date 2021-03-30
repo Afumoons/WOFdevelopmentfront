@@ -49,7 +49,7 @@
         margin-bottom: 2em;
 
         @include tablet {
-            max-width: 11em;
+            max-width: 10.3125em;
         }
     }
 
@@ -57,11 +57,12 @@
         @include font2;
 
         font: {
-            weight: 300;
+            weight: 500;
             size: 1em;
             align: center;
         }
 
+        color: black;
         margin-bottom: 2em;
         z-index: 2;
     }
@@ -75,13 +76,13 @@
 
         .button {
             z-index: 2;
-            padding: .6em 1em;
-            border-radius: 2em;
-            border: grey 2px solid;
-            color: grey;
+            padding: 14px 20px 16px 19px;
+            border-radius: 40px;
+            border: rgba(112, 112, 112, 1) solid 2px;
+            color: black;
             margin-bottom: 1em;
-            font: .7em;
-            font-weight: 600;
+            font-weight: 400;
+            font-size: 11px;
 
             @include tablet {
                 margin-bottom: 0;
@@ -101,13 +102,13 @@
 }
 
 @mixin button {
-    color: color(black-lightest);
-    padding: .5em 1em;
+    color: black;
+    padding: 14px 20px 16px 19px;
     transition: $transition-slow;
-    font-size: 0.6875em;
+    font-size: 11px;
 
-    border: 2px color(white-darkest) solid {
-        radius: 2em;
+    border: 2px rgba(112, 112, 112, 1) solid {
+        radius: 40px;
     }
 
     @include tablet {
@@ -121,13 +122,15 @@
 }
 
 @mixin judul {
+    @include font1;
+
     font: {
         size: 2em;
         weight: 700;
     }
 
     @include font1;
-    color: color(black-lighter);
+    color: black;
 
     transition: $transition-slower;
 

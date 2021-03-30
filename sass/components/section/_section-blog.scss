@@ -1,23 +1,29 @@
 .section-blog {
     @include flex-column;
     justify-content: flex-start;
-    padding: 3em;
-    background-color: color(white);
+    padding: 3.9375em;
+    background-color: rgba(232, 232, 232, 1);
 
     .judul {
         @include judul;
         text-align: center;
-        color: color(black-lightest);
-        border-bottom: .08em color(black-lightest) solid;
-        padding-bottom: .5em;
+        color: rgba(0, 0, 0, 1);
+        // border-bottom: 2px rgba(112, 112, 112, 1) solid;
+        // padding-bottom: .5em;
 
         margin: {
-            bottom: 1.5em;
+            bottom: 21.5px;
         }
+    }
 
+    .line {
+        border-bottom: 2px rgba(112, 112, 112, 1) solid;
+        width: 41.5px;
+        margin-bottom: 48.5px
     }
 
     .button {
         @include button;
+        font-size: 14px;
     }
 }

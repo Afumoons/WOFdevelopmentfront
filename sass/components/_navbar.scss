@@ -24,7 +24,7 @@
          font-size: 1.25rem;
 
          img {
-             max-width: 4em;
+             max-width: 3.3125em;
          }
      }
 
@@ -57,20 +57,6 @@
          li {
              opacity: 0;
 
-             a {
-                 @include font2;
-                 color: color(black-lighter);
-                 text-decoration: none;
-                 letter-spacing: .1rem;
-                 font-size: 1rem;
-
-                 @include tablet {
-                     font-size: .875rem
-                 }
-             }
-
-
-
              @include tablet {
                  opacity: 1;
              }
@@ -79,7 +65,7 @@
                  position: relative;
 
                  i {
-                     color: color(black-lighter);
+                     color: #707070;
                      //  margin-right: 1em;
                  }
 
@@ -89,11 +75,37 @@
                      left: 1em;
                      bottom: -.5em;
                      padding: .2em .4em;
-                     color: color(black);
-                     background-color: hsl(0, 0%, 77%);
+                     color: black;
+                     background: #C4C4C4;
                      border-radius: 50%;
                  }
              }
+
+             a {
+                 @include font2;
+                 color: #707070;
+                 text-decoration: none;
+                 letter-spacing: .1rem;
+                 font-size: 1rem;
+
+                 @include tablet {
+                     font-size: .875rem
+                 }
+             }
+
+             .button {
+                 font-size: 0.75em;
+                 margin-right: 3em;
+                 border: 2px #707070 solid;
+                 border-radius: 2em;
+                 padding: .7em 1em;
+                 cursor: pointer;
+             }
+
+
+
+
+
          }
 
          @include tablet {
@@ -119,7 +131,7 @@
          div {
              width: 1.875em;
              height: .1875em;
-             background-color: color(black);
+             background-color: #707070;
              margin: .3125em;
              transition: .3s ease
          }

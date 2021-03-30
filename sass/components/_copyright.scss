@@ -1,10 +1,10 @@
 .copyright {
     @include flex-column;
     height: 4rem;
-    background-color: color(white);
+    background-color: white;
 
     .teks {
-        color: color(black-lightest);
+        color: black;
         font-size: 1.125em;
     }
 }

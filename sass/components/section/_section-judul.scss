@@ -2,7 +2,7 @@
     @include flex-column;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 2px color(black-lighter) solid;
+    border-bottom: 2px rgba(112, 112, 112, 1) solid;
     margin: 4rem 1rem;
     padding: 1em 0;
     transition: $transition-slower;
@@ -122,7 +122,7 @@
 
         .teks {
             @include font2;
-            color: color(black-lightest);
+            color: rgba(0, 0, 0, 1);
             margin-right: .23em;
             margin-left: 2em;
             font-weight: 400;
@@ -130,7 +130,7 @@
 
             a {
                 text-decoration: none;
-                color: color(black-lightest);
+                color: rgba(0, 0, 0, 1);
                 // text-align: right;
             }
         }
