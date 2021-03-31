@@ -70,6 +70,7 @@
                  }
 
                  .angka {
+                     @include font2;
                      font-size: 0.8125em;
                      position: absolute;
                      left: 1em;
@@ -94,6 +95,7 @@
              }
 
              .button {
+                 @include font2;
                  font-size: 0.75em;
                  margin-right: 3em;
                  border: 2px #707070 solid;

@@ -38,6 +38,7 @@
         }
 
         .teks {
+            @include font2;
             width: 100%;
             font-size: 1.125em;
             color: rgba(0, 0, 0, 1);
@@ -67,6 +68,7 @@
             transition: $transition-slow;
 
             .teks {
+                @include font2;
                 width: auto;
                 font-size: 1.4rem;
                 padding: 0 .5em;

@@ -25,11 +25,14 @@
 }
 
 @mixin font1 {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    // font-family: 'EB Garamond', serif;
 }
 
 @mixin font2 {
     font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 @mixin isicarouselheader {
@@ -57,7 +60,6 @@
         @include font2;
 
         font: {
-            weight: 500;
             size: 1em;
             align: center;
         }
@@ -81,7 +83,7 @@
             border: rgba(112, 112, 112, 1) solid 2px;
             color: black;
             margin-bottom: 1em;
-            font-weight: 400;
+            @include font2;
             font-size: 11px;
 
             @include tablet {
@@ -126,10 +128,8 @@
 
     font: {
         size: 2em;
-        weight: 700;
     }
 
-    @include font1;
     color: black;
 
     transition: $transition-slower;

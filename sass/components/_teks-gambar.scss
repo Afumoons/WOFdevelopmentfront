@@ -7,14 +7,13 @@
     grid-template-columns: 100%;
     grid-template-areas: "gambar"
         "teks";
-    grid-gap: 8%;
     // height: 30em;
 
     @include pc {
         grid-template-columns: 37% 55%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
-
+        grid-gap: 8%;
     }
 
     &:nth-child(2n) {
@@ -63,7 +62,10 @@
 
         // justify-content: space-evenly;
         @include pc {
-            padding-right: 20em;
+            padding: {
+                left: 10em;
+                right: 20em;
+            }
         }
 
         .icon {
@@ -105,7 +107,6 @@
 
         p.teks {
             @include font2;
-            font-weight: 400;
             color: rgba(0, 0, 0, 1);
             transition: $transition-slower;
         }

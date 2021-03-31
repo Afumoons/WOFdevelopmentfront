@@ -4,6 +4,7 @@
     background-color: white;
 
     .teks {
+        @include font2;
         color: black;
         font-size: 1.125em;
     }

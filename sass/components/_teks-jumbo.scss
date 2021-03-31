@@ -42,6 +42,7 @@ div.teks-jumbo {
     }
 
     .teks {
+        @include font2;
         text-align: center;
         transition: $transition-slower;
         font-size: 18px;
