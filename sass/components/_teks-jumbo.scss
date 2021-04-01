@@ -63,17 +63,31 @@ div.teks-jumbo {
 
         input[type="text"] {
             @include font2;
-            width: 35%;
+            width: 100%;
             text-align: center;
             padding: 12px;
             border-radius: 5px;
             margin-bottom: 7px;
+            transition: $transition-fast;
+
+            @include pc {
+                width: 35%;
+            }
+
+            &:focus {
+                box-shadow: 2px 2px 2px color(black-lighter);
+            }
         }
 
         input[type="submit"] {
             @include font2;
             padding: 2px 23px;
             border-radius: 40px;
+            background: rgba(112, 112, 112, 1);
+            border: none;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
         }
     }
 }

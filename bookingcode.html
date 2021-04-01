@@ -46,12 +46,47 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         <p class="judul fade right full rotate y"> Enter Your Booking Code </p>
         <div class="line fade left full rotate y"></div>
         <form action="#" class="form-booking">
-            <input type="text" name="bookingcode" id="bookingcode">
+            <input type="text" name="bookingcode" id="bookingcode" placeholder="Ex. 561427153889">
             <input type="submit" value="Enter">
         </form>
     </div>
 
+    <form class="section-booking" action="#" method="POST" id="billingdetails">
+        <div class="field-kiri">
+            <p class="judul">Billing Details</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Nama Lengkap">
+            <label for="address">Address:</label>
+            <textarea rows="4" cols="50" id="address" name="address" form="billingdetails"
+                placeholder="Alamat"></textarea>
+            <div class="field-input">
+                <input type="text" id="country" name="country" placeholder="Country">
+                <input type="text" id="district" name="district" placeholder="District">
+                <input type="text" id="village" name="village" placeholder="Village">
+            </div>
+            <div class="field-input">
+                <input type="text" id="province" name="province" placeholder="Province">
+                <input type="text" id="subdisctrict" name="subdisctrict" placeholder="Sub-Disctrict">
+                <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code">
+            </div>
+            <label for="addressnotes">Address Notes:</label>
+            <textarea rows="4" cols="50" id="addressnotes" name="addressnotes" form="billingdetails"
+                placeholder="Address Notes"></textarea>
+            <label for="phone">Phone Number / WA:</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number / WA">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="E-mail">
+        </div>
+        <div class="field-kanan">
+            <div class="judul">Your Order</div>
+            <div class="field-item">
+                <div class="gambar"></div>
+                <div class="field-teks">
 
+                </div>
+            </div>
+        </div>
+    </form>
 
     <!-- Footer -->
     <div class="footer">

@@ -1,0 +1,55 @@
+.section-booking {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 311px;
+
+    .field-kiri,
+    .field-kanan {
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 43%;
+        // background: red;
+
+        .judul {
+            @include judul;
+            margin-bottom: 28px;
+
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    .field-kiri {
+
+        input,
+        textarea {
+            @include font2;
+            font-size: 16px;
+            margin-bottom: 25px;
+            width: 100%;
+            border: rgba(112, 112, 112, 1) 1px solid;
+            padding: 11px 13px;
+            border-radius: 5px;
+
+            &::placeholder {}
+        }
+
+        .field-input {
+            @include flex-row;
+            justify-content: space-between;
+
+            input {
+                width: 30%;
+            }
+        }
+
+    }
+
+    .field-kanan {
+        margin-bottom: 71px;
+    }
+}
