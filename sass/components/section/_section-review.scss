@@ -2,9 +2,9 @@
     @include flex-column;
     justify-content: flex-start;
     align-items: center;
-    padding: 3em;
-    background-color: #E8E8E8;
-    margin-bottom: 13em;
+    padding: 88px 3em 2px 3em;
+    background-color: #e8e8e8;
+    margin-bottom: 197px;
 
     .judul {
         @include judul;
@@ -22,7 +22,7 @@
 
     .line {
         width: 2em;
-        border-bottom: 2px color(black-lighter) solid;
+        border-bottom: 2px rgba(112, 112, 112, 1) solid;
         margin-bottom: 2em;
 
         @include tablet {

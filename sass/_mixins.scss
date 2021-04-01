@@ -25,11 +25,14 @@
 }
 
 @mixin font1 {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    // font-family: 'EB Garamond', serif;
 }
 
 @mixin font2 {
     font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
 }
 
 @mixin isicarouselheader {
@@ -49,7 +52,7 @@
         margin-bottom: 2em;
 
         @include tablet {
-            max-width: 11em;
+            max-width: 165px;
         }
     }
 
@@ -57,11 +60,11 @@
         @include font2;
 
         font: {
-            weight: 300;
             size: 1em;
             align: center;
         }
 
+        color: black;
         margin-bottom: 2em;
         z-index: 2;
     }
@@ -75,13 +78,13 @@
 
         .button {
             z-index: 2;
-            padding: .6em 1em;
-            border-radius: 2em;
-            border: grey 2px solid;
-            color: grey;
+            padding: 14px 20px 16px 19px;
+            border-radius: 40px;
+            border: rgba(112, 112, 112, 1) solid 2px;
+            color: black;
             margin-bottom: 1em;
-            font: .7em;
-            font-weight: 600;
+            @include font2;
+            font-size: 11px;
 
             @include tablet {
                 margin-bottom: 0;
@@ -101,13 +104,13 @@
 }
 
 @mixin button {
-    color: color(black-lightest);
-    padding: .5em 1em;
+    color: black;
+    padding: 14px 20px 16px 19px;
     transition: $transition-slow;
-    font-size: 0.6875em;
+    font-size: 11px;
 
-    border: 2px color(white-darkest) solid {
-        radius: 2em;
+    border: 2px rgba(112, 112, 112, 1) solid {
+        radius: 40px;
     }
 
     @include tablet {
@@ -121,13 +124,13 @@
 }
 
 @mixin judul {
+    @include font1;
+
     font: {
         size: 2em;
-        weight: 700;
     }
 
-    @include font1;
-    color: color(black-lighter);
+    color: black;
 
     transition: $transition-slower;
 

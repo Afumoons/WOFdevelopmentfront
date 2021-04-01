@@ -7,14 +7,13 @@
     grid-template-columns: 100%;
     grid-template-areas: "gambar"
         "teks";
-    grid-gap: 8%;
     // height: 30em;
 
     @include pc {
         grid-template-columns: 37% 55%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
-
+        grid-gap: 8%;
     }
 
     &:nth-child(2n) {
@@ -31,8 +30,8 @@
 
             @include pc {
                 padding: {
-                    left: 15em;
-                    right: 0;
+                    left: 20em;
+                    right: 10em;
                 }
             }
         }
@@ -63,7 +62,10 @@
 
         // justify-content: space-evenly;
         @include pc {
-            padding-right: 15em;
+            padding: {
+                left: 10em;
+                right: 20em;
+            }
         }
 
         .icon {
@@ -105,8 +107,7 @@
 
         p.teks {
             @include font2;
-            font-weight: 300;
-            color: color(black-lighter);
+            color: rgba(0, 0, 0, 1);
             transition: $transition-slower;
         }
     }

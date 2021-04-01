@@ -1,15 +1,8 @@
 div.teks-jumbo {
     padding: 3em;
     background-color: white;
-    // position: relative;
     @include flex-column;
     justify-content: space-evenly;
-    // display: grid;
-    // grid-template-columns: 100%;
-    // grid-template-areas:
-    //     "judul"
-    //     "text";
-    // grid-gap: 2em;
     min-height: 15em;
 
     @include tablet {
@@ -43,16 +36,17 @@ div.teks-jumbo {
     }
 
     .line {
-        width: 5em;
-        border-bottom: solid color(black-lightest) 2px;
+        width: 41.5px;
+        border-bottom: solid rgba(112, 112, 112, 1) 2px;
         transition: $transition-slower;
-
     }
 
     .teks {
+        @include font2;
         text-align: center;
         transition: $transition-slower;
-        font-size: 1.125em;
+        font-size: 18px;
+        color: black;
 
         // @include flex-column;
         // width: 50%;

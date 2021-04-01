@@ -24,6 +24,7 @@
             }
 
             .teks {
+                @include font2;
                 color: color(white-light);
                 font-size: 1rem;
                 text-align: center;

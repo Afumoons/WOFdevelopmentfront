@@ -2,7 +2,7 @@
     @include flex-column;
     justify-content: space-between;
     align-items: flex-start;
-    border-bottom: 2px color(black-lighter) solid;
+    border-bottom: 2px rgba(112, 112, 112, 1) solid;
     margin: 4rem 1rem;
     padding: 1em 0;
     transition: $transition-slower;
@@ -33,9 +33,9 @@
             .line2,
             .line3 {
                 width: 1.875em;
-                height: .1875em;
+                height: 2px;
                 background-color: color(black-lighter);
-                margin: .3125em;
+                margin: 12px;
                 transition: .3s ease
             }
 
@@ -45,8 +45,8 @@
         .menu {
             position: absolute;
             top: .5em;
-            left: -15em;
-            width: 14em;
+            left: -16em;
+            width: 240px;
             padding-top: .5em;
             background: #E8E8E8;
             opacity: 0;
@@ -63,9 +63,9 @@
                 .line2,
                 .line3 {
                     width: 17em;
-                    height: .1875em;
+                    height: 2px;
                     background-color: color(black-lighter);
-                    margin: .3125em;
+                    margin: 12px;
                     transition: .3s ease
                 }
             }
@@ -78,9 +78,10 @@
                 margin: 3em 0;
 
                 li {
-                    margin-bottom: 1.2em;
+                    margin-bottom: 26px;
 
                     a {
+                        @include font2;
                         color: color(black-lighter);
                         text-decoration: none;
                         letter-spacing: .1rem;
@@ -91,7 +92,7 @@
                         }
 
                         &.active {
-                            padding: .4em 1em;
+                            padding: .4em 7px;
                             border-bottom: color(black-lighter) .1875em solid
                         }
                     }
@@ -122,15 +123,14 @@
 
         .teks {
             @include font2;
-            color: color(black-lightest);
+            color: rgba(0, 0, 0, 1);
             margin-right: .23em;
             margin-left: 2em;
-            font-weight: 400;
             font-size: 0.9375em;
 
             a {
                 text-decoration: none;
-                color: color(black-lightest);
+                color: rgba(0, 0, 0, 1);
                 // text-align: right;
             }
         }

@@ -31,7 +31,7 @@
         div {
             width: 1.875em;
             height: .1875em;
-            background-color: color(black-light);
+            background-color: rgba(112, 112, 112, 1);
             margin: .3125em;
             transition: .3s ease;
             cursor: pointer;
@@ -48,15 +48,15 @@
 
     .judul {
         @include judul;
-        margin-bottom: 1em;
+        margin-bottom: 30px;
 
 
     }
 
     .line {
         width: 10%;
-        border-bottom: 2px color(black-lightest) solid;
-        margin-bottom: 3em;
+        border-bottom: 2px rgba(112, 112, 112, 1) solid;
+        margin-bottom: 60px;
 
         @include pc {
             width: 5%;
@@ -88,10 +88,10 @@
             }
 
             .teks {
+                @include font2;
                 width: 100%;
                 font-size: 1.125em;
-                font-weight: 500;
-                color: color(black-lighter);
+                color: black;
                 transition: $transition-slower;
             }
         }

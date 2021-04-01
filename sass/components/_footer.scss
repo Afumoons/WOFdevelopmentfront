@@ -23,7 +23,7 @@
         }
 
         .judul {
-            font-weight: 700;
+            @include font1;
             color: color(white-dark);
             font-size: 1.375em;
             margin-bottom: 1em;
@@ -38,6 +38,7 @@
                 margin-bottom: .5em;
 
                 a {
+                    @include font2;
                     font-size: 1.125em;
                     color: color(white-dark);
                     text-decoration: none
@@ -60,7 +61,7 @@
         }
 
         .judul {
-            font-weight: 700;
+            @include font1;
             color: color(white-dark);
             font-size: 1.375em;
             margin-bottom: 1em;
@@ -68,6 +69,7 @@
         }
 
         .teks {
+            @include font2;
             font-size: 1.125em;
             color: color(white-dark);
             transition: $transition-slower;

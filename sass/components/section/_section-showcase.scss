@@ -90,8 +90,8 @@
                 }
 
                 .deskripsi {
-                    font-weight: 300;
-                    color: color(black-lighter);
+                    @include font2;
+                    color: black;
                     transition: $transition-slower;
                 }
             }

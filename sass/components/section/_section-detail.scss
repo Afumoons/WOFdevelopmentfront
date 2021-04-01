@@ -10,13 +10,13 @@
     align-items: flex-start;
     justify-content: flex-start;
     background: color(white-light);
-    padding: 1em 2em;
+    padding: 37px 2em;
     z-index: 3;
     transform: translateX(100%);
     transition: $transition-slow;
 
     @include tablet {
-        width: 52vw;
+        width: 984px;
         padding: 2em 6em 2em 10em;
     }
 
@@ -26,7 +26,7 @@
 
     .cross {
         align-self: flex-end;
-        margin-bottom: 1em;
+        margin-bottom: 34px;
 
         div {
             width: 1.875em;
@@ -53,8 +53,8 @@
     }
 
     .line {
-        width: 10%;
-        border-bottom: 2px color(black-lightest) solid;
+        width: 41px;
+        border-bottom: 2px rgba(112, 112, 112, 1) solid;
         margin-bottom: 3em;
 
         @include pc {
@@ -65,20 +65,25 @@
     .gambar {
         width: 100%;
         height: 100%;
+        max-width: 643px;
+        max-height: 392px;
         object-fit: cover;
-        margin-bottom: 3em;
+        margin-bottom: 53px;
+        align-self: flex-start;
         transition: $transition-slower;
         // max-width: 40.1875em;
-        align-self: center;
     }
 
     .flex {
         width: 100%;
-        margin-bottom: 2em;
+        max-width: 643px;
+        margin-bottom: 63px;
+        align-self: flex-start;
         @include flex-column;
 
         @include pc {
             @include flex-row;
+            justify-content: space-between;
         }
 
         .item {
@@ -87,13 +92,13 @@
 
             .spesifikasi-item {
                 width: 100%;
-                justify-content: flex-start;
                 @include flex-row;
+                justify-content: flex-start;
 
                 p {
-                    color: color(black-lightest);
+                    @include font2;
+                    color: black;
                     margin-bottom: .5em;
-                    font-weight: 300;
                 }
 
                 .spesifikasi {
@@ -112,7 +117,8 @@
     }
 
     .deskripsi {
-        color: color(black-lightest);
-        font-weight: 300;
+        @include font2;
+        max-width: 643px;
+        color: black;
     }
 }
