@@ -81,6 +81,7 @@
                     margin-bottom: 26px;
 
                     a {
+                        @include font2;
                         color: color(black-lighter);
                         text-decoration: none;
                         letter-spacing: .1rem;

@@ -56,9 +56,10 @@
         padding: 1em;
 
         .category {
+            @include font2;
+
             font: {
                 size: 1.125em;
-                weight: 500;
             }
 
             margin-bottom: 3em;
@@ -75,15 +76,17 @@
         }
 
         .subjudul {
+            @include font2;
             font-size: 20px;
             color: black;
             margin-bottom: 32px;
         }
 
         .harga {
+            @include font2;
+
             font: {
                 size: 36px;
-                weight: 500;
             }
 
             margin-bottom: 42px;
@@ -102,9 +105,9 @@
         }
 
         .deskripsi {
+            @include font2;
             color: black;
             margin-bottom: 3em;
-            font-weight: 300;
         }
 
         .field-spesifikasi {
@@ -119,7 +122,7 @@
                 list-style: none;
 
                 li {
-                    font-weight: 500;
+                    @include font2;
                     margin-bottom: .8em;
                 }
             }
@@ -147,8 +150,8 @@
                 border: 2px rgba(112, 112, 112, 1) solid;
 
                 @include tablet {
+                    @include font2;
                     font-size: 18px;
-                    font-weight: 500;
                     padding: 11px 62px 10px 61px;
                 }
 
@@ -172,8 +175,10 @@
             }
 
             @include tablet {
-                font-size: 30px;
-                padding: 11px 80px 9px 239px;
+                width: 40%;
+                align-self: center;
+                font-size: 16px;
+                padding: 12px 14px 13px 13%;
             }
 
             &:hover {
@@ -233,8 +238,8 @@
                 }
 
                 .angka {
+                    @include font2;
                     font-size: 48px;
-                    font-weight: 500;
                     color: color(white);
 
                     @include tablet {
@@ -245,6 +250,7 @@
         }
 
         .estimasi {
+            @include font2;
             align-self: center;
             color: black;
         }

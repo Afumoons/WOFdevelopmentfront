@@ -96,9 +96,9 @@
                 justify-content: flex-start;
 
                 p {
+                    @include font2;
                     color: black;
                     margin-bottom: .5em;
-                    font-weight: 500;
                 }
 
                 .spesifikasi {
@@ -117,8 +117,8 @@
     }
 
     .deskripsi {
+        @include font2;
         max-width: 643px;
         color: black;
-        font-weight: 300;
     }
 }

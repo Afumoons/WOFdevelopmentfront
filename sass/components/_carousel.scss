@@ -539,12 +539,14 @@
         }
 
         .keterangan {
+            @include font2;
             color: black;
             margin-bottom: 1em;
             font-size: 1.125em;
         }
 
         .deskripsi {
+            @include font2;
             color: black;
         }
     }
@@ -600,6 +602,7 @@
             }
 
             .teks {
+                @include font2;
                 font-size: 18px;
                 margin-left: 1em;
                 margin-bottom: .6em;
