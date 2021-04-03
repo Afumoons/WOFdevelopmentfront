@@ -1,0 +1,10 @@
+.section-delivery {
+    @include flex-row;
+    // width: 100%;
+
+    .gambar {
+        max-height: 150px;
+        // width: 25%;
+        object-fit: contain;
+    }
+}

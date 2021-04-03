@@ -1,0 +1,153 @@
+.section-booking {
+    @include flex-column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+
+    @include pc {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 311px;
+    }
+
+    .field-kiri,
+    .field-kanan {
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        @include pc {
+            width: 43%;
+        }
+
+        .judul {
+            @include judul;
+            margin-bottom: 28px;
+
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+
+        .pembungkus-input {
+            position: relative;
+            width: 100%;
+
+            input,
+            textarea {
+                @include font2;
+                font-size: 16px;
+                margin-bottom: 25px;
+                width: 100%;
+                border: rgba(112, 112, 112, 1) 1px solid;
+                padding: 11px 13px;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include font2;
+                }
+
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            label {
+                @include font2;
+                font-size: 10px;
+                position: absolute;
+                z-index: 1;
+                top: -6px;
+                left: 13px;
+                background: white;
+                padding: 0px 5px;
+                color: rgba(112, 112, 112, 1);
+            }
+        }
+
+        .field-input {
+            @include flex-row;
+            justify-content: space-between;
+
+            .pembungkus-input {
+                width: 30%;
+            }
+        }
+
+        .field-item {
+            @include flex-row;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 21px;
+
+            .gambar {
+                width: 225px;
+                height: 225px;
+                object-fit: cover;
+                margin-right: 36px;
+            }
+
+            .field-teks {
+                @include flex-column;
+                width: 100%;
+
+
+
+            }
+        }
+
+        .field-spesifikasi {
+            width: 100%;
+            @include flex-row;
+            justify-content: flex-start;
+
+            p {
+                @include font2;
+                color: black;
+                margin-bottom: .5em;
+            }
+
+            .spesifikasi {
+                width: 35%;
+            }
+
+            .titikdua {
+                width: 5%;
+            }
+
+            .isi {
+                @include font1;
+                width: 50%;
+            }
+        }
+
+        .payment {
+            @include flex-row;
+            width: 100%;
+            justify-content: space-between;
+            background: #E8E8E8;
+            padding: 18px;
+            margin-bottom: 12px;
+
+            .teks {
+                @include font2;
+                font-size: 16px;
+            }
+        }
+
+        .deskripsi {
+            @include font2;
+            font-size: 10px;
+        }
+    }
+
+    .field-kiri {}
+
+    .field-kanan {
+        margin-bottom: 71px;
+    }
+}

@@ -13,7 +13,7 @@ div.teks-jumbo {
     }
 
     .background {
-        background-image: url('../img/WOFLogo.png');
+        // background-image: url('../img/WOFLogo.png');
         // background-image: url([data-gambar]);
         background-repeat: no-repeat;
         background-position: center;
@@ -32,6 +32,7 @@ div.teks-jumbo {
 
     .judul {
         @include judul;
+        margin-bottom: 21.5px;
         text-align: center;
     }
 
@@ -39,6 +40,7 @@ div.teks-jumbo {
         width: 41.5px;
         border-bottom: solid rgba(112, 112, 112, 1) 2px;
         transition: $transition-slower;
+        margin-bottom: 22.5px;
     }
 
     .teks {
@@ -52,6 +54,40 @@ div.teks-jumbo {
         // width: 50%;
         // padding: 3em;
         @include tablet {}
+    }
 
+    .form-booking {
+        @include flex-column;
+        width: 100%;
+        // margin-top: 31px;
+
+        input[type="text"] {
+            @include font2;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 7px;
+            transition: $transition-fast;
+
+            @include pc {
+                width: 35%;
+            }
+
+            &:focus {
+                box-shadow: 2px 2px 2px color(black-lighter);
+            }
+        }
+
+        input[type="submit"] {
+            @include font2;
+            padding: 2px 23px;
+            border-radius: 40px;
+            background: rgba(112, 112, 112, 1);
+            border: none;
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+        }
     }
 }
