@@ -3,26 +3,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    margin-top: 95px;
 
-    .field-link {
-        width: 100%;
-        @include flex-row;
-        margin-bottom: 86px;
-
-        .link {
-            @include font1;
-            font-size: 36px;
-            margin-right: 50px;
-            color: color(white-darker);
-
-            &.active {
-                color: black;
-                border-bottom: 2px rgba(112, 112, 112, 1) solid;
-                padding: 22px 0px;
-            }
-        }
-    }
 
     .field-item {
         @include flex-row;
