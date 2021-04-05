@@ -217,11 +217,23 @@
             @include font2;
             list-style: none;
             width: 50%;
-            padding: 11px 11px;
+            // padding: 11px 11px;
             background-color: rgba(112, 112, 112, 1);
             border: rgba(112, 112, 112, 1) 2px solid;
             border-radius: 40px;
             color: white;
+
+            input {
+                // height: 100%;
+                background-color: rgba(112, 112, 112, 1);
+                border: none;
+                border-radius: 40px;
+                color: white;
+                padding: 11px 11px;
+                text-decoration: none;
+                // margin: 4px 2px;
+                cursor: pointer;
+            }
 
             .overlay {
                 position: absolute;

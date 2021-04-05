@@ -48,7 +48,7 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         <a href="./confirmation.html" class="link">Confirmation</a>
     </div>
 
-    <form class="section-form" action="#" method="POST" id="billingdetails">
+    <form class="section-form" action="#" method="GET" id="billingdetails">
         <div class="field-kiri">
             <p class="judul">Billing Details</p>
             <div class="pembungkus-input">
@@ -179,9 +179,15 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
                 <input type="checkbox" name="agreement" id="agreement">
                 <span class="checkmark"></span>
             </label>
-            <a href="#" class="button-order">Proceed to Checkout
+            <!-- <a href="./confirmation.html" class="button-order">
+                <input type="submit" value="Proceed to checkout" class="">
                 <div class="overlay">-></div>
-            </a>
+            </a> -->
+            <div class="button-order">
+                <input type="submit" value="Proceed to checkout" class="">
+                <!-- <div class="overlay">-></div> -->
+                <input type="submit" value="->" class="overlay">
+            </div>
         </div>
     </form>
 
