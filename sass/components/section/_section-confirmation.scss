@@ -1,1 +1,82 @@
-.section-confirmation {}
+.section-confirmation {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(232, 232, 232, 1);
+    padding: 38px 311px;
+
+    .field-kiri,
+    .field-tengah,
+    .field-kanan {
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        @include font2;
+        // width: 454px;
+        margin-right: 54px;
+
+        .judul {
+            @include font1;
+            font-size: 24px;
+            margin-bottom: 91px
+        }
+
+        .teks {
+            @include font2;
+            margin-bottom: 10px
+        }
+
+        .bookingcode {
+            @include font1;
+            font-size: 30px;
+        }
+
+        .field-payment {
+            @include flex-row;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            .gambar {
+                margin-right: 13px;
+            }
+
+            .field-teks {
+                @include flex-column;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-right: 13px;
+
+                .teks {
+                    margin-bottom: 0;
+                }
+
+                .sub-judul {
+                    align-self: flex-start
+                }
+            }
+
+            .sub-judul {
+                @include font1;
+                align-self: flex-end;
+            }
+        }
+
+        .button {
+            align-self: center;
+            @include font2;
+            font-size: 0.75em;
+            margin-right: 3em;
+            border: 2px #707070 solid;
+            border-radius: 2em;
+            padding: .7em 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
+    .field-kanan {
+        .teks {
+            margin-bottom: 27px;
+        }
+    }
+}
