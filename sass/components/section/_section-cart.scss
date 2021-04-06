@@ -1,0 +1,123 @@
+.section-cart {
+    @include flex-column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+
+    .field-item {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 2px rgba(112, 112, 112, 1) solid;
+        padding: 40px 0;
+        width: 70%;
+        // margin: 0 311px;
+
+        .gambar {
+            width: 225px;
+            height: 225px;
+            object-fit: cover;
+            // margin-right: 36px;
+        }
+
+        .field-tengah {
+            @include flex-column;
+            width: 30%;
+
+
+        }
+
+        .field-kanan {
+            @include flex-column;
+            align-items: flex-start;
+            width: 30%;
+            margin-right: 160px;
+
+            .judul {
+                @include font1;
+                margin-bottom: 15px;
+                color: black;
+            }
+
+            .field-spesifikasi {
+                .isi {
+                    @include flex-row;
+                    justify-content: space-between;
+                    width: 50%;
+                    @include font1;
+
+                    .angka {
+                        @include font1;
+                    }
+
+                    .button {
+                        width: 27px;
+                        height: 27px;
+                        // padding: .2em .5em;
+                        text-align: center;
+                        border: 1px black solid;
+                        border-radius: 13px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .button-checkout {
+                position: relative;
+                @include font2;
+                list-style: none;
+                width: 100%;
+                padding: 11px 11px;
+                background-color: rgba(112, 112, 112, 1);
+                border: rgba(112, 112, 112, 1) 2px solid;
+                border-radius: 40px;
+                color: white;
+
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 1px;
+                    padding: 11px 11px;
+                    background: rgba(196, 196, 196, 1);
+                    border-radius: 40px;
+                }
+            }
+        }
+
+        .field-spesifikasi {
+            width: 100%;
+            @include flex-row;
+            justify-content: flex-start;
+            margin-bottom: 18px;
+
+            p {
+                @include font2;
+                font-size: 16px;
+                color: black;
+            }
+
+            .spesifikasi {
+                width: 35%;
+            }
+
+            .titikdua {
+                width: 5%;
+            }
+
+            .isi {
+                width: 50%;
+            }
+        }
+    }
+
+    .buttonadd {
+        @include font2;
+        color: rgba(112, 112, 112, 1);
+        font-size: 18px;
+        border: 2px rgba(112, 112, 112, 1) solid;
+        border-radius: 40px;
+        padding: 11px 44px;
+        margin-bottom: 50px;
+    }
+}
