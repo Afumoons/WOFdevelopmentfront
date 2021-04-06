@@ -82,7 +82,7 @@ $(document).ready(function () {
   initscenesimple(".button-section", false);
 
   // Scene SectionBlog
-  initscenesimple(".section-blog", true);
+  initscenesimple(".section-blog-carousel", true);
 
   // Scene SectionGaleri
   initscenesimple(".section-galeri", true);
