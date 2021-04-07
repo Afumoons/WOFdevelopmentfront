@@ -1,7 +1,131 @@
 .section-article {
+    .judul {
+        @include font1;
+        font-size: 36px;
+        margin: 0 521px;
+        margin-bottom: 24px;
+    }
+
     .teks {
         @include font2;
         margin: 0 521px;
         margin-bottom: 34px;
+    }
+
+    .gambar-teks {
+        overflow: hidden;
+        background-color: white;
+        position: relative;
+        // color: color(black);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "gambar"
+            "teks";
+        // height: 30em;
+        margin-bottom: 26px;
+
+        @include pc {
+            grid-template-columns: 73% 27%;
+            grid-template-areas: "gambar teks";
+            justify-content: space-between;
+            // grid-gap: 8%;
+        }
+
+        &:nth-child(2n) {
+            background-color: white;
+
+            @include pc {
+                grid-template-columns: 27% 73%;
+                grid-template-areas: "teks gambar";
+            }
+
+
+            .field-teks {
+                background-color: hsl(0, 0%, 100%);
+
+                @include pc {
+                    padding: {
+                        left: 311px;
+                        right: 32px;
+                    }
+                }
+            }
+        }
+
+        .field-gambar {
+            grid-area: gambar;
+            transition: $transition-slower;
+            // min-height: 20em;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        .field-teks {
+            background-color: color(white-light);
+            // min-height: 60em;
+            grid-area: teks;
+            // padding: 3em;
+            // padding-left: 15em;
+            @include flex-column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transition: $transition-slower;
+
+            // justify-content: space-evenly;
+            @include pc {
+                padding: {
+                    left: 32px;
+                    right: 311px;
+                }
+            }
+
+            .icon {
+                font-size: 3em;
+                margin-bottom: .33em;
+                transition: $transition-slower;
+                color: grey;
+            }
+
+            .judul {
+                @include judul;
+
+                margin: {
+                    bottom: .6em;
+                }
+
+            }
+
+            .subjudul {
+                // @include flex-column;
+                // width: 50%;
+                font-size: .5em;
+                font-weight: 400;
+                margin-bottom: 2em;
+                transition: $transition-slower;
+                color: color(black-lighter);
+
+                @include tablet {
+                    font-size: 1em;
+                }
+            }
+
+            div.line {
+                width: 5em;
+                border-bottom: solid color(black-light) 2px;
+                margin-bottom: 1.2em;
+                transition: $transition-slower;
+            }
+
+            p.teks {
+                @include font2;
+                color: rgba(0, 0, 0, 1);
+                transition: $transition-slower;
+            }
+        }
     }
 }
