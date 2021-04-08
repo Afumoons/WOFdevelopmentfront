@@ -3,12 +3,12 @@
     @include flex-row;
     // padding: 3.5em;
     // justify-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     background-color: color(white-light);
 
     @include pc {
-        margin: 0rem 15%;
+        margin: 0rem 15% 120px 15%;
     }
 
     .item {
@@ -86,6 +86,113 @@
 
             .teks-overlay {
                 opacity: 1;
+            }
+        }
+    }
+
+    .item-blog {
+        position: relative;
+
+        margin: {
+            bottom: 2em;
+            right: 29px;
+        }
+
+        max: {
+            width: 404px;
+        }
+
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: $transition-slow;
+        background: rgb(242, 242, 242);
+
+        .gambar {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+
+        .field-content {
+            @include flex-column;
+            width: 100%;
+            height: 50%;
+            justify-content: space-between;
+            padding: 0 41px;
+
+            .field-teks {
+                width: 100%;
+
+                .judul {
+                    @include font2;
+                    font-size: 22px;
+                    text-align: left;
+                    line-height: 29.01px;
+                    border: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 21px;
+                    color: black
+                }
+
+                .deskripsi {
+                    @include font2;
+                    text-align: justify;
+                    margin-bottom: 1em;
+                    line-height: 21.1px;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 1);
+                }
+            }
+
+            .field-meta {
+                width: 100%;
+
+                .line {
+                    width: 100%;
+                    border-bottom: 2px solid color(white-darkest);
+                    justify-self: flex-end;
+                    margin-bottom: .4em;
+                }
+
+                .meta {
+                    @include flex-row;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .tanggal,
+                    .author {
+                        @include font2;
+                        font-style: italic;
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, 1);
+                    }
+                }
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            opacity: 0;
+            background: color(white-darkest);
+            transition: $transition-slow;
+            // background: red;
+        }
+
+        &:hover {
+            .overlay {
+                opacity: .5;
             }
         }
     }

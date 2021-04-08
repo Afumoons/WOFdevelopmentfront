@@ -75,6 +75,9 @@ $(document).ready(function () {
   // Scene GambarHero
   initscenesimple(".gambar-hero", true);
 
+  // Scene GambarHeroBig
+  initscenesimple(".gambar-hero-big", true);
+
   // Scene JudulSection
   initscenesimple(".section-judul", false);
 
@@ -82,7 +85,7 @@ $(document).ready(function () {
   initscenesimple(".button-section", false);
 
   // Scene SectionBlog
-  initscenesimple(".section-blog", true);
+  initscenesimple(".section-blog-carousel", true);
 
   // Scene SectionGaleri
   initscenesimple(".section-galeri", true);

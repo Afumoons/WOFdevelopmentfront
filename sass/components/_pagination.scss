@@ -1,0 +1,26 @@
+.pagination {
+    @include flex-row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 40%;
+    margin-bottom: 42px;
+
+    a {
+        @include font1;
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+
+        &.active {
+            padding-bottom: 9px;
+            border-bottom: 2px rgba(112, 112, 112, 1) solid;
+        }
+    }
+
+    .teks {
+        align-items: flex-end;
+        @include font1;
+        font-size: 24px;
+        color: black;
+    }
+}

@@ -1,0 +1,116 @@
+.form-comment {
+    @include flex-column;
+    width: 100%;
+    background-color: rgb(232, 232, 232);
+    margin-top: 71px;
+    margin-bottom: 96px;
+    padding: 76px 313px 54px 313px;
+
+    .judul {
+        @include font1;
+        font-size: 36px;
+        color: black;
+        margin-bottom: 61px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        border: none;
+    }
+
+    textarea {
+        resize: vertical;
+        margin-bottom: 32px;
+        padding: 32px 42px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        padding: 30px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 40px;
+        border: 2px rgba(112, 112, 112, 1) solid;
+        border-radius: 40px;
+    }
+
+    .field-input {
+        width: 100%;
+        @include flex-row;
+        justify-content: space-between;
+        margin-bottom: 37px;
+
+        input[type="text"],
+        input[type="email"] {
+            width: 49%;
+        }
+    }
+
+    .agreement {
+        @include font2;
+        @include flex-row;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+        margin-bottom: 40px;
+        align-self: flex-start;
+        height: 27px;
+
+        /* Hide the browser's default checkbox */
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            /* When the checkbox is checked, add a blue background */
+            &:checked~.checkmark {
+                // background-color: #59aaec;
+
+                /* Show the checkmark when checked */
+                &:after {
+                    display: block;
+                }
+            }
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 27px;
+            width: 27px;
+            background-color: white;
+            // border: 1px rgba(112, 112, 112, 1) solid;
+            // border-radius: 5px;
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            /* Style the checkmark/indicator */
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 10px;
+                bottom: 2px;
+                width: 5px;
+                height: 19px;
+                border: solid black;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        /* On mouse-over, add a grey background color */
+        &:hover input~.checkmark {
+            background-color: #ccc;
+        }
+    }
+}

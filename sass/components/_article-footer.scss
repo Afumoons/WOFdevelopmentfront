@@ -1,0 +1,60 @@
+.article-footer {
+    @include flex-column;
+    justify-content: flex-start;
+
+    .field-button {
+        @include flex-row;
+        justify-content: space-between;
+        width: 10%;
+        margin-bottom: 69px;
+
+        a {
+            @include flex-column;
+            // margin-right: 122px;
+
+            img {
+                margin-bottom: 17px;
+            }
+
+            p {
+                @include font2;
+            }
+        }
+    }
+
+    .line {
+        border-bottom: 2px rgba(196, 196, 196, 1) solid;
+        width: 70%;
+        // margin: 0 312px;
+        margin-bottom: 40px;
+    }
+
+    .author {
+        @include flex-column;
+        justify-content: flex-start;
+        width: 100%;
+
+        img {
+            margin-bottom: 20px
+        }
+
+        .teks {
+            @include font2;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .judul {
+            @include font1;
+            font-size: 25px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .field-nav {
+        @include flex-row;
+        justify-content: space-between;
+        width: 68%;
+        margin-bottom: 40px;
+    }
+}
