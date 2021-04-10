@@ -12,8 +12,14 @@
 // Header Carousel
 .swiper-container.header-carousel {
     width: 100%;
+    height: 45vh;
     position: relative;
-    height: 100vh;
+    margin-top: 8vh;
+
+    @include pc {
+        margin-top: 0vh;
+        height: 100vh;
+    }
 
     .swiper-slide {
         text-align: center;
@@ -35,6 +41,8 @@
 
         .atas {
             @include isicarouselheader;
+
+            top: 7%;
 
             @include tablet {
                 top: 20%;
@@ -100,11 +108,12 @@
 .swiper-container.blog-carousel {
     width: 100%;
     position: relative;
-    height: 36rem;
+    height: 16rem;
     margin-bottom: 2rem;
 
     @include tablet {
         width: 75%;
+        height: 36rem;
     }
 
     .swiper-slide {
@@ -138,22 +147,31 @@
 
                 .judul {
                     @include font2;
-                    font-size: 22px;
+                    font-size: 11px;
                     text-align: left;
-                    line-height: 29.01px;
+                    line-height: 14.51px;
                     border: 0;
                     padding-bottom: 0;
                     margin-bottom: 21px;
 
+                    @include pc {
+                        font-size: 22px;
+                        line-height: 29.01px;
+                    }
                 }
 
                 .deskripsi {
                     @include font2;
                     text-align: justify;
+                    font-size: 8px;
+                    line-height: 10.55px;
                     margin-bottom: 1em;
-                    line-height: 21.1px;
-                    font-size: 16px;
                     color: rgba(0, 0, 0, 1);
+
+                    @include pc {
+                        line-height: 21.1px;
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -162,9 +180,13 @@
 
                 .line {
                     width: 100%;
-                    border-bottom: 2px solid rgba(0, 0, 0, 1);
+                    border-bottom: 1px solid rgba(0, 0, 0, 1);
                     justify-self: flex-end;
                     margin-bottom: .4em;
+
+                    @include pc {
+                        border-bottom: 2px solid rgba(0, 0, 0, 1);
+                    }
                 }
 
                 .meta {
@@ -176,8 +198,12 @@
                     .author {
                         @include font2;
                         font-style: italic;
-                        font-size: 18px;
+                        font-size: 7px;
                         color: rgba(0, 0, 0, 1);
+
+                        @include pc {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -208,17 +234,20 @@
         color: color(black);
         filter: drop-shadow(2px 2px 4px color(white-dark));
     }
+
+    .swiper-button-next {}
 }
 
 // Galeri Carousel
 .swiper-container.galeri-carousel {
     width: 100%;
     position: relative;
-    height: 20rem;
+    height: 15rem;
     margin-bottom: 2rem;
 
     @include tablet {
         width: 75%;
+        height: 36rem;
     }
 
     .swiper-slide {
@@ -357,10 +386,11 @@
 .swiper-container.team-carousel {
     width: 100%;
     position: relative;
-    height: 23rem;
+    height: 14rem;
 
     @include tablet {
         width: 75%;
+        height: 23rem;
     }
 
     .swiper-slide {
@@ -384,22 +414,31 @@
 
         .field-gambar {
             @include flex-column;
-            margin-bottom: 1em;
+            margin-bottom: 6px;
             height: 70%;
 
+            @include pc {
+                margin-bottom: 1em;
+            }
+
             img.gambar {
-                width: 12em;
-                height: 12em;
+                width: 110px;
+                height: 110px;
                 // max-width: 300px;
                 object-fit: cover;
                 border-radius: 50%;
+
+                @include pc {
+                    width: 12em;
+                    height: 12em;
+                }
             }
         }
 
         .field-content {
             @include flex-column;
             width: 100%;
-            height: 20%;
+            height: 30%;
             justify-content: space-between;
 
             .field-teks {
@@ -407,26 +446,33 @@
 
                 .judul {
                     @include font1;
+                    font-size: 14px;
 
-                    font: {
-                        size: 22px;
-                        weight: 700;
-                    }
 
                     line-height: 1.794375em;
                     text-align: center;
                     border: 0;
                     padding-bottom: 0;
                     margin-bottom: .25em;
-                    color:black;
+                    color: black;
+
+                    @include pc {
+                        font: {
+                            size: 22px;
+                        }
+                    }
                 }
 
                 .deskripsi {
                     @include font2;
                     text-align: center;
-                    font-size: 18px;
+                    font-size: 10px;
                     margin-bottom: 1em;
                     color: black;
+
+                    @include pc {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -446,10 +492,11 @@
 .swiper-container.client-carousel {
     width: 100%;
     position: relative;
-    height: 15rem;
+    height: 8rem;
 
     @include tablet {
         width: 75%;
+        height: 15rem;
     }
 
     .swiper-slide {
@@ -471,18 +518,29 @@
             // height: 100%;
             // transform: translateY(0);
             .gambar {
-                width: 11em;
-                height: 11em;
+                width: 100px;
+                height: 100px;
+
+                @include pc {
+                    width: 11em;
+                    height: 11em;
+                }
             }
         }
 
         .gambar {
-            width: 10em;
-            height: 10em;
+            width: 98px;
+            height: 98px;
             object-fit: cover;
             margin-bottom: 1em;
             border-radius: 50%;
             transition: $transition-slow;
+
+            @include pc {
+                width: 10em;
+                height: 10em;
+                margin-bottom: 0;
+            }
         }
     }
 

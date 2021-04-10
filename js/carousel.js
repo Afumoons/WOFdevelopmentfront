@@ -22,6 +22,8 @@ var swiperblog = new Swiper(".swiper-container.blog-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 2,
+  spaceBetween: 19,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -35,10 +37,10 @@ var swiperblog = new Swiper(".swiper-container.blog-carousel", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     1024: {
@@ -54,6 +56,8 @@ var swipergaleri = new Swiper(".swiper-container.galeri-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 2,
+  spaceBetween: 19,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -110,6 +114,8 @@ var swiperteam = new Swiper(".swiper-container.team-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 2,
+  spaceBetween: 19,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -120,7 +126,7 @@ var swiperteam = new Swiper(".swiper-container.team-carousel", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 2,
@@ -139,6 +145,8 @@ var swiperclient = new Swiper(".swiper-container.client-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 3,
+  spaceBetween: 19,
   centeredSlides: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -150,10 +158,10 @@ var swiperclient = new Swiper(".swiper-container.client-carousel", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 3,
     },
     768: {
-      slidesPerView: 1,
+      slidesPerView: 3,
     },
     1024: {
       slidesPerView: 5,

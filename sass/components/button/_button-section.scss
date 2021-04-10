@@ -1,12 +1,18 @@
 .button-section {
     @include flex-column;
-    margin: 4rem 1rem;
+    margin: 4rem 1rem 29px 1rem;
     padding: 1em;
     transition: $transition-slower;
+
+    @include pc {
+        margin: 4rem 1rem;
+    }
 
     .button {
         @include button;
         position: relative;
+
+        @include pc {}
 
         .overlay {
             @include flex-column;

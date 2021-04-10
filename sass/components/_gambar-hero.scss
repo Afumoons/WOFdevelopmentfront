@@ -2,7 +2,13 @@
     position: relative;
     height: 35vh;
     width: 100%;
-    margin-bottom: 127px;
+    margin-bottom: 30px;
+    margin-top: 8vh;
+
+    @include pc {
+        margin-top: 0;
+        margin-bottom: 127px;
+    }
 
 
     img {
@@ -14,16 +20,25 @@
     .item {
         @include flex-column;
         position: absolute;
-        top: 0;
+        top: 60px;
         right: 0;
         left: 0;
-        bottom: 0;
         margin: 1em;
+
+        @include pc {
+            top: 0;
+            bottom: 0
+        }
 
         .judul {
             @include judul;
-            font-size: 3em;
-            margin-bottom: .6em;
+            font-size: 24px;
+            margin-bottom: .4em;
+
+            @include pc {
+                font-size: 3em;
+                margin-bottom: .6em;
+            }
 
             &.putih {
                 color: white;
@@ -34,6 +49,11 @@
             @include font2;
             color: color(black-lightest);
             text-align: center;
+            font-size: 10px;
+
+            @include pc {
+                font-size: 16px;
+            }
         }
 
         .line {

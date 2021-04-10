@@ -1,8 +1,12 @@
 .section-galeri {
     @include flex-column;
     justify-content: flex-start;
-    padding: 3.9375em;
+    padding: 35px;
     background-color: white;
+
+    @include pc {
+        padding: 3.9375em;
+    }
 
     .judul {
         @include judul;

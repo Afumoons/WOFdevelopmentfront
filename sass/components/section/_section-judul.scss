@@ -1,113 +1,40 @@
 .section-judul {
     @include flex-column;
     justify-content: space-between;
-    align-items: flex-start;
     border-bottom: 2px rgba(112, 112, 112, 1) solid;
     margin: 0 1rem 4rem 1rem;
-    padding: 1em 0;
+    padding: 0 0 37px 0;
     transition: $transition-slower;
 
     @include tablet {
         @include flex-row;
         justify-content: space-between;
         margin: 4rem 15%;
+        padding: 1em 0;
     }
 
     .field-kiri {
         @include flex-row;
         justify-content: space-evenly;
         margin-bottom: .23em;
+        width: 100%;
 
         @include tablet {
+            width: auto;
             margin-bottom: 0;
-        }
-
-        .burger {
-            display: block;
-            z-index: 3;
-            margin-right: .23em;
-            position: relative;
-            cursor: pointer;
-
-            .line1,
-            .line2,
-            .line3 {
-                width: 1.875em;
-                height: 2px;
-                background-color: color(black-lighter);
-                margin: 12px;
-                transition: .3s ease
-            }
-
-
-        }
-
-        .menu {
-            position: absolute;
-            top: .5em;
-            left: -16em;
-            width: 240px;
-            padding-top: .5em;
-            background: #E8E8E8;
-            opacity: 0;
-            transition: $transition-slow;
-
-            &.animate {
-                opacity: 1;
-            }
-
-            .burger {
-                position: relative;
-
-                .line1,
-                .line2,
-                .line3 {
-                    width: 17em;
-                    height: 2px;
-                    background-color: color(black-lighter);
-                    margin: 12px;
-                    transition: .3s ease
-                }
-            }
-
-            .nav-links {
-                @include flex-column;
-                justify-content: space-around;
-                list-style: none;
-                min-height: 10em;
-                margin: 3em 0;
-
-                li {
-                    margin-bottom: 26px;
-
-                    a {
-                        @include font2;
-                        color: color(black-lighter);
-                        text-decoration: none;
-                        letter-spacing: .1rem;
-                        font-size: 0.9375em;
-
-                        @include tablet {
-                            font-size: .875rem
-                        }
-
-                        &.active {
-                            padding: .4em 7px;
-                            border-bottom: color(black-lighter) .1875em solid
-                        }
-                    }
-                }
-            }
         }
 
         .judul {
             @include judul;
+            font-size: 18px;
 
             margin: {
-                bottom: .23em;
+                bottom: 5px;
             }
 
-            @include tablet {
+            @include pc {
+                font-size: 36px;
+
                 margin: {
                     right: .23em;
                     bottom: 0;
@@ -120,13 +47,22 @@
     .field-kanan {
         @include flex-row;
         justify-content: space-evenly;
+        width: 100%;
+
+        @include pc {
+            width: auto
+        }
 
         .teks {
             @include font2;
             color: rgba(0, 0, 0, 1);
             margin-right: .23em;
             margin-left: 2em;
-            font-size: 0.9375em;
+            font-size: 8px;
+
+            @include pc {
+                font-size: 0.9375em;
+            }
 
             a {
                 text-decoration: none;
@@ -136,5 +72,113 @@
         }
     }
 
+    &.dengan-menu {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0 7px 0;
+
+        .field-kiri {
+            justify-content: flex-start;
+            margin-bottom: 0;
+
+            .burger {
+                display: block;
+                z-index: 3;
+                margin-right: .23em;
+                position: relative;
+                cursor: pointer;
+
+                .line1,
+                .line2,
+                .line3 {
+                    width: 1.875em;
+                    height: 3px;
+                    background-color: rgba(112, 112, 112, 1);
+                    margin: 6px;
+                    transition: .3s ease;
+
+                    @include pc {
+                        height: 2px;
+                        margin: 12px;
+                    }
+                }
+
+
+            }
+
+            .menu {
+                position: absolute;
+                top: -.5em;
+                left: -16em;
+                width: 240px;
+                padding-top: .5em;
+                background: #E8E8E8;
+                opacity: 0;
+                transition: $transition-slow;
+                // z-index: 3;
+
+                @include pc {
+                    left: -16em;
+                }
+
+                &.animate {
+                    opacity: 1;
+                }
+
+                .burger {
+                    position: relative;
+
+                    .line1,
+                    .line2,
+                    .line3 {
+                        width: 17em;
+                    }
+                }
+
+                .nav-links {
+                    @include flex-column;
+                    justify-content: space-around;
+                    list-style: none;
+                    min-height: 10em;
+                    margin: 3em 0;
+
+                    li {
+                        margin-bottom: 26px;
+
+                        a {
+                            @include font2;
+                            color: color(black-lighter);
+                            text-decoration: none;
+                            letter-spacing: .1rem;
+                            font-size: 0.9375em;
+
+                            @include tablet {
+                                font-size: .875rem
+                            }
+
+                            &.active {
+                                padding: .4em 7px;
+                                border-bottom: color(black-lighter) .1875em solid
+                            }
+                        }
+                    }
+                }
+            }
+
+            .judul {
+                margin-bottom: 0;
+            }
+        }
+
+        .field-kanan {
+            .teks {
+                font-size: 12px;
+
+                @include pc {
+                    font-size: 0.9375em;
+                }
+            }
+        }
+    }
 
 }

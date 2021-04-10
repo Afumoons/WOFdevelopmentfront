@@ -1,11 +1,13 @@
 div.teks-jumbo {
-    padding: 3em;
+    padding: 26px;
     background-color: white;
     @include flex-column;
-    justify-content: space-evenly;
-    min-height: 15em;
+    justify-content: flex-start;
+    // min-height: 15em;
 
-    @include tablet {
+    @include pc {
+        padding: 3em;
+        min-height: 15em;
         // grid-template-columns: 46% 46%;
         // grid-template-areas:
         //     "judul"
@@ -32,28 +34,39 @@ div.teks-jumbo {
 
     .judul {
         @include judul;
-        margin-bottom: 21.5px;
+        margin-bottom: 7px;
         text-align: center;
+
+        @include pc {
+            margin-bottom: 21.5px;
+        }
     }
 
     .line {
-        width: 41.5px;
+        width: 13px;
         border-bottom: solid rgba(112, 112, 112, 1) 2px;
         transition: $transition-slower;
-        margin-bottom: 22.5px;
+        margin-bottom: 7px;
+
+        @include pc {
+            width: 41.5px;
+            margin-bottom: 22.5px;
+        }
     }
 
     .teks {
         @include font2;
         text-align: center;
         transition: $transition-slower;
-        font-size: 18px;
         color: black;
+        font-size: 8px;
 
         // @include flex-column;
         // width: 50%;
         // padding: 3em;
-        @include tablet {}
+        @include pc {
+            font-size: 18px;
+        }
     }
 
     .form-booking {

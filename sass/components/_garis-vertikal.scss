@@ -1,0 +1,18 @@
+.garis-vertikal {
+    height: 50px;
+    @include flex-column;
+
+    @include pc {
+        height: 90px;
+    }
+
+    .line {
+        width: 2px;
+        height: 12px;
+        border-right: 2px solid rgba(112, 112, 112, 1);
+
+        .line {
+            height: 25px;
+        }
+    }
+}

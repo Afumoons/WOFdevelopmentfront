@@ -6,6 +6,10 @@
     .teks {
         @include font2;
         color: black;
-        font-size: 1.125em;
+        font-size: 1em;
+
+        @include pc {
+            font-size: 1.125em;
+        }
     }
 }

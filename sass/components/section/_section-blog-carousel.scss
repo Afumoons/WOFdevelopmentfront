@@ -1,8 +1,12 @@
 .section-blog-carousel {
     @include flex-column;
     justify-content: flex-start;
-    padding: 3.9375em;
+    padding: 35px;
     background-color: rgba(232, 232, 232, 1);
+
+    @include pc {
+        padding: 3.9375em;
+    }
 
     .judul {
         @include judul;
@@ -19,11 +23,11 @@
     .line {
         border-bottom: 2px rgba(112, 112, 112, 1) solid;
         width: 41.5px;
-        margin-bottom: 48.5px
+        margin-bottom: 48.5px;
     }
 
     .button {
         @include button;
-        font-size: 14px;
+        font-size: 10px;
     }
 }

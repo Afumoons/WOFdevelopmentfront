@@ -2,45 +2,17 @@
     overflow: hidden;
     background-color: color(white-light);
     position: relative;
-    // color: color(black);
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "gambar"
-        "teks";
-    // height: 30em;
+    grid-template-columns: 33% 67%;
+    grid-template-areas: "gambar teks";
 
     @include pc {
-        grid-template-columns: 37% 55%;
-        grid-template-areas: "gambar teks";
         justify-content: space-between;
-        grid-gap: 8%;
-    }
-
-    &:nth-child(2n) {
-        background-color: #E8E8E8;
-
-        @include pc {
-            grid-template-columns: 55% 37%;
-            grid-template-areas: "teks gambar";
-        }
-
-
-        .field-teks {
-            background-color: hsl(0, 0%, 91%);
-
-            @include pc {
-                padding: {
-                    left: 20em;
-                    right: 10em;
-                }
-            }
-        }
     }
 
     .field-gambar {
         grid-area: gambar;
         transition: $transition-slower;
-        // min-height: 20em;
 
         img {
             width: 100%;
@@ -52,10 +24,8 @@
 
     .field-teks {
         background-color: color(white-light);
-        // min-height: 60em;
         grid-area: teks;
-        padding: 3em;
-        // padding-left: 15em;
+        padding: 43px 57px;
         @include flex-column;
         align-items: flex-start;
         transition: $transition-slower;
@@ -79,9 +49,14 @@
             @include judul;
 
             margin: {
-                bottom: .6em;
+                bottom: 9px;
             }
 
+            @include pc {
+                margin: {
+                    bottom: .6em;
+                }
+            }
         }
 
         .subjudul {
@@ -107,8 +82,52 @@
 
         p.teks {
             @include font2;
+            font-size: 12px;
             color: rgba(0, 0, 0, 1);
             transition: $transition-slower;
+
+            @include pc {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &:nth-child(2n) {
+        background-color: #E8E8E8;
+        grid-template-areas: "teks gambar";
+        grid-template-columns: 67% 33%;
+
+        @include pc {
+            grid-template-columns: 67% 33%;
+        }
+
+
+        .field-teks {
+            background-color: hsl(0, 0%, 91%);
+            padding: 43px 57px;
+
+            @include pc {
+                padding: {
+                    left: 20em;
+                    right: 10em;
+                }
+            }
+
+            .judul {
+                align-self: flex-end;
+
+                @include pc {
+                    align-self: flex-start;
+                }
+            }
+
+            .teks {
+                text-align: right;
+
+                @include pc {
+                    text-align: left;
+                }
+            }
         }
     }
 }
