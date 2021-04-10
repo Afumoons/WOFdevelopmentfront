@@ -1,6 +1,12 @@
 .section-client {
     @include flex-column;
     justify-content: flex-start;
-    padding: 3em;
+    padding: 0em;
+    margin-bottom: 3em;
     background-color: color(white-light);
+
+    @include pc {
+        padding: 2em 3em 3em 3em;
+        margin-bottom: 0;
+    }
 }

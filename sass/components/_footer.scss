@@ -1,33 +1,28 @@
 .footer {
-    @include flex-column;
+    @include flex-row;
+    align-items: flex-start;
     justify-content: space-evenly;
     background-color: color(black-lighter);
     padding: 2em;
 
 
     @include tablet {
-        @include flex-row;
-        align-items: flex-start;
         padding: 3em;
     }
 
-    .knavigasi {
-        @include flex-column;
-        width: 100%;
-        align-items: flex-start;
-        margin-bottom: 2em;
-
-        @include tablet {
-            width: 30%;
-            margin-bottom: 0em;
-        }
-
+    .knavigasi,
+    .kkontak,
+    .ksosial {
         .judul {
             @include font1;
             color: color(white-dark);
-            font-size: 1.375em;
+            font-size: 14px;
             margin-bottom: 1em;
             transition: $transition-slower;
+
+            @include pc {
+                font-size: 1.375em;
+            }
         }
 
         .nav-links {
@@ -35,59 +30,38 @@
             transition: $transition-slower;
 
             li {
-                margin-bottom: .5em;
+                // margin-bottom: .2em;
+
+                @include pc {
+                    margin-bottom: .5em;
+                }
 
                 a {
                     @include font2;
-                    font-size: 1.125em;
+                    font-size: 10px;
                     color: color(white-dark);
-                    text-decoration: none
+                    text-decoration: none;
+
+                    @include pc {
+                        font-size: 1.125em;
+                    }
                 }
             }
-        }
-    }
-
-    .kkontak {
-        @include flex-column;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 2em;
-        transition: $transition-slower;
-
-
-        @include tablet {
-            width: 30%;
-            margin-bottom: 0em;
-        }
-
-        .judul {
-            @include font1;
-            color: color(white-dark);
-            font-size: 1.375em;
-            margin-bottom: 1em;
-            transition: $transition-slower;
         }
 
         .teks {
             @include font2;
-            font-size: 1.125em;
+            font-size: 10px;
             color: color(white-dark);
             transition: $transition-slower;
-        }
-    }
 
-    .ksosial {
-        @include flex-column;
-        width: 100%;
-        transition: $transition-slower;
-
-
-        @include tablet {
-            width: 30%;
+            @include pc {
+                font-size: 1.125em;
+            }
         }
 
         .logo {
-            max-width: 40%;
+            max-width: 90px;
             margin-bottom: 2em;
             transition: $transition-slower;
 
@@ -100,14 +74,51 @@
         .icon-social {
             @include flex-row;
             justify-content: space-evenly;
-            font-size: 2em;
+            font-size: 17px;
             color: color(white-dark);
             transition: $transition-slower;
 
+            @include pc {
+                font-size: 2em;
+            }
 
             i {
                 margin: 0 .5em;
             }
         }
+    }
+
+    .knavigasi {
+        @include flex-column;
+        // width: 100%;
+        width: 30%;
+        align-items: flex-start;
+        margin-bottom: 2em;
+
+        @include tablet {
+            margin-bottom: 0em;
+        }
+    }
+
+    .kkontak {
+        @include flex-column;
+        align-items: flex-start;
+        // width: 100%;
+        width: 30%;
+        margin-bottom: 2em;
+        transition: $transition-slower;
+
+        @include tablet {
+            margin-bottom: 0em;
+        }
+    }
+
+    .ksosial {
+        @include flex-column;
+        width: 30%;
+        // width: 100%;
+        transition: $transition-slower;
+
+        @include tablet {}
     }
 }

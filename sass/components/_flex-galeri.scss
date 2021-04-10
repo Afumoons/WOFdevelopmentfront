@@ -1,26 +1,38 @@
 .flex-galeri {
-    padding: 1em;
+    padding: 0 8%;
     @include flex-row;
     // padding: 3.5em;
-    // justify-content: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: color(white-light);
 
     @include pc {
+        justify-content: flex-start;
         margin: 0rem 15% 120px 15%;
+        padding: 1em;
     }
 
     .item {
         position: relative;
 
         margin: {
-            bottom: 2em;
-            right: 1em;
+            bottom: 29px;
+            right: 0;
         }
 
         max: {
-            width: 25.25em;
+            width: 167px;
+        }
+
+        @include pc {
+            margin: {
+                bottom: 2em;
+                right: 1em;
+            }
+
+            max: {
+                width: 25.25em;
+            }
         }
 
         .gambar {
@@ -40,9 +52,13 @@
         .teks {
             @include font2;
             width: 100%;
-            font-size: 1.125em;
+            font-size: 14px;
             color: rgba(0, 0, 0, 1);
             transition: $transition-slower;
+
+            @include pc {
+                font-size: 1.125em;
+            }
         }
 
         .overlay {
