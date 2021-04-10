@@ -95,7 +95,8 @@
             }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             .overlay {
                 opacity: .3;
             }
