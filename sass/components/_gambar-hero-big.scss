@@ -2,8 +2,11 @@
     position: relative;
     height: 50vh;
     width: 100%;
-    margin-bottom: 94px;
+    margin-bottom: 21px;
 
+    @include pc {
+        margin-bottom: 94px;
+    }
 
     img {
         height: 100%;

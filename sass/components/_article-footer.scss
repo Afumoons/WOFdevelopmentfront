@@ -5,28 +5,47 @@
     .field-button {
         @include flex-row;
         justify-content: space-between;
-        width: 10%;
+        width: 20.83333333333333%;
         margin-bottom: 69px;
+
+        @include pc {
+            width: 10%
+        }
 
         a {
             @include flex-column;
             // margin-right: 122px;
 
             img {
-                margin-bottom: 17px;
+                width: 16px;
+                margin-bottom: 3px;
+
+                @include pc {
+                    width: auto;
+                    margin-bottom: 17px;
+                }
             }
 
             p {
                 @include font2;
+                font-size: 9px;
+
+                @include pc {
+                    font-size: 16px;
+                }
             }
         }
     }
 
     .line {
         border-bottom: 2px rgba(196, 196, 196, 1) solid;
-        width: 70%;
+        width: 90%;
         // margin: 0 312px;
         margin-bottom: 40px;
+
+        @include pc {
+            width: 70%
+        }
     }
 
     .author {
@@ -35,26 +54,43 @@
         width: 100%;
 
         img {
-            margin-bottom: 20px
+            width: 20px;
+            margin-bottom: 20px;
+
+            @include pc {
+                width: auto
+            }
         }
 
         .teks {
             @include font2;
-            font-size: 20px;
+            font-size: 10px;
             margin-bottom: 12px;
+
+            @include pc {
+                font-size: 20px;
+            }
         }
 
         .judul {
             @include font1;
-            font-size: 25px;
+            font-size: 15px;
             margin-bottom: 80px;
+
+            @include pc {
+                font-size: 25px;
+            }
         }
     }
 
     .field-nav {
         @include flex-row;
         justify-content: space-between;
-        width: 68%;
+        width: 86%;
         margin-bottom: 40px;
+
+        @include pc {
+            width: 68%;
+        }
     }
 }
