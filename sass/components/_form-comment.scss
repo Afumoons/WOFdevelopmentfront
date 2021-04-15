@@ -2,15 +2,25 @@
     @include flex-column;
     width: 100%;
     background-color: rgb(232, 232, 232);
-    margin-top: 71px;
-    margin-bottom: 96px;
-    padding: 76px 313px 54px 313px;
+    margin-bottom: 22px;
+    padding: 0 10%;
+
+    @include pc {
+        margin-bottom: 96px;
+        margin-top: 71px;
+        padding: 76px 313px 54px 313px;
+    }
 
     .judul {
         @include font1;
-        font-size: 36px;
+        font-size: 14px;
         color: black;
-        margin-bottom: 61px;
+        margin-bottom: 21px;
+
+        @include pc {
+            font-size: 36px;
+            margin-bottom: 61px;
+        }
     }
 
     textarea,
@@ -22,13 +32,24 @@
 
     textarea {
         resize: vertical;
-        margin-bottom: 32px;
-        padding: 32px 42px;
+        margin-bottom: 10px;
+        padding: 7px 9px;
+        font-size: 9px;
+
+        @include pc {
+            margin-bottom: 32px;
+            font-size: 16px;
+            padding: 32px 42px;
+        }
     }
 
     input[type="text"],
     input[type="email"] {
-        padding: 30px;
+        padding: 9px;
+
+        @include pc {
+            padding: 30px;
+        }
     }
 
     input[type="submit"] {
@@ -56,11 +77,16 @@
         padding-left: 35px;
         margin-bottom: 12px;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 7px;
         user-select: none;
         margin-bottom: 40px;
         align-self: flex-start;
-        height: 27px;
+        height: 17px;
+
+        @include pc {
+            height: 27px;
+            font-size: 14px;
+        }
 
         /* Hide the browser's default checkbox */
         input {
@@ -86,11 +112,16 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 27px;
-            width: 27px;
+            height: 17px;
+            width: 17px;
             background-color: white;
             // border: 1px rgba(112, 112, 112, 1) solid;
             // border-radius: 5px;
+
+            @include pc {
+                height: 27px;
+                width: 27px;
+            }
 
             /* Create the checkmark/indicator (hidden when not checked) */
             /* Style the checkmark/indicator */

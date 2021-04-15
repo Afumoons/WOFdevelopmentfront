@@ -4,15 +4,17 @@
      position: fixed;
      align-items: center;
      height: 8vh;
+     width: 100vw;
      z-index: 2;
      top: 0;
      left: 0;
      right: 0;
-     padding: 1em 4em;
+     padding: 1em 5.833333333333333%;
      transition: $transition;
      background-color: white;
 
      @include pc {
+         padding: 1em 4em;
          background-color: rgba(255, 255, 255, 0);
      }
 
@@ -21,134 +23,136 @@
          background-color: white;
      }
 
-     .logo {
-         color: black;
-         text-transform: uppercase;
-         letter-spacing: .3125rem;
-         font-size: 1.25rem;
+     .field-kiri {
+         .logo {
+             color: black;
+             text-transform: uppercase;
+             letter-spacing: .3125rem;
+             font-size: 1.25rem;
 
-         img {
-             max-width: 3.3125em;
+             img {
+                 max-width: 3.3125em;
+             }
          }
      }
 
-     .nav-links {
-         @include flex-column;
-         justify-content: space-around;
-         position: absolute;
-         background-color: white;
-         top: 0;
-         left: 0;
-         height: 100vh;
-         width: 100vw;
-         align-items: center;
-         flex-direction: column;
-         clip-path: circle(1% at 100% 0%);
-         transition: all 1s ease-out;
-         list-style: none;
-         z-index: 2;
-         pointer-events: none;
+     .field-kanan {
+         @include flex-row;
+         justify-content: flex-end;
+         width: auto;
 
-         @include tablet {
-             background-color: rgba(255, 255, 255, 0);
-         }
-
-         &.nav-active {
-             clip-path: circle(200% at 100% 0%);
-             pointer-events: all
-         }
-
-         li {
-             opacity: 0;
+         .nav-links {
+             @include flex-column;
+             justify-content: space-around;
+             position: absolute;
+             background-color: white;
+             top: 0;
+             left: 0;
+             height: 100vh;
+             width: 100vw;
+             align-items: center;
+             flex-direction: column;
+             clip-path: circle(1% at 100% 0%);
+             transition: all 1s ease-out;
+             list-style: none;
+             z-index: 2;
+             pointer-events: none;
 
              @include tablet {
-                 opacity: 1;
+                 background-color: rgba(255, 255, 255, 0);
+                 pointer-events: all;
+                 flex-direction: row;
+                 position: static;
+                 clip-path: circle(1500px at 90% -10%);
+                 width: auto;
+                 height: 100%;
+                 justify-self: flex-end;
              }
 
-             &.keranjang {
-                 position: relative;
-
-                 i {
-                     color: #707070;
-                     //  margin-right: 1em;
-                 }
-
-                 .angka {
-                     @include font2;
-                     font-size: 0.8125em;
-                     position: absolute;
-                     left: 1em;
-                     bottom: -.5em;
-                     padding: .2em .4em;
-                     color: black;
-                     background: #C4C4C4;
-                     border-radius: 50%;
-                 }
+             @include pc {
+                 width: auto;
              }
 
-             a {
-                 @include font2;
-                 color: #707070;
-                 text-decoration: none;
-                 letter-spacing: .1rem;
-                 font-size: 1rem;
+             &.nav-active {
+                 clip-path: circle(200% at 100% 0%);
+                 pointer-events: all
+             }
+
+             li {
+                 opacity: 0;
 
                  @include tablet {
-                     font-size: .875rem
+                     opacity: 1;
+                 }
+
+                 a {
+                     @include font2;
+                     color: #707070;
+                     text-decoration: none;
+                     letter-spacing: .1rem;
+                     font-size: 1rem;
+
+                     @include tablet {
+                         margin-right: 63px;
+                         font-size: .875rem
+                     }
+                 }
+
+                 .button {
+                     @include font2;
+                     font-size: 0.75em;
+                     margin-right: 3em;
+                     border: 2px #707070 solid;
+                     border-radius: 2em;
+                     padding: .7em 1em;
+                     cursor: pointer;
                  }
              }
 
-             .button {
-                 @include font2;
-                 font-size: 0.75em;
-                 margin-right: 3em;
-                 border: 2px #707070 solid;
-                 border-radius: 2em;
-                 padding: .7em 1em;
-                 cursor: pointer;
+
+         }
+
+         .keranjang {
+             justify-self: flex-end;
+             position: relative;
+
+             i {
+                 color: #707070;
+                 //  margin-right: 1em;
              }
 
-
-
-
-
+             .angka {
+                 @include font2;
+                 font-size: 0.8125em;
+                 position: absolute;
+                 left: 1em;
+                 bottom: -.5em;
+                 padding: .2em .4em;
+                 color: black;
+                 background: #C4C4C4;
+                 border-radius: 50%;
+             }
          }
 
-         @include tablet {
-             pointer-events: all;
-             flex-direction: row;
-             position: static;
-             clip-path: circle(1500px at 90% -10%);
-             width: 70%;
-             height: 100%;
-         }
+         .burger {
+             display: block;
+             cursor: pointer;
+             z-index: 3;
+             margin-right: 22px;
 
-         @include pc {
-             width: 50%;
+             div {
+                 width: 1.875em;
+                 height: .1875em;
+                 background-color: #707070;
+                 margin: .3125em;
+                 transition: .3s ease
+             }
 
-         }
-     }
-
-     .burger {
-         display: block;
-         cursor: pointer;
-         z-index: 3;
-
-         div {
-             width: 1.875em;
-             height: .1875em;
-             background-color: #707070;
-             margin: .3125em;
-             transition: .3s ease
-         }
-
-         @include tablet {
-             display: none;
+             @include tablet {
+                 display: none;
+             }
          }
      }
-
-
-
  }
 
  .toggle-burger .line1 {

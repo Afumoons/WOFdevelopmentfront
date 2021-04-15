@@ -2,8 +2,11 @@
     position: relative;
     height: 50vh;
     width: 100%;
-    margin-bottom: 94px;
+    margin-bottom: 21px;
 
+    @include pc {
+        margin-bottom: 94px;
+    }
 
     img {
         height: 100%;
@@ -22,23 +25,50 @@
 
         .judul {
             @include judul;
-            font-size: 3em;
+            font-size: 18px;
+            align-self: flex-start;
+            margin-left: 16.18948464341489%;
             margin-bottom: .6em;
 
             &.putih {
                 color: white;
             }
+
+            @include pc {
+                font-size: 3em;
+            }
         }
 
         .teks {
             @include font2;
+            font-size: 9px;
             color: color(black-lightest);
             text-align: center;
+            margin-right: 3.904216553878188%;
+
+            &.putih {
+                color: white;
+            }
+
+            @include pc {
+                font-size: 16px;
+            }
+        }
+
+        .field-teks {
+            @include flex-row;
+            align-self: flex-start;
+            justify-content: flex-start;
+            margin-left: 13.89901093180635%;
+            min-width: 70%;
         }
 
         .line {
             width: 84px;
+            align-self: flex-start;
+            margin-left: 13.01405517959396%;
             border-bottom: 2px rgba(255, 255, 255, 1) solid;
+            margin-bottom: 21px;
         }
     }
 }

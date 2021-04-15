@@ -1,5 +1,5 @@
 .flex-galeri {
-    padding: 0 8%;
+    padding: 0 12.08333333333333%;
     @include flex-row;
     // padding: 3.5em;
     justify-content: space-between;
@@ -7,8 +7,8 @@
     background-color: color(white-light);
 
     @include pc {
-        justify-content: flex-start;
-        margin: 0rem 15% 120px 15%;
+        // justify-content: flex-start;
+        margin: 0rem 16.18948464341489% 120px 16.18948464341489%;
         padding: 1em;
     }
 
@@ -17,21 +17,19 @@
 
         margin: {
             bottom: 29px;
-            right: 0;
         }
 
         max: {
-            width: 167px;
+            width: 46%;
         }
 
         @include pc {
             margin: {
                 bottom: 2em;
-                right: 1em;
             }
 
             max: {
-                width: 25.25em;
+                width: 31.39497835766962%;
             }
         }
 
@@ -86,12 +84,16 @@
             .teks {
                 @include font2;
                 width: auto;
-                font-size: 1.4rem;
+                font-size: 14px;
                 padding: 0 .5em;
                 padding-bottom: .3em;
                 margin-bottom: 1.7em;
                 color: color(white-light);
                 border-bottom: 2px solid color(white-light);
+
+                @include pc {
+                    font-size: 1.4rem;
+                }
             }
         }
 
@@ -111,13 +113,12 @@
         position: relative;
 
         margin: {
-            bottom: 2em;
-            right: 29px;
+            bottom: 24px;
+            // right: 21px;
         }
 
-        max: {
-            width: 404px;
-        }
+
+        max-width: 47%;
 
         padding: 10px 0;
         text-align: center;
@@ -131,6 +132,17 @@
         transition: $transition-slow;
         background: rgb(242, 242, 242);
 
+        @include pc {
+            margin: {
+                bottom: 2em;
+                // right: 29px;
+            }
+
+            max: {
+                width: 31.5512753774076%;
+            }
+        }
+
         .gambar {
             width: 100%;
             height: 50%;
@@ -143,29 +155,44 @@
             width: 100%;
             height: 50%;
             justify-content: space-between;
-            padding: 0 41px;
+            padding: 0 18px;
+
+            @include pc {
+                padding: 0 41px;
+            }
 
             .field-teks {
                 width: 100%;
 
                 .judul {
-                    @include font2;
-                    font-size: 22px;
+                    @include font1;
+                    font-size: 10px;
                     text-align: left;
-                    line-height: 29.01px;
+                    line-height: 13.19px;
                     border: 0;
                     padding-bottom: 0;
-                    margin-bottom: 21px;
-                    color: black
+                    margin-bottom: 10px;
+                    color: black;
+
+                    @include pc {
+                        margin-bottom: 21px;
+                        line-height: 29.01px;
+                        font-size: 22px;
+                    }
                 }
 
                 .deskripsi {
                     @include font2;
                     text-align: justify;
                     margin-bottom: 1em;
-                    line-height: 21.1px;
-                    font-size: 16px;
+                    line-height: 10.55px;
+                    font-size: 8px;
                     color: rgba(0, 0, 0, 1);
+
+                    @include pc {
+                        line-height: 21.1px;
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -174,9 +201,13 @@
 
                 .line {
                     width: 100%;
-                    border-bottom: 2px solid color(white-darkest);
+                    border-bottom: 1px solid color(white-darkest);
                     justify-self: flex-end;
                     margin-bottom: .4em;
+
+                    @include pc {
+                        border-bottom: 2px solid color(white-darkest);
+                    }
                 }
 
                 .meta {
@@ -188,8 +219,12 @@
                     .author {
                         @include font2;
                         font-style: italic;
-                        font-size: 12px;
+                        font-size: 7px;
                         color: rgba(0, 0, 0, 1);
+
+                        @include pc {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
