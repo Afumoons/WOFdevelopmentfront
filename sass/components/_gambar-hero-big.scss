@@ -22,11 +22,15 @@
 
         .judul {
             @include judul;
-            font-size: 3em;
+            font-size: 18px;
             margin-bottom: .6em;
 
             &.putih {
                 color: white;
+            }
+
+            @include pc {
+                font-size: 3em;
             }
         }
 
