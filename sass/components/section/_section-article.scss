@@ -59,14 +59,12 @@
 
 
             .field-teks {
-                padding: 0 19px 0 43px;
+                padding: 0 13.28671328671329% 0 30.06993006993007%;
                 background-color: hsl(0, 0%, 100%);
 
                 @include pc {
-                    padding: {
-                        left: 16.18948464341489%;
-                        right: 32px;
-                    }
+                    padding: 0 6.236199971547338% 0 60.60806847347569%;
+
                 }
             }
         }
@@ -86,7 +84,7 @@
 
         .field-teks {
             background-color: color(white-light);
-            padding: 0 43px 0 19px;
+            padding: 0 30.06993006993007% 0 13.28671328671329%;
             // min-height: 60em;
             grid-area: teks;
             // padding: 3em;
@@ -98,10 +96,7 @@
 
             // justify-content: space-evenly;
             @include pc {
-                padding: {
-                    left: 32px;
-                    right: 16.18948464341489%;
-                }
+                padding: 0 60.60806847347569% 0 6.236199971547338%;
             }
 
             p.teks {

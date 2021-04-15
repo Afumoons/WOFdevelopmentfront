@@ -7,7 +7,7 @@
     grid-template-areas: "gambar teks";
 
     @include pc {
-        grid-template-columns: 37.32431025507548% 62.67568974492452%;
+        grid-template-columns: 37.34375% 62.65625%;
         justify-content: space-between;
     }
 
@@ -23,12 +23,12 @@
 
         .field-teks {
             background-color: hsl(0, 0%, 91%);
-            padding: 43px 57px;
+            padding: 43px 17.06586826347305% 43px 23.35329341317365%;
 
             @include pc {
                 padding: {
-                    left: 43.77076411960133%;
-                    right: 17.0265780730897%;
+                    left: 44.19917304773007%;
+                    right: 17.19322670737128%;
                 }
             }
 
@@ -65,7 +65,7 @@
     .field-teks {
         background-color: color(white-light);
         grid-area: teks;
-        padding: 43px 19.78706342621682%;
+        padding: 43px 23.35329341317365% 43px 17.06586826347305%;
         @include flex-column;
         align-items: flex-start;
         transition: $transition-slower;
@@ -73,8 +73,8 @@
         // justify-content: space-evenly;
         @include pc {
             padding: {
-                left: 17.0265780730897%;
-                right: 43.77076411960133%;
+                left: 17.19322670737128%;
+                right: 44.19917304773007%;
             }
         }
 
