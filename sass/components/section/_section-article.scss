@@ -42,7 +42,7 @@
 
         @include pc {
             margin-bottom: 26px;
-            grid-template-columns: 73% 27%;
+            grid-template-columns: 73.03487766788131% 26.96512233211869%;
             justify-content: space-between;
             // grid-gap: 8%;
         }
@@ -53,7 +53,7 @@
             grid-template-areas: "teks gambar";
 
             @include pc {
-                grid-template-columns: 27% 73%;
+                grid-template-columns: 26.96512233211869% 73.03487766788131%;
                 grid-template-areas: "teks gambar";
             }
 
@@ -64,7 +64,7 @@
 
                 @include pc {
                     padding: {
-                        left: 311px;
+                        left: 16.18948464341489%;
                         right: 32px;
                     }
                 }
@@ -100,7 +100,7 @@
             @include pc {
                 padding: {
                     left: 32px;
-                    right: 311px;
+                    right: 16.18948464341489%;
                 }
             }
 

@@ -1,11 +1,12 @@
 .gambar-hero {
     position: relative;
-    height: 35vh;
+    height: 149px;
     width: 100%;
     margin-bottom: 30px;
     margin-top: 8vh;
 
     @include pc {
+        height: 35vh;
         margin-top: 0;
         margin-bottom: 127px;
     }
@@ -20,7 +21,7 @@
     .item {
         @include flex-column;
         position: absolute;
-        top: 60px;
+        top: 47px;
         right: 0;
         left: 0;
         margin: 1em;
@@ -32,7 +33,7 @@
 
         .judul {
             @include judul;
-            font-size: 24px;
+            font-size: 18px;
             margin-bottom: .4em;
 
             @include pc {
