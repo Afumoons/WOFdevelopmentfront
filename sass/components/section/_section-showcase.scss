@@ -3,16 +3,17 @@
     // background: color(white-light);
     position: relative;
     // color: color(black);
-    display: none;
-    grid-template-columns: 100%;
-    grid-template-areas: "kiri"
-        "kanan";
+    display: grid;
+    // grid-template-columns: 100%;
+    // grid-template-areas: "kiri"
+    //     "kanan";
     height: 78em;
+    grid-template-areas: "kiri kanan";
+    grid-template-columns: 56.66666666666667% 50%;
 
     @include pc {
-        display: grid;
-        grid-template-columns: 50% 50%;
         grid-template-areas: "kiri kanan";
+        grid-template-columns: 50% 50%;
         justify-content: space-between;
     }
 

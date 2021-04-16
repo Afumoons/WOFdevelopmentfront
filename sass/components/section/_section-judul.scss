@@ -6,10 +6,10 @@
     padding: 0 0 37px 0;
     transition: $transition-slower;
 
-    @include tablet {
+    @include pc {
         @include flex-row;
         justify-content: space-between;
-        margin: 4rem 15%;
+        margin: 4rem 16.19791666666667%;
         padding: 1em 0;
     }
 

@@ -176,6 +176,7 @@ var swiperreview = new Swiper(".swiper-container.review-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 2,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -190,7 +191,7 @@ var swiperreview = new Swiper(".swiper-container.review-carousel", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 2,

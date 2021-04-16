@@ -6,8 +6,8 @@
     grid-template-columns: 100%;
     grid-template-areas: "gambar"
         "teks";
-    grid-gap: 2em;
-    margin: 10rem 1rem;
+    // grid-gap: 2em;
+    margin: 121px 16.04166666666667% 25px 16.04166666666667%;
     // height: 30em;
 
     @include pc {
@@ -15,7 +15,6 @@
         grid-template-columns: 43% 54%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
-
     }
 
     .field-gambar {
@@ -53,47 +52,62 @@
         @include flex-column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 1em;
+        padding-top: 36px;
+
+        @include pc {
+            padding: 1em;
+        }
 
         .category {
             @include font2;
+            font-size: 14px;
+            margin-bottom: 3px;
+            color: black;
 
-            font: {
-                size: 1.125em;
+            @include pc {
+                margin-bottom: 3em;
+
+                font: {
+                    size: 1.125em;
+                }
             }
-
-            margin-bottom: 3em;
-            color:black;
         }
 
         .judul {
             @include judul;
-            margin-bottom: .4em;
+            margin-bottom: 0em;
 
-            @include tablet {
+            @include pc {
+                margin-bottom: .4em;
                 font-size: 4em;
             }
         }
 
         .subjudul {
             @include font2;
-            font-size: 20px;
+            font-size: 10px;
             color: black;
-            margin-bottom: 32px;
+            margin-bottom: 3px;
+
+            @include pc {
+                font-size: 20px;
+                margin-bottom: 32px;
+            }
         }
 
         .harga {
             @include font2;
 
             font: {
-                size: 36px;
+                size: 14px;
             }
 
-            margin-bottom: 42px;
+            margin-bottom: 18px;
             color: black;
             transition: $transition-slower;
 
-            @include tablet {
+            @include pc {
+                margin-bottom: 42px;
                 font-size: 2.25em;
             }
         }
@@ -101,7 +115,21 @@
         .line {
             width: 100%;
             border-bottom: 2px rgba(112, 112, 112, 1) solid;
-            margin-bottom: 49px;
+            margin-bottom: 13px;
+            display: none;
+
+            @include pc {
+                margin-bottom: 49px;
+                display: block
+            }
+
+            &.mobile {
+                display: block;
+
+                @include pc {
+                    display: none;
+                }
+            }
         }
 
         .deskripsi {
@@ -123,7 +151,12 @@
 
                 li {
                     @include font2;
+                    font-size: 12px;
                     margin-bottom: .8em;
+
+                    @include pc {
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -142,14 +175,20 @@
         .field-button {
             width: 100%;
             @include flex-row;
-            justify-content: space-evenly;
-            margin-bottom: 2em;
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            @include pc {
+                margin-bottom: 2em;
+            }
 
             .button {
                 @include button;
+                width: 46%;
                 border: 2px rgba(112, 112, 112, 1) solid;
+                text-align: center;
 
-                @include tablet {
+                @include pc {
                     @include font2;
                     font-size: 18px;
                     padding: 11px 62px 10px 61px;
@@ -160,21 +199,23 @@
 
         .button-cart {
             position: relative;
+            align-self: flex-end;
             @include flex-row;
-            padding: 1em 2em;
+            padding: 8px 12.85px;
+            // padding: 1em 2em;
             transition: $transition-slow;
-            width: 100%;
+            width: 46%;
             background-color: rgba(112, 112, 112, 1);
             color: color(white-light);
             margin-bottom: 36px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 12px;
 
             border: 2px transparent solid {
                 radius: 2em;
             }
 
-            @include tablet {
+            @include pc {
                 width: 40%;
                 align-self: center;
                 font-size: 16px;
@@ -182,11 +223,14 @@
             }
 
             &:hover {
-                background-color: transparent;
-                color: color(black-lightest);
 
-                border: 2px color(white-darkest) solid {
-                    radius: 2em;
+                @include pc {
+                    background-color: transparent;
+                    color: color(black-lightest);
+
+                    border: 2px color(white-darkest) solid {
+                        radius: 2em;
+                    }
                 }
             }
 
@@ -196,7 +240,7 @@
                 position: absolute;
                 height: 100%;
                 top: 0;
-                left: 0;
+                right: 0;
                 background-color: color(white-darker);
                 padding: .5em .5em;
 
@@ -204,24 +248,45 @@
                     radius: 40px;
                 }
 
-                @include tablet {
+                @include pc {
+                    right: auto;
+                    left: 0;
                     padding: 1em 30.83px 1em 7px;
                 }
 
                 .tombol {
-                    @include flex-column;
-                    margin-right: .4em;
+                    @include flex-row;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    position: absolute;
+                    right: 35vw;
+                    width: 32.4vw;
+                    height: 33px;
+
+                    @include pc {
+                        margin-right: .4em;
+                        @include flex-column;
+                        position: static;
+                    }
 
                     .segitiga {
+                        @include flex-row;
                         cursor: pointer;
                         width: 1em;
-                        height: 0.5em;
+                        // height: 0.5em;
                         margin: .2em;
-                        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-                        background-color: color(black-lighter);
+                        background-color: white;
                         transition: $transition-slow;
+                        border: 1px black solid;
+                        border-radius: 40px;
+                        padding: 5px 22px;
 
-                        @include tablet {
+                        @include pc {
+                            display: block;
+                            padding: 0;
+                            border: none;
+                            background-color: color(black-lighter);
+                            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                             width: 14px;
                             height: 6px;
                             margin: 2px 3.81px;
@@ -234,16 +299,41 @@
                         &:hover {
                             background-color: color(satu);
                         }
+
+                        p.teks.mobile {
+                            color: black;
+                            text-align: center;
+
+                            @include pc {
+                                display: none
+                            }
+                        }
                     }
                 }
 
                 .angka {
                     @include font2;
-                    font-size: 48px;
-                    color: color(white);
+                    position: absolute;
+                    // right: 240px;
+                    right: 49.5vw;
+                    font-size: 18px;
+                    color: black;
+
 
                     @include tablet {
+                        position: static;
+                        color: color(white);
                         font-size: 3em;
+                    }
+                }
+
+                .teks.mobile {
+                    @include font2;
+                    font-size: 18px;
+                    color: white;
+
+                    @include pc {
+                        display: none
                     }
                 }
             }
@@ -251,8 +341,13 @@
 
         .estimasi {
             @include font2;
-            align-self: center;
+            align-self: flex-start;
             color: black;
+            margin-bottom: 17px;
+
+            @include pc {
+                align-self: center;
+            }
         }
     }
 }

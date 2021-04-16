@@ -1,13 +1,13 @@
 .footer {
     @include flex-row;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: color(black-lighter);
     padding: 2em;
 
 
     @include tablet {
-        padding: 3em;
+        padding: 92px 16.30208333333333% 94px 16.09375%;
     }
 
     .knavigasi,

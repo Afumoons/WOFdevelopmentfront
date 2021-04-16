@@ -10,12 +10,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     background: color(white-light);
-    padding: 37px 2em;
+    padding: 31px 6.875%;
     z-index: 3;
     transform: translateX(100%);
     transition: $transition-slow;
 
-    @include tablet {
+    @include pc {
         width: 984px;
         padding: 2em 6em 2em 10em;
     }
@@ -48,16 +48,23 @@
 
     .judul {
         @include judul;
-        margin-bottom: 1em;
+        margin-bottom: 7px;
+        margin-left: 5.416666666666667%;
 
+        @include pc {
+            margin-bottom: 1em;
+        }
     }
 
     .line {
         width: 41px;
         border-bottom: 2px rgba(112, 112, 112, 1) solid;
-        margin-bottom: 3em;
+        margin-bottom: 39px;
+        margin-left: 5.416666666666667%;
+
 
         @include pc {
+            margin-bottom: 3em;
             width: 5%;
         }
     }
@@ -65,10 +72,11 @@
     .gambar {
         width: 100%;
         height: 100%;
-        max-width: 643px;
-        max-height: 392px;
+        // max-width: 643px;
+        max-height: 224px;
         object-fit: cover;
-        margin-bottom: 53px;
+        padding: 0 5.416666666666667%;
+        margin-bottom: 17px;
         align-self: flex-start;
         transition: $transition-slower;
         // max-width: 40.1875em;
@@ -77,13 +85,15 @@
     .flex {
         width: 100%;
         max-width: 643px;
-        margin-bottom: 63px;
+        margin-left: 5.416666666666667%;
+        margin-bottom: 30px;
         align-self: flex-start;
         @include flex-column;
 
         @include pc {
             @include flex-row;
             justify-content: space-between;
+            margin-bottom: 63px;
         }
 
         .item {
@@ -97,8 +107,13 @@
 
                 p {
                     @include font2;
+                    font-size: 12px;
                     color: black;
                     margin-bottom: .5em;
+
+                    @include pc {
+                        font-size: 16px;
+                    }
                 }
 
                 .spesifikasi {
@@ -120,5 +135,7 @@
         @include font2;
         max-width: 643px;
         color: black;
+        margin-left: 5.416666666666667%;
+
     }
 }
