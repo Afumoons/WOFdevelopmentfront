@@ -634,10 +634,11 @@
 .swiper-container.related-carousel {
     width: 100%;
     position: relative;
-    height: 40rem;
+    height: auto;
     margin-bottom: 2rem;
 
     @include tablet {
+        height: 40rem;
         width: 75%;
     }
 
@@ -675,11 +676,15 @@
 
             .teks {
                 @include font2;
-                font-size: 18px;
+                font-size: 12px;
                 margin-left: 1em;
                 margin-bottom: .6em;
                 align-self: flex-start;
                 color: black;
+
+                @include pc {
+                    font-size: 18px;
+                }
             }
         }
     }

@@ -210,6 +210,8 @@ var swiperrelated = new Swiper(".swiper-container.related-carousel", {
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
+  slidesPerView: 2,
+  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -224,7 +226,8 @@ var swiperrelated = new Swiper(".swiper-container.related-carousel", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     768: {
       slidesPerView: 2,

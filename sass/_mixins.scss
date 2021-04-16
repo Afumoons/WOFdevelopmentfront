@@ -10,6 +10,12 @@
     }
 }
 
+@mixin pcbig {
+    @media screen and (min-width:#{$pcbig}) {
+        @content;
+    }
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
