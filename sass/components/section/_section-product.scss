@@ -11,8 +11,8 @@
     // height: 30em;
 
     @include pc {
-        margin: 136px 311px;
-        grid-template-columns: 43% 54%;
+        margin: 136px 16.19791666666667%;
+        grid-template-columns: 44.84932337372622% 55.15067662627378%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
     }
@@ -55,7 +55,7 @@
         padding-top: 36px;
 
         @include pc {
-            padding: 1em;
+            padding: 0 0 0 10.14774839785375%;
         }
 
         .category {
@@ -179,6 +179,7 @@
             margin-bottom: 16px;
 
             @include pc {
+                justify-content: space-evenly;
                 margin-bottom: 2em;
             }
 
@@ -191,7 +192,8 @@
                 @include pc {
                     @include font2;
                     font-size: 18px;
-                    padding: 11px 62px 10px 61px;
+                    padding: 10px;
+                    width: 32.93947136854092%;
                 }
 
             }
@@ -206,31 +208,46 @@
             transition: $transition-slow;
             width: 46%;
             background-color: rgba(112, 112, 112, 1);
-            color: color(white-light);
             margin-bottom: 36px;
             cursor: pointer;
-            font-size: 12px;
 
             border: 2px transparent solid {
                 radius: 2em;
             }
 
             @include pc {
-                width: 40%;
+                width: 55%;
                 align-self: center;
-                font-size: 16px;
+                padding: 12px 14px 13px 13%;
+            }
+
+            @include pcbig {
+                width: 37.01769163321742%;
+                align-self: center;
                 padding: 12px 14px 13px 13%;
             }
 
             &:hover {
-
                 @include pc {
                     background-color: transparent;
-                    color: color(black-lightest);
 
                     border: 2px color(white-darkest) solid {
                         radius: 2em;
                     }
+
+                    .teks {
+                        color: color(black-lightest);
+                    }
+                }
+            }
+
+            .teks {
+                font-size: 12px;
+                color: color(white-light);
+
+                @include pc {
+                    font-size: 16px;
+
                 }
             }
 
@@ -251,7 +268,7 @@
                 @include pc {
                     right: auto;
                     left: 0;
-                    padding: 1em 30.83px 1em 7px;
+                    padding: 1em 20.83px 1em 7px;
                 }
 
                 .tombol {
@@ -264,6 +281,7 @@
                     height: 33px;
 
                     @include pc {
+                        width: auto;
                         margin-right: .4em;
                         @include flex-column;
                         position: static;

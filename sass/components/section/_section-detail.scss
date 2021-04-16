@@ -16,8 +16,8 @@
     transition: $transition-slow;
 
     @include pc {
-        width: 984px;
-        padding: 2em 6em 2em 10em;
+        width: 51.25%;
+        padding: 37px 2.34375% 0 9.427083333333333%;
     }
 
     &.animate {
@@ -53,6 +53,7 @@
 
         @include pc {
             margin-bottom: 1em;
+            margin-left: 0;
         }
     }
 
@@ -65,6 +66,7 @@
 
         @include pc {
             margin-bottom: 3em;
+            margin-left: 0;
             width: 5%;
         }
     }
@@ -79,12 +81,16 @@
         margin-bottom: 17px;
         align-self: flex-start;
         transition: $transition-slower;
+
         // max-width: 40.1875em;
+        @include pc {
+            padding: 0 15.30680154399042% 0 0;
+        }
     }
 
     .flex {
         width: 100%;
-        max-width: 643px;
+        // max-width: 643px;
         margin-left: 5.416666666666667%;
         margin-bottom: 30px;
         align-self: flex-start;
@@ -92,8 +98,10 @@
 
         @include pc {
             @include flex-row;
+            padding: 0 15.30680154399042% 0 0;
             justify-content: space-between;
             margin-bottom: 63px;
+            margin-left: 0;
         }
 
         .item {
@@ -137,5 +145,9 @@
         color: black;
         margin-left: 5.416666666666667%;
 
+        @include pc {
+            margin-left: 0;
+            padding: 0 15.30680154399042% 0 0;
+        }
     }
 }
