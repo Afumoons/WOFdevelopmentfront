@@ -7,38 +7,64 @@
 
 
     .field-item {
-        @include flex-row;
+        @include flex-column;
         justify-content: flex-start;
         align-items: flex-start;
         border-top: 2px rgba(112, 112, 112, 1) solid;
-        padding: 40px 0;
+        padding: 28px 5.546995377503852%;
         width: 100%;
         // margin: 0 311px;
 
+        @include pc {
+            padding: 40px 0;
+            @include flex-row;
+        }
+
         .gambar {
-            width: 15.75908878140115%;
-            height: 225px;
+            width: 100%;
+            height: 283px;
             object-fit: cover;
-            margin-right: 11.46824777656421%;
+            margin: 0 0 21px 0;
+
             // margin-right: 36px;
+            @include pc {
+                height: 225px;
+                margin: 0 11.46824777656421% 0 0;
+                width: 15.75908878140115%;
+            }
         }
 
         .field-tengah {
             @include flex-column;
-            width: 35.88703385863629%;
+            width: 100%;
+            margin: 0 0 25px 0;
+
+            @include pc {
+                width: 35.88703385863629%;
+            }
         }
 
         .field-kanan {
             @include flex-column;
             align-items: flex-start;
-            width: 28.92806990170074%;
+            width: 100%;
+
             // width: 48.35387735996256%;
             // padding-right: 19.42580745826182%;
+            @include pc {
+                width: 28.92806990170074%;
+            }
 
             .judul {
                 @include font1;
-                margin-bottom: 15px;
+                font-size: 12px;
+                margin-bottom: 14px;
                 color: black;
+
+                @include pc {
+                    margin-bottom: 15px;
+                    font-size: 16px
+                }
             }
 
             .field-spesifikasi {
@@ -66,14 +92,24 @@
 
             .button-checkout {
                 position: relative;
+                align-self: center;
                 @include font2;
                 list-style: none;
-                width: 100%;
+                width: 68.69670710571924%;
                 padding: 11px 11px;
+                margin-top: 37px;
                 background-color: rgba(112, 112, 112, 1);
                 border: rgba(112, 112, 112, 1) 2px solid;
                 border-radius: 40px;
                 color: white;
+                font-size: 12px;
+
+                @include pc {
+                    margin-top: 0;
+                    font-size: 16px;
+                    align-self: flex-start;
+                    width: 100%;
+                }
 
                 .overlay {
                     position: absolute;
@@ -90,12 +126,20 @@
             width: 100%;
             @include flex-row;
             justify-content: flex-start;
-            margin-bottom: 18px;
+            margin-bottom: 9px;
+
+            @include pc {
+                margin-bottom: 18px;
+            }
 
             p {
                 @include font2;
-                font-size: 16px;
+                font-size: 12px;
                 color: black;
+
+                @include pc {
+                    font-size: 16px;
+                }
             }
 
             .spesifikasi {
@@ -115,10 +159,17 @@
     .buttonadd {
         @include font2;
         color: rgba(112, 112, 112, 1);
-        font-size: 18px;
+        font-size: 12px;
         border: 2px rgba(112, 112, 112, 1) solid;
         border-radius: 40px;
-        padding: 11px 44px;
+        padding: 11px 24px;
         margin-bottom: 50px;
+        width: 61.19291217257319%;
+
+        @include pc {
+            padding: 11px 44px;
+            font-size: 18px;
+            width: auto;
+        }
     }
 }
