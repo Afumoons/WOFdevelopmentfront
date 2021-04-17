@@ -3,36 +3,37 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    padding: 0 16.19791666666667%;
 
 
     .field-item {
         @include flex-row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: flex-start;
         border-top: 2px rgba(112, 112, 112, 1) solid;
         padding: 40px 0;
-        width: 70%;
+        width: 100%;
         // margin: 0 311px;
 
         .gambar {
-            width: 225px;
+            width: 15.75908878140115%;
             height: 225px;
             object-fit: cover;
+            margin-right: 11.46824777656421%;
             // margin-right: 36px;
         }
 
         .field-tengah {
             @include flex-column;
-            width: 30%;
-
-
+            width: 35.88703385863629%;
         }
 
         .field-kanan {
             @include flex-column;
             align-items: flex-start;
-            width: 30%;
-            margin-right: 160px;
+            width: 28.92806990170074%;
+            // width: 48.35387735996256%;
+            // padding-right: 19.42580745826182%;
 
             .judul {
                 @include font1;
