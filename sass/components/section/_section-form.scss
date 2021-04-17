@@ -8,7 +8,11 @@
         @include flex-row;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 0 311px;
+        padding: 0 12.19791666666667%;
+    }
+
+    @include pcbig {
+        padding: 0 16.19791666666667%;
     }
 
     .field-kiri,
@@ -19,7 +23,11 @@
         width: 100%;
 
         @include pc {
-            width: 43%;
+            width: 45.52264623499029%;
+        }
+
+        @include pcbig {
+            width: 42.52264623499029%;
         }
 
         .judul {
@@ -91,7 +99,10 @@
                 width: 225px;
                 height: 225px;
                 object-fit: cover;
-                margin-right: 36px;
+
+                @include pc {
+                    margin-right: 5.516818634587388%;
+                }
             }
 
             .field-teks {
