@@ -1,5 +1,5 @@
 div.teks-jumbo {
-    padding: 26px;
+    padding: 26px 0;
     background-color: white;
     @include flex-column;
     justify-content: flex-start;
@@ -76,15 +76,16 @@ div.teks-jumbo {
 
         input[type="text"] {
             @include font2;
-            width: 100%;
+            width: 55.83333333333333%;
             text-align: center;
             padding: 12px;
             border-radius: 5px;
-            margin-bottom: 7px;
+            margin: 46px 0 17px 0;
             transition: $transition-fast;
 
             @include pc {
-                width: 35%;
+                margin: 0 0 7px 0;
+                width: 29.87938596491228%;
             }
 
             &:focus {
@@ -101,6 +102,11 @@ div.teks-jumbo {
             font-size: 14px;
             color: white;
             cursor: pointer;
+            margin: 21px;
+
+            @include pc {
+                margin: 0;
+            }
         }
     }
 }

@@ -1,0 +1,9 @@
+.margin {
+    &.mobile {
+        margin-top: 8vh;
+
+        @include pc {
+            display: none;
+        }
+    }
+}

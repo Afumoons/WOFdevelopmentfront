@@ -328,6 +328,10 @@
     }
 
     .field-kanan {
-        margin-bottom: 71px;
+        margin-bottom: 48px;
+
+        @include pc {
+            margin-bottom: 71px;
+        }
     }
 }
