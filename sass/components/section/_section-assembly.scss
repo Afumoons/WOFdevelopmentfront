@@ -16,8 +16,8 @@
     transition: $transition-slow;
 
     @include pc {
-        width: 52vw;
-        padding: 2em 6em 2em 10em;
+        width: 51.25%;
+        padding: 37px 2.34375% 0 9.6875%;
     }
 
     &.animate {
@@ -26,7 +26,7 @@
 
     .cross {
         align-self: flex-end;
-        margin-bottom: 1em;
+        margin-bottom: 34px;
 
         div {
             width: 1.875em;
@@ -52,6 +52,7 @@
         margin-left: 12.5%;
 
         @include pc {
+            margin-left: 0;
             margin-bottom: 30px;
         }
     }
@@ -64,6 +65,7 @@
 
 
         @include pc {
+            margin-left: 0;
             margin-bottom: 60px;
             width: 5%;
         }
@@ -75,18 +77,25 @@
         justify-content: space-between;
         margin: 0 12.5%;
 
+        @include pc {
+            justify-content: flex-start;
+            margin: 0;
+        }
 
         .item {
             position: relative;
 
             margin: {
                 bottom: 2em;
-                // right: 2em;
+                // right: 20.16181725179496%;
             }
-
 
             width: 40.48953301127214%;
 
+            @include pc {
+                width: 29.76205985323984%;
+                margin-right: 5.06982146603823%;
+            }
 
             .gambar {
                 width: 100%;

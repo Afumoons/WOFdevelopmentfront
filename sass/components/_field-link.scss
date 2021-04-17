@@ -1,14 +1,29 @@
 .field-link {
     width: 100%;
     @include flex-row;
+    justify-content: space-between;
     margin-top: 95px;
-    margin-bottom: 86px;
+    margin-bottom: 32px;
+    padding: 0 18.54166666666667%;
+
+    @include pc {
+        margin-bottom: 86px;
+        padding: 0 30.77083333333333%;
+    }
+
+    @include pcbig {
+        padding: 0 36.77083333333333%;
+    }
 
     .link {
         @include font1;
-        font-size: 36px;
-        margin-right: 50px;
+        font-size: 16px;
+        // margin-right: 50px;
         color: color(white-darker);
+
+        @include pc {
+            font-size: 26px;
+        }
 
         &.active {
             color: black;

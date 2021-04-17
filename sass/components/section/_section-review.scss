@@ -2,9 +2,14 @@
     @include flex-column;
     justify-content: flex-start;
     align-items: center;
-    padding: 88px 3em 2px 3em;
+    padding: 38px 3em 2px 3em;
     background-color: #e8e8e8;
-    margin-bottom: 197px;
+    margin-bottom: 45px;
+
+    @include pc {
+        padding: 88px 3em 2px 3em;
+        margin-bottom: 197px;
+    }
 
     .judul {
         @include judul;

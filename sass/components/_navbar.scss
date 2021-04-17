@@ -101,11 +101,14 @@
                  .button {
                      @include font2;
                      font-size: 0.75em;
-                     margin-right: 3em;
                      border: 2px #707070 solid;
                      border-radius: 2em;
                      padding: .7em 1em;
                      cursor: pointer;
+
+                     @include pc {
+                         margin-right: 3em;
+                     }
                  }
              }
 

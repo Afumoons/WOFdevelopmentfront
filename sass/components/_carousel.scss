@@ -555,10 +555,11 @@
 .swiper-container.review-carousel {
     width: 100%;
     position: relative;
-    height: 20rem;
+    height: 10rem;
     margin-bottom: 2rem;
 
-    @include tablet {
+    @include pc {
+        height: 20rem;
         width: 75%;
     }
 
@@ -588,8 +589,12 @@
         // }
         .field-bintang {
             color: black;
-            font-size: 1.4em;
+            font-size: 14px;
             margin-bottom: 1em;
+
+            @include pc {
+                font-size: 1.4em;
+            }
         }
 
         .line {
@@ -600,12 +605,21 @@
             @include font2;
             color: black;
             margin-bottom: 1em;
-            font-size: 1.125em;
+            font-size: 10px;
+
+            @include pc {
+                font-size: 1.125em;
+            }
         }
 
         .deskripsi {
             @include font2;
+            font-size: 8px;
             color: black;
+
+            @include pc {
+                font-size: 16px;
+            }
         }
     }
 
@@ -620,10 +634,11 @@
 .swiper-container.related-carousel {
     width: 100%;
     position: relative;
-    height: 40rem;
+    height: auto;
     margin-bottom: 2rem;
 
     @include tablet {
+        height: 40rem;
         width: 75%;
     }
 
@@ -661,11 +676,15 @@
 
             .teks {
                 @include font2;
-                font-size: 18px;
+                font-size: 12px;
                 margin-left: 1em;
                 margin-bottom: .6em;
                 align-self: flex-start;
                 color: black;
+
+                @include pc {
+                    font-size: 18px;
+                }
             }
         }
     }

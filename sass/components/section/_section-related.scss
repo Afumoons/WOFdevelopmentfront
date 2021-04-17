@@ -4,7 +4,10 @@
     align-items: center;
     padding: 3em;
     background-color: color(white-light);
-    margin-bottom: 75px;
+
+    @include pc {
+        margin-bottom: 75px;
+    }
 
     .judul {
         @include judul;

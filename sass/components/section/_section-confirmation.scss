@@ -1,43 +1,72 @@
 .section-confirmation {
-    @include flex-row;
-    justify-content: space-between;
+    @include flex-column;
+    justify-content: flex-start;
     align-items: flex-start;
     background: rgba(232, 232, 232, 1);
-    padding: 38px 311px;
+    padding: 38px 15.41666666666667%;
+
+    @include pc {
+        padding: 38px 16.19791666666667%;
+        @include flex-row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
     .field-kiri,
     .field-tengah,
     .field-kanan {
         @include flex-column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: space-between;
         @include font2;
-        // width: 454px;
-        margin-right: 54px;
 
         .judul {
             @include font1;
-            font-size: 24px;
-            margin-bottom: 91px
+            font-size: 16px;
+            margin-bottom: 23px;
+
+            @include pc {
+                font-size: 24px;
+                margin-bottom: 91px;
+            }
         }
 
         .teks {
             @include font2;
-            margin-bottom: 10px
+            margin-bottom: 10px;
+            font-size: 13px;
+
+            @include pc {
+                font-size: 16px
+            }
         }
 
         .bookingcode {
             @include font1;
-            font-size: 30px;
+            font-size: 24px;
+            margin-bottom: 24px;
+
+            @include pc {
+                font-size: 30px;
+                margin-bottom: 0;
+            }
         }
 
         .field-payment {
             @include flex-row;
             justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 22px;
+
+            @include pc {
+                width: 100%;
+                margin-bottom: 10px;
+            }
 
             .gambar {
                 margin-right: 13px;
+
+                @include pc {
+                    margin-right: 0;
+                }
             }
 
             .field-teks {
@@ -45,6 +74,10 @@
                 justify-content: space-between;
                 align-items: flex-start;
                 margin-right: 13px;
+
+                @include pc {
+                    margin-right: 0;
+                }
 
                 .teks {
                     margin-bottom: 0;
@@ -65,16 +98,46 @@
             align-self: center;
             @include font2;
             font-size: 0.75em;
-            margin-right: 3em;
             border: 2px #707070 solid;
             border-radius: 2em;
             padding: .7em 1em;
             cursor: pointer;
             text-decoration: none;
+
+            @include pc {
+                // margin-right: 3em;
+            }
+        }
+    }
+
+    .field-kiri {
+        width: 100%;
+
+        @include pc {
+            align-items: flex-start;
+            width: 24.49922958397535%;
+        }
+    }
+
+    .field-tengah {
+        width: 100%;
+
+        @include pc {
+            width: 34.9768875192604%;
+        }
+
+        .teks {
+            margin-bottom: 27px;
         }
     }
 
     .field-kanan {
+        width: 100%;
+
+        @include pc {
+            width: 33.97534668721109%;
+        }
+
         .teks {
             margin-bottom: 27px;
         }

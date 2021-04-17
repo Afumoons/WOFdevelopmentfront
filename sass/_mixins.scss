@@ -10,6 +10,12 @@
     }
 }
 
+@mixin pcbig {
+    @media screen and (min-width:#{$pcbig}) {
+        @content;
+    }
+}
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -93,7 +99,7 @@
             @include font2;
             font-size: 11px;
 
-            @include tablet {
+            @include pc {
                 margin-bottom: 0;
                 margin-right: 1em;
 
