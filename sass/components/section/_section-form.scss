@@ -2,7 +2,7 @@
     @include flex-column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 15.52083333333333%;
 
     @include pc {
         @include flex-row;
@@ -82,26 +82,44 @@
         .field-input {
             @include flex-row;
             justify-content: space-between;
+            flex-wrap: wrap;
+
+            @include pc {
+                // @include flex-row;
+            }
 
             .pembungkus-input {
-                width: 30%;
+                width: 47%;
+
+                @include pc {
+                    width: 30%;
+                }
             }
         }
 
         .field-item {
-            @include flex-row;
+            @include flex-column;
             width: 100%;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 21px;
 
+            @include pc {
+                @include flex-row;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
             .gambar {
-                width: 225px;
-                height: 225px;
+                width: 100%;
+                height: 331px;
                 object-fit: cover;
+                margin: 0 0 36px 0;
 
                 @include pc {
-                    margin-right: 5.516818634587388%;
+                    height: 225px;
+                    width: 34.48011646617117%;
+                    margin: 0 5.516818634587388% 0 0
                 }
             }
 
@@ -109,8 +127,13 @@
                 @include flex-column;
                 width: 100%;
 
+                @include pc {
+                    width: 50.5137537354%;
+                }
 
-
+                @include pcbig {
+                    width: 45.5137537354%;
+                }
             }
         }
 
@@ -145,18 +168,32 @@
             justify-content: space-between;
             background: #E8E8E8;
             padding: 18px;
-            margin-bottom: 12px;
+            margin-top: 24px;
+            margin-bottom: 6px;
+
+            @include pc {
+                margin-top: 0;
+                margin-bottom: 12px;
+            }
 
             .teks {
                 @include font2;
-                font-size: 16px;
+                font-size: 12px;
+
+                @include pc {
+                    font-size: 16px;
+                }
             }
         }
 
         .deskripsi {
             @include font2;
             font-size: 10px;
-            margin-bottom: 22px
+            margin-bottom: 11px;
+
+            @include pc {
+                margin-bottom: 22px;
+            }
         }
 
         .agreement {
@@ -166,9 +203,13 @@
             padding-left: 35px;
             margin-bottom: 12px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 12px;
             user-select: none;
             margin-bottom: 40px;
+
+            @include pc {
+                font-size: 14px;
+            }
 
             /* Hide the browser's default checkbox */
             input {
@@ -224,15 +265,23 @@
 
         .button-order {
             position: relative;
-            align-self: center;
+            align-self: flex-end;
             @include font2;
             list-style: none;
-            width: 50%;
+            width: 55%;
             // padding: 11px 11px;
             background-color: rgba(112, 112, 112, 1);
             border: rgba(112, 112, 112, 1) 2px solid;
             border-radius: 40px;
             color: white;
+            font-size: 12px;
+            padding-right: 41.2px;
+
+            @include pc {
+                font-size: 16px;
+                width: 50%;
+                align-self: center;
+            }
 
             input {
                 // height: 100%;
@@ -240,24 +289,43 @@
                 border: none;
                 border-radius: 40px;
                 color: white;
-                padding: 11px 11px;
+                padding: 11px 17px;
                 text-decoration: none;
                 // margin: 4px 2px;
+                width: 100%;
                 cursor: pointer;
-            }
 
-            .overlay {
-                position: absolute;
-                top: 0;
-                right: 1px;
-                padding: 11px 11px;
-                background: rgba(196, 196, 196, 1);
-                border-radius: 40px;
+                @include pc {
+                    font-size: 16px;
+                    padding: 11px 11px;
+                    // margin-right: 41.2px;
+                }
+
+                &.overlay {
+                    position: absolute;
+                    top: 0;
+                    right: 1px;
+                    padding: 11px 11px;
+                    background: rgba(196, 196, 196, 1);
+                    border-radius: 40px;
+                    width: auto;
+
+                    @include pc {
+                        // margin-right: 0;
+                    }
+                }
             }
         }
     }
 
-    .field-kiri {}
+    .field-kiri {
+        margin: 0 0 38px 0;
+
+        @include pc {
+            margin: 0;
+
+        }
+    }
 
     .field-kanan {
         margin-bottom: 71px;

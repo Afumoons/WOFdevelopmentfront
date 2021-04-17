@@ -3,10 +3,11 @@
     @include flex-row;
     justify-content: space-between;
     margin-top: 95px;
-    margin-bottom: 86px;
+    margin-bottom: 32px;
     padding: 0 18.54166666666667%;
 
     @include pc {
+        margin-bottom: 86px;
         padding: 0 30.77083333333333%;
     }
 
