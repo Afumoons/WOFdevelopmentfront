@@ -2,7 +2,11 @@
     @include flex-column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 15.52083333333333%;
+    padding: 0 10.52083333333333%;
+
+    @include mobilebig {
+        padding: 0 15.52083333333333%;
+    }
 
     @include pc {
         @include flex-row;
@@ -176,12 +180,74 @@
                 margin-bottom: 12px;
             }
 
+            &.column {
+                @include flex-column;
+                align-items: flex-start;
+                padding: 19px 7.552870090634441% 19px 9.667673716012085%;
+                justify-content: space-between;
+
+                @include pc {
+                    padding: 18px 5.254260933845231%;
+                }
+
+                .teks {
+                    margin-bottom: 12px;
+
+                    @include pc {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
             .teks {
                 @include font2;
                 font-size: 12px;
 
                 @include pc {
                     font-size: 16px;
+                }
+            }
+
+            .field-payment {
+                @include flex-row;
+                justify-content: space-between;
+                // margin-bottom: 22px;
+
+                @include pc {
+                    width: 100%;
+                    // margin-bottom: 10px;
+                }
+
+                .gambar {
+                    margin-right: 13px;
+
+                    @include pc {
+                        margin-right: 0;
+                    }
+                }
+
+                .field-teks {
+                    @include flex-column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-right: 13px;
+
+                    @include pc {
+                        margin-right: 0;
+                    }
+
+                    .teks {
+                        margin-bottom: 0;
+                    }
+
+                    .sub-judul {
+                        align-self: flex-start
+                    }
+                }
+
+                .sub-judul {
+                    @include font1;
+                    align-self: flex-end;
                 }
             }
         }

@@ -4,7 +4,11 @@
     justify-content: space-between;
     margin-top: 95px;
     margin-bottom: 32px;
-    padding: 0 18.54166666666667%;
+    padding: 0 13.54166666666667%;
+
+    @include mobilebig {
+        padding: 0 18.54166666666667%;
+    }
 
     @include pc {
         margin-bottom: 86px;

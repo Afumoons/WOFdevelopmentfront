@@ -2,8 +2,12 @@
     @include flex-row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 0 38.33333333333333%;
+    padding: 0 28.33333333333333%;
     margin-bottom: 42px;
+
+    @include pc {
+        padding: 0 38.33333333333333%;
+    }
 
     a {
         @include font1;

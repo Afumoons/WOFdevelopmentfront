@@ -2,9 +2,13 @@
     @include flex-column;
     justify-content: space-between;
     border-bottom: 2px rgba(112, 112, 112, 1) solid;
-    margin: 0 10.41666666666667% 4rem 10.41666666666667%;
+    margin: 0 5% 4rem 5%;
     padding: 0 0 37px 0;
     transition: $transition-slower;
+
+    @include mobilebig {
+        margin: 0 10.41666666666667% 4rem 10.41666666666667%;
+    }
 
     @include pc {
         @include flex-row;
@@ -76,10 +80,13 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0 0 7px 0;
+        position: relative;
+        z-index: 2;
 
         .field-kiri {
             justify-content: flex-start;
             margin-bottom: 0;
+            position: relative;
 
             .burger {
                 display: block;
@@ -109,16 +116,22 @@
             .menu {
                 position: absolute;
                 top: -.5em;
-                left: -16em;
-                width: 240px;
+                left: -2.8vh;
+                width: 100vw;
                 padding-top: .5em;
                 background: #E8E8E8;
                 opacity: 0;
                 transition: $transition-slow;
+
                 // z-index: 3;
+                @include mobilebig {
+                    left: -6.8vh;
+                }
 
                 @include pc {
+                    position: absolute;
                     left: -16em;
+                    width: 240px;
                 }
 
                 &.animate {
@@ -127,11 +140,20 @@
 
                 .burger {
                     position: relative;
+                    padding: 0 4.166666666666667%;
+
+                    @include pc {
+                        padding: 0;
+                    }
 
                     .line1,
                     .line2,
                     .line3 {
-                        width: 17em;
+                        width: 100%;
+
+                        @include pc {
+                            width: 17em;
+                        }
                     }
                 }
 

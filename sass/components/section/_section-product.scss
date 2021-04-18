@@ -7,11 +7,14 @@
     grid-template-areas: "gambar"
         "teks";
     // grid-gap: 2em;
-    margin: 121px 16.04166666666667% 25px 16.04166666666667%;
-    // height: 30em;
+    padding: 121px 12.04166666666667% 25px 12.04166666666667%;
+
+    @include mobilebig {
+        padding: 121px 16.04166666666667% 25px 16.04166666666667%;
+    }
 
     @include pc {
-        margin: 136px 16.19791666666667%;
+        padding: 136px 16.19791666666667%;
         grid-template-columns: 44.84932337372622% 55.15067662627378%;
         grid-template-areas: "gambar teks";
         justify-content: space-between;
@@ -276,9 +279,14 @@
                     flex-direction: row-reverse;
                     justify-content: space-between;
                     position: absolute;
-                    right: 35vw;
-                    width: 32.4vw;
+                    right: 40vw;
+                    width: 35.4vw;
                     height: 33px;
+
+                    @include mobilebig {
+                        width: 32.4vw;
+                        right: 35vw;
+                    }
 
                     @include pc {
                         width: auto;
@@ -333,10 +341,13 @@
                     @include font2;
                     position: absolute;
                     // right: 240px;
-                    right: 49.5vw;
+                    right: 55vw;
                     font-size: 18px;
                     color: black;
 
+                    @include mobilebig {
+                        right: 49.5vw;
+                    }
 
                     @include tablet {
                         position: static;
