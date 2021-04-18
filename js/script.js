@@ -101,9 +101,15 @@ const shopMenu = () => {
   const burgerButton = document.querySelector(
     ".section-judul .field-kiri .burger"
   );
+  const burgerButton2 = document.querySelector(
+    ".section-judul .field-kiri .menu .burger"
+  );
   const menu = document.querySelector(".section-judul .field-kiri .menu");
   burgerButton.addEventListener("click", () => {
     menu.classList.toggle("animate");
+  });
+  burgerButton2.addEventListener("click", () => {
+    menu.classList.remove("animate");
   });
   // burgerButton.addEventListener("focusout", () => {
   //   menu.classList.remove("animate");
