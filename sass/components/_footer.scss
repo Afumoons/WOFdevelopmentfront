@@ -3,8 +3,11 @@
     align-items: flex-start;
     justify-content: space-between;
     background-color: color(black-lighter);
-    padding: 2em;
+    padding: 2em 1em;
 
+    @include mobilebig {
+        padding: 2em;
+    }
 
     @include tablet {
         padding: 92px 16.30208333333333% 94px 16.09375%;
