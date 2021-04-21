@@ -66,27 +66,77 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
             <div class="field-input">
                 <div class="pembungkus-input">
                     <label for="country">Country:</label>
-                    <input type="text" id="country" name="country" placeholder="Country">
+                    <!-- <input type="text" id="country" name="country" placeholder="Country"> -->
+                    <div class="custom-select">
+                        <select id="country" name="country">
+                            <option value="0">Country:</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Singapura">Singapura</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="pembungkus-input">
                     <label for="district">District:</label>
-                    <input type="text" id="district" name="district" placeholder="District">
+                    <!-- <input type="text" id="district" name="district" placeholder="District"> -->
+                    <div class="custom-select">
+                        <select id="district" name="district">
+                            <option value="0">District:</option>
+                            <option value="District1">District1</option>
+                            <option value="District2">District2</option>
+                            <option value="District3">District3</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="pembungkus-input">
                     <label for="village">Village:</label>
-                    <input type="text" id="village" name="village" placeholder="Village">
+                    <!-- <input type="text" id="village" name="village" placeholder="Village"> -->
+                    <div class="custom-select">
+                        <select id="village" name="village">
+                            <option value="0">Village:</option>
+                            <option value="Village1">Village1</option>
+                            <option value="Village2">Village2</option>
+                            <option value="Village3">Village3</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="pembungkus-input">
                     <label for="province">Province:</label>
-                    <input type="text" id="province" name="province" placeholder="Province">
+                    <!-- <input type="text" id="province" name="province" placeholder="Province"> -->
+                    <div class="custom-select">
+                        <select id="province" name="province">
+                            <option value="0">Province:</option>
+                            <option value="Province1">Province1</option>
+                            <option value="Province2">Province2</option>
+                            <option value="Province3">Province3</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="pembungkus-input">
                     <label for="subdistrict">Sub-District:</label>
-                    <input type="text" id="subdistrict" name="subdistrict" placeholder="Sub-District">
+                    <!-- <input type="text" id="subdistrict" name="subdistrict" placeholder="Sub-District"> -->
+                    <div class="custom-select">
+                        <select id="subdistrict" name="subdistrict">
+                            <option value="0">Sub-District:</option>
+                            <option value="Sub-District1">Sub-District1</option>
+                            <option value="Sub-District2">Sub-District2</option>
+                            <option value="Sub-District3">Sub-District3</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="pembungkus-input">
                     <label for="postalcode">Postal Code:</label>
-                    <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code">
+                    <!-- <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code"> -->
+                    <div class="custom-select">
+                        <select id="postalcode" name="postalcode">
+                            <option value="0">Postal-Code:</option>
+                            <option value="Postal-Code1">Postal-Code1</option>
+                            <option value="Postal-Code2">Postal-Code2</option>
+                            <option value="Postal-Code3">Postal-Code3</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="pembungkus-input">
@@ -250,6 +300,7 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         navSlide();
         scrollPage();
         navMod();
+        customSelect();
     </script>
 </body>
 

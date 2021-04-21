@@ -306,6 +306,8 @@
                         border: 1px black solid;
                         border-radius: 40px;
                         padding: 5px 22px;
+                        user-select: none;
+
 
                         @include pc {
                             display: block;
