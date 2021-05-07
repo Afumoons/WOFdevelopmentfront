@@ -248,12 +248,12 @@
 .swiper-container.galeri-carousel {
     width: 100%;
     position: relative;
-    height: 15rem;
+    height: 9rem;
     margin-bottom: 2rem;
 
     @include tablet {
         width: 75%;
-        height: 26rem;
+        height: 20rem;
     }
 
     .swiper-slide {
