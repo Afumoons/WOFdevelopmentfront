@@ -1,6 +1,10 @@
 .section-team {
     @include flex-column;
-    padding: 3em 2em;
+    // padding: 3em 2em;
     background-color: rgba(232, 232, 232, 1);
     justify-content: flex-start;
+
+    .gambar {
+        width: 100%;
+    }
 }

@@ -79,7 +79,7 @@ var swipergaleri = new Swiper(".swiper-container.galeri-carousel", {
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30,
     },
   },

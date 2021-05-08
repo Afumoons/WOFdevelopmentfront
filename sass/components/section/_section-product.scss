@@ -24,6 +24,8 @@
         position: relative;
         grid-area: gambar;
         transition: $transition-slower;
+        @include flex-column;
+        align-items: flex-start;
 
 
         .gambar {
@@ -46,6 +48,27 @@
             i {
                 color: color(black-lighter);
                 font-size: 1.2em;
+            }
+        }
+
+        .field-icon {
+            @include flex-row;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 23px;
+
+            &.mobile-hidden {
+                display: none;
+
+                @include pc {
+                    display: flex;
+                }
+            }
+
+            .gambar-icon {
+                cursor: pointer;
+                width: 16.4910767814228%;
+                margin-right: 4.122769195355701%;
             }
         }
     }

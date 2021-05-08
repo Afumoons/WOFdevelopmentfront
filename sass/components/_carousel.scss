@@ -145,31 +145,33 @@
             width: 100%;
             height: 50%;
             justify-content: space-between;
+            padding: 0 18px;
 
             .field-teks {
                 width: 100%;
 
                 .judul {
-                    @include font2;
-                    font-size: 11px;
+                    @include font1;
+                    font-size: 10px;
                     text-align: left;
-                    line-height: 14.51px;
+                    line-height: 13.19px;
                     border: 0;
                     padding-bottom: 0;
-                    margin-bottom: 21px;
+                    margin-bottom: 10px;
 
                     @include pc {
-                        font-size: 22px;
+                        margin-bottom: 21px;
                         line-height: 29.01px;
+                        font-size: 21px;
                     }
                 }
 
                 .deskripsi {
                     @include font2;
                     text-align: justify;
-                    font-size: 8px;
-                    line-height: 10.55px;
                     margin-bottom: 1em;
+                    line-height: 10.55px;
+                    font-size: 8px;
                     color: rgba(0, 0, 0, 1);
 
                     @include pc {
@@ -206,7 +208,7 @@
                         color: rgba(0, 0, 0, 1);
 
                         @include pc {
-                            font-size: 18px;
+                            font-size: 12px;
                         }
                     }
                 }
@@ -246,12 +248,12 @@
 .swiper-container.galeri-carousel {
     width: 100%;
     position: relative;
-    height: 15rem;
+    height: 9rem;
     margin-bottom: 2rem;
 
     @include tablet {
         width: 75%;
-        height: 36rem;
+        height: 20rem;
     }
 
     .swiper-slide {
