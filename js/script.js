@@ -201,32 +201,6 @@ const detailButton = () => {
   });
 };
 
-/* Ganti Gambar
-  -----------------------------------------------*/
-const gantiGambar = () => {
-  const fieldGambar = document.querySelector(".section-product .field-gambar");
-  const gambarUtama = fieldGambar.querySelector(".gambar");
-  const iconGambar = fieldGambar.querySelectorAll(
-    ".field-icon.mobile-hidden .gambar-icon"
-  );
-  const gambar0 = iconGambar[0].src;
-  const gambar1 = iconGambar[1].src;
-  const gambar2 = iconGambar[2].src;
-  const gambar3 = iconGambar[3].src;
-  iconGambar[0].addEventListener("click", () => {
-    gambarUtama.src = gambar0;
-  });
-  iconGambar[1].addEventListener("click", () => {
-    gambarUtama.src = gambar1;
-  });
-  iconGambar[2].addEventListener("click", () => {
-    gambarUtama.src = gambar2;
-  });
-  iconGambar[3].addEventListener("click", () => {
-    gambarUtama.src = gambar3;
-  });
-};
-
 /* Custom Select
   -----------------------------------------------*/
 const customSelect = () => {

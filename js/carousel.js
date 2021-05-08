@@ -239,3 +239,26 @@ var swiperrelated = new Swiper(".swiper-container.related-carousel", {
     },
   },
 });
+
+var swiperdetail = new Swiper(".swiper-container.detail-carousel", {
+  loop: true,
+  lazy: true,
+  spaceBetween: 20,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+
+var swiperdetail2 = new Swiper(".swiper-container.detail-carousel2", {
+  loop: true,
+  lazy: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiperdetail,
+  },
+  autoplay: {
+    delay: 2000,
+    // reverseDirection: true,
+  },
+});

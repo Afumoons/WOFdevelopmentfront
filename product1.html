@@ -45,12 +45,6 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     </nav>
     <!-- Navbar Close -->
 
-    <!-- Overlay -->
-    <div class="overlay-gambar">
-        <div class="background"></div>
-        <img src="./img/1.png" alt="" class="gambar">
-    </div>
-
     <div class="overlay-background"></div>
 
     <!-- Section Assembly -->
@@ -127,13 +121,39 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
     <!-- Section Product -->
     <div class="section-product">
         <div class="field-gambar">
-            <img src="./img/1.png" alt="" class="gambar">
-            <div class="icon"><img src="./img/perbesar 1.png" alt=""></div>
-            <div class="field-icon mobile-hidden">
-                <img src="./img/1.png" alt="" class="gambar-icon">
-                <img src="./img/2.png" alt="" class="gambar-icon">
-                <img src="./img/3.png" alt="" class="gambar-icon">
-                <img src="./img/4.png" alt="" class="gambar-icon">
+            <!-- Swiper -->
+            <div class="swiper-container detail-carousel2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/4.png" />
+                    </div>
+                </div>
+            </div>
+            <div thumbsSlider="" class="swiper-container detail-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/4.png" />
+                    </div>
+
+                </div>
             </div>
         </div>
         <div class="field-teks">
@@ -141,10 +161,10 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
             <p class="judul">Taku Stool</p>
             <p class="harga">IDR 370.000,-</p>
             <div class="line"></div>
+            <div class="line mobile"></div>
             <p class="deskripsi">Inspired by structure of Japanese building Mori and Taku stool
                 is our furniture pieces made with attention to details. It has
                 strong joints behind its simple form.</p>
-            <div class="line mobile"></div>
             <div class="field-spesifikasi">
                 <ul class="list-judul">
                     <li>Category</li>
@@ -176,7 +196,6 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
                 </div>
             </div>
             <p class="estimasi">Delivered in 5 - 14 days.</p>
-            <div class="line mobile"></div>
         </div>
     </div>
 
@@ -381,7 +400,6 @@ sticky, sweet treat with just a hint of salt that you'll keep coming back for.">
         zoomButton();
         assemblyButton();
         detailButton();
-        gantiGambar();
     </script>
 </body>
 
