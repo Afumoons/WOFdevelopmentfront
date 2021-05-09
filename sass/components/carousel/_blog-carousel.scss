@@ -1,0 +1,140 @@
+// Blog Carousel
+.swiper-container.blog-carousel {
+    width: 100%;
+    position: relative;
+    height: 22rem;
+    margin-bottom: 2rem;
+
+    @include mobilebig {
+        height: 16rem;
+    }
+
+    @include pc {
+        width: 75%;
+        height: 36rem;
+    }
+
+    .swiper-slide {
+        padding: 10px 0;
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: $transition-slow;
+        position: relative;
+        background-color: rgb(242, 242, 242);
+
+        .gambar {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            margin-bottom: 1em;
+        }
+
+        .field-content {
+            @include flex-column;
+            width: 100%;
+            height: 50%;
+            justify-content: space-between;
+            padding: 0 18px;
+
+            .field-teks {
+                width: 100%;
+
+                .judul {
+                    @include font1;
+                    font-size: 10px;
+                    text-align: left;
+                    line-height: 13.19px;
+                    border: 0;
+                    padding-bottom: 0;
+                    margin-bottom: 10px;
+
+                    @include pc {
+                        margin-bottom: 21px;
+                        line-height: 29.01px;
+                        font-size: 21px;
+                    }
+                }
+
+                .deskripsi {
+                    @include font2;
+                    text-align: justify;
+                    margin-bottom: 1em;
+                    line-height: 10.55px;
+                    font-size: 8px;
+                    color: rgba(0, 0, 0, 1);
+
+                    @include pc {
+                        line-height: 21.1px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .field-meta {
+                width: 100%;
+
+                .line {
+                    width: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 1);
+                    justify-self: flex-end;
+                    margin-bottom: .4em;
+
+                    @include pc {
+                        border-bottom: 2px solid rgba(0, 0, 0, 1);
+                    }
+                }
+
+                .meta {
+                    @include flex-row;
+                    width: 100%;
+                    justify-content: space-between;
+
+                    .tanggal,
+                    .author {
+                        @include font2;
+                        font-style: italic;
+                        font-size: 7px;
+                        color: rgba(0, 0, 0, 1);
+
+                        @include pc {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            opacity: 0;
+            background: color(white-darkest);
+            transition: $transition-slow;
+            // background: red;
+        }
+
+        &:hover {
+            .overlay {
+                opacity: .5;
+            }
+        }
+
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: color(black);
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+
+    .swiper-button-next {}
+}

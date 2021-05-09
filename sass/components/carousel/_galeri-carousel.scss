@@ -1,0 +1,58 @@
+// Galeri Carousel
+.swiper-container.galeri-carousel {
+    width: 100%;
+    position: relative;
+    height: 9rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+        width: 75%;
+        height: 20rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: $transition-slow;
+        // transform: translateY(2.3em);
+        // margin-left: -30px;
+
+        // &.animate {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+
+        // &.swiper-slide-active {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+
+        .field-gambar {
+            @include flex-column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .gambar {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: color(black);
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}

@@ -1,0 +1,78 @@
+// Review Carousel
+.swiper-container.review-carousel {
+    width: 100%;
+    position: relative;
+    height: 10rem;
+    margin-bottom: 2rem;
+
+    @include pc {
+        height: 20rem;
+        width: 75%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: $transition-slow;
+        // transform: translateY(2.3em);
+        // margin-left: -30px;
+
+        // &.animate {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+
+        // &.swiper-slide-active {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+        .field-bintang {
+            color: black;
+            font-size: 14px;
+            margin-bottom: 1em;
+
+            @include pc {
+                font-size: 1.4em;
+            }
+        }
+
+        .line {
+            margin-bottom: 1em;
+        }
+
+        .keterangan {
+            @include font2;
+            color: black;
+            margin-bottom: 1em;
+            font-size: 10px;
+
+            @include pc {
+                font-size: 1.125em;
+            }
+        }
+
+        .deskripsi {
+            @include font2;
+            font-size: 8px;
+            color: black;
+
+            @include pc {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: color(black);
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}

@@ -1,0 +1,105 @@
+// Team Carousel
+.swiper-container.team-carousel {
+    width: 100%;
+    position: relative;
+    height: 14rem;
+
+    @include tablet {
+        width: 75%;
+        height: 23rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        @include flex-column;
+        justify-content: space-between;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        transition: $transition-slow;
+
+        // transform: translateY(2.3em);
+        // margin-left: -30px;
+
+        // &.swiper-slide-active {
+        //     // transition: $transition-slow;
+        //     // height: 100%;
+        //     // transform: translateY(0);
+        // }
+
+        .field-gambar {
+            @include flex-column;
+            margin-bottom: 6px;
+            height: 70%;
+
+            @include pc {
+                margin-bottom: 1em;
+            }
+
+            img.gambar {
+                width: 110px;
+                height: 110px;
+                // max-width: 300px;
+                object-fit: cover;
+                border-radius: 50%;
+
+                @include pc {
+                    width: 12em;
+                    height: 12em;
+                }
+            }
+        }
+
+        .field-content {
+            @include flex-column;
+            width: 100%;
+            height: 30%;
+            justify-content: space-between;
+
+            .field-teks {
+                width: 100%;
+
+                .judul {
+                    @include font1;
+                    font-size: 14px;
+
+
+                    line-height: 1.794375em;
+                    text-align: center;
+                    border: 0;
+                    padding-bottom: 0;
+                    margin-bottom: .25em;
+                    color: black;
+
+                    @include pc {
+                        font: {
+                            size: 22px;
+                        }
+                    }
+                }
+
+                .deskripsi {
+                    @include font2;
+                    text-align: center;
+                    font-size: 10px;
+                    margin-bottom: 1em;
+                    color: black;
+
+                    @include pc {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: black;
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}
