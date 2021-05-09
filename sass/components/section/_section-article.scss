@@ -29,6 +29,14 @@
         }
     }
 
+    .field-paragraf {
+        margin-bottom: 46px;
+
+        @include pc {
+            margin-bottom: 0;
+        }
+    }
+
     .gambar-teks {
         overflow: hidden;
         background-color: white;
@@ -36,7 +44,7 @@
         // color: color(black);
         display: grid;
         // height: 30em;
-        margin-bottom: 12px;
+        margin-bottom: 49px;
         grid-template-columns: 70.20833333333333% 29.79166666666667%;
         grid-template-areas: "gambar teks";
 

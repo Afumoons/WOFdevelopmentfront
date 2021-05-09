@@ -2,8 +2,7 @@
     @include flex-column;
     width: 100%;
     background-color: rgb(232, 232, 232);
-    margin-bottom: 22px;
-    padding: 0 10%;
+    padding: 25px 10% 22px 10%;
 
     @include pc {
         margin-bottom: 96px;
@@ -62,7 +61,11 @@
         width: 100%;
         @include flex-row;
         justify-content: space-between;
-        margin-bottom: 37px;
+        margin-bottom: 14px;
+
+        @include pc {
+            margin-bottom: 37px;
+        }
 
         input[type="text"],
         input[type="email"] {
