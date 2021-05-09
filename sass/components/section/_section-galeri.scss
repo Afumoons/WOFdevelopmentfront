@@ -1,11 +1,11 @@
 .section-galeri {
     @include flex-column;
     justify-content: flex-start;
-    padding: 35px;
+    padding: 35px 0;
     background-color: white;
 
     @include pc {
-        padding: 3.9375em;
+        padding: 3.9375em 0;
     }
 
     .judul {
@@ -26,5 +26,27 @@
 
     .button {
         @include button;
+    }
+
+    .flex-kotak {
+        @include flex-row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 19.79166666666667%;
+
+        @include pc {
+            padding: 0 16.25%;
+        }
+
+        .gambar {
+            width: 48.27586206896552%;
+            margin-bottom: 16px;
+
+            @include pc {
+                width: 23.68827160493827%;
+                margin-bottom: 0;
+            }
+        }
     }
 }

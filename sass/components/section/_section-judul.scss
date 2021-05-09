@@ -25,6 +25,18 @@
         }
     }
 
+    &.tanpa-garis {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 25.21px;
+
+        @include pc {
+            margin-bottom: 4rem;
+            padding-bottom: 37px;
+            border-bottom: 2px rgba(112, 112, 112, 1) solid;
+        }
+    }
+
     .field-kiri {
         @include flex-row;
         justify-content: space-evenly;
