@@ -17,6 +17,14 @@
         padding: 1em 0;
     }
 
+    &.di-index {
+        margin-top: 74px;
+
+        @include pc {
+            margin-top: 4rem;
+        }
+    }
+
     .field-kiri {
         @include flex-row;
         justify-content: space-evenly;

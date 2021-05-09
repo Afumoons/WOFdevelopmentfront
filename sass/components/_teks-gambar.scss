@@ -33,19 +33,17 @@
             }
 
             .judul {
-                align-self: flex-end;
+                // align-self: flex-end;
+                align-self: flex-start;
 
-                @include pc {
-                    align-self: flex-start;
-                }
+                @include pc {}
             }
 
             .teks {
-                text-align: right;
+                // text-align: right;
+                text-align: left;
 
-                @include pc {
-                    text-align: left;
-                }
+                @include pc {}
             }
         }
     }
