@@ -142,6 +142,9 @@ var swiperteam = new Swiper(".swiper-container.team-carousel", {
 var swiperclient = new Swiper(".swiper-container.client-carousel", {
   loop: true,
   lazy: true,
+  allowSlideNext: false,
+  allowSlidePrev: false,
+  noSwiping: true,
   effect: "slide",
   speed: 1000,
   // 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip'
@@ -152,10 +155,6 @@ var swiperclient = new Swiper(".swiper-container.client-carousel", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 2000,
-    // reverseDirection: true,
-  },
   breakpoints: {
     640: {
       slidesPerView: 3,
@@ -164,7 +163,7 @@ var swiperclient = new Swiper(".swiper-container.client-carousel", {
       slidesPerView: 3,
     },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 3,
       spaceBetween: 30,
     },
   },

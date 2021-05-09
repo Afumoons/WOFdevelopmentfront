@@ -1,0 +1,62 @@
+// Client Carousel
+.swiper-container.client-carousel {
+    width: 100%;
+    position: relative;
+    height: 8rem;
+
+    @include tablet {
+        width: 75%;
+        height: 15rem;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-column;
+        transition: $transition-slow;
+        // transform: translateY(2.3em);
+        // margin-left: -30px;
+
+
+
+        &.swiper-slide-active {
+
+            // transition: $transition-slow;
+            // height: 100%;
+            // transform: translateY(0);
+            .gambar {
+                width: 100px;
+                height: 100px;
+
+                @include pc {
+                    width: 11em;
+                    height: 11em;
+                }
+            }
+        }
+
+        .gambar {
+            width: 98px;
+            height: 98px;
+            object-fit: cover;
+            margin-bottom: 1em;
+            border-radius: 50%;
+            transition: $transition-slow;
+
+            @include pc {
+                width: 10em;
+                height: 10em;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: black;
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}

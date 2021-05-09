@@ -6,10 +6,11 @@
         @include flex-row;
         justify-content: space-between;
         width: 20.83333333333333%;
-        margin-bottom: 69px;
+        margin-bottom: 15px;
 
         @include pc {
-            width: 10.87975013014055%
+            width: 10.87975013014055%;
+            margin-bottom: 69px;
         }
 
         a {
@@ -41,9 +42,10 @@
         border-bottom: 2px rgba(196, 196, 196, 1) solid;
         width: 90%;
         // margin: 0 312px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         @include pc {
+            margin-bottom: 40px;
             width: 70%
         }
     }
@@ -52,9 +54,14 @@
         @include flex-column;
         justify-content: flex-start;
         width: 100%;
+        margin-top: 20px;
+
+        @include pc {
+            margin-top: 0;
+        }
 
         img {
-            width: 20px;
+            width: 10%;
             margin-bottom: 20px;
 
             @include pc {
@@ -65,7 +72,7 @@
         .teks {
             @include font2;
             font-size: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 0px;
 
             @include pc {
                 font-size: 20px;
@@ -75,9 +82,10 @@
         .judul {
             @include font1;
             font-size: 15px;
-            margin-bottom: 80px;
+            margin-bottom: 40px;
 
             @include pc {
+                margin-bottom: 80px;
                 font-size: 25px;
             }
         }
@@ -87,9 +95,10 @@
         @include flex-row;
         justify-content: space-between;
         width: 86%;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         @include pc {
+            margin-bottom: 40px;
             width: 68%;
         }
     }

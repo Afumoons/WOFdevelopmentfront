@@ -39,6 +39,14 @@
             }
         }
 
+        &.kecil {
+            max-width: 28.02197802197802%;
+
+            @include pc {
+                max-width: 46%;
+            }
+        }
+
         .gambar {
             width: 100%;
             height: 100%;
@@ -56,7 +64,7 @@
         .teks {
             @include font2;
             width: 100%;
-            font-size: 14px;
+            font-size: 9px;
             color: rgba(0, 0, 0, 1);
             transition: $transition-slower;
 

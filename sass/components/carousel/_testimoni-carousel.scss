@@ -1,0 +1,84 @@
+// Testimoni Carousel
+.swiper-container.testimoni-carousel {
+    width: 100%;
+    height: 45vh;
+
+    @include tablet {
+        width: 75%;
+    }
+
+    .swiper-slide {
+        padding: 10%;
+        text-align: center;
+        font-size: 18px;
+        // background: rgb(162, 162, 162);
+        // position: relative;
+        /* Center slide text vertically */
+        @include flex-row;
+        justify-content: space-around;
+        align-items: flex-start;
+        transition: $transition-slow;
+
+        .field-kiri {
+            width: 100%;
+            @include flex-column;
+            align-items: flex-start;
+
+
+
+            .judul {
+                font-size: 2rem;
+                padding-bottom: .5em;
+                border-bottom: .1em color(white-dark) solid;
+                color: color(white-dark);
+            }
+        }
+
+        .field-kanan {
+            width: 100%;
+            @include flex-column;
+            align-items: flex-start;
+
+
+            .field-bintang {
+                @include flex-row;
+                color: color(white-dark);
+                margin-bottom: 2em;
+            }
+
+            .teks {
+                color: color(white-dark);
+                font-style: italic;
+                margin-bottom: 2em;
+            }
+
+            .field-author {
+                @include flex-row;
+                width: 100%;
+                justify-content: flex-start;
+                // align-items: flex-start;
+
+                i {
+                    color: color(white-dark);
+                    font-size: 1.5em;
+                    margin-right: .5em;
+                }
+
+                .teks {
+                    color: color(white-dark);
+                    font-style: normal;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+
+
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: color(white);
+        filter: drop-shadow(2px 2px 4px color(white-dark));
+    }
+}
